@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
   kbeaconlib2 is a IOS library used from KBeaconPro device. With this SDK, the developer can scan and configure the KBeaconPro device.
                        DESC
 
-  s.homepage         = 'https://github.com/kkmhogen/ios_kbeaconlib2'
+  s.homepage         = 'https://github.com/kkmhogen/kbeaconlib2'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'liushax@gmail.com' => 'liushax@gmail.com' }
-  s.source           = { :git => 'https://github.com/kkmhogen/ios_kbeaconlib2.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/kkmhogen/kbeaconlib2.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '11.0'
