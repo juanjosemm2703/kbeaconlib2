@@ -309,11 +309,13 @@ public typealias onActionComplete = (_ result:Bool, _ error:KBException?)->Void
         mBeaconMgr = beaconMgr
     }
     
+    //get the specified advertisement packet
     @objc public func getAvPacketByType(_ advType:Int)->KBAdvPacketBase?
     {
         return mAdvPacketMgr.getAdvPacket(advType)
     }
     
+    //get trigger parameters that read from device
     @objc public func getTriggerCfgList()->[KBCfgTrigger]?
     {
         return mCfgMgr.getTriggerCfgList()
@@ -404,6 +406,7 @@ public typealias onActionComplete = (_ result:Bool, _ error:KBException?)->Void
         return nil
     }
     
+    //get common parameters that read from device
     @objc public func getCommonCfg()->KBCfgCommon?
     {
         if let cfgCommon = mCfgMgr.getCfgComm(){
@@ -423,11 +426,7 @@ public typealias onActionComplete = (_ result:Bool, _ error:KBException?)->Void
         self.delegate = delegate;
     }
     
-    @objc public func isSensorDataSubscribe(triggerType:Int)->Bool
-    {
-        return mNotifyData2ClassMap[triggerType] != nil
-    }
-    
+    //check device support notification report
     @objc public func isSupportSensorDataNotification()->Bool
     {
         let cbService = KBUtility.findService(peripherial: cbPeripheral, sUUID: KBUtility.KB_CFG_SERVICES_UUID)
@@ -439,11 +438,13 @@ public typealias onActionComplete = (_ result:Bool, _ error:KBException?)->Void
         return false
     }
     
+    //remove buffered advertisement packet
     @objc public func removeAdvPacket()
     {
         mAdvPacketMgr.removeAdvPacket()
     }
     
+    //subscribe trigger event notification
     @objc public func subscribeSensorDataNotify(_ triggerType:Int,
                                           notifyDelegate: NotifyDataDelegate ,
                                           callback: onActionComplete?)
@@ -497,6 +498,13 @@ public typealias onActionComplete = (_ result:Bool, _ error:KBException?)->Void
         }
     }
     
+    //check if subscribe the trigger event
+    @objc public func isSensorDataSubscribe(triggerType:Int)->Bool
+    {
+        return mNotifyData2ClassMap[triggerType] != nil
+    }
+    
+    //remove trigger event subscribe notfication
     @objc public func removeSubscribeSensorDataNotify(_ triggerType:Int, callback: onActionComplete?)->Void
     {
         if (!isSupportSensorDataNotification()) {
@@ -540,11 +548,13 @@ public typealias onActionComplete = (_ result:Bool, _ error:KBException?)->Void
         }
     }
     
+    //connect to device with default parameters
     @objc @discardableResult public func connect(_ password:String, timeout:Double, delegate:ConnStateDelegate?)->Bool
     {
         return connectEnhanced(password, timeout:timeout, connPara:KBConnPara(), delegate: delegate);
     }
     
+    //connect to device with parameters
     @objc @discardableResult public func connectEnhanced(_ password: String, timeout:Double, connPara: KBConnPara, delegate:ConnStateDelegate?)->Bool
     {
         guard let cbCentral = mBeaconMgr?.cbBeaconMgr,
@@ -590,6 +600,7 @@ public typealias onActionComplete = (_ result:Bool, _ error:KBException?)->Void
         return true;
     }
     
+    //the app can init disconnect with device
     @objc public func disconnect() {
         self.closeBeacon(reason: KBConnEvtReason.ConnManualDisconnting)
     }
@@ -635,7 +646,7 @@ public typealias onActionComplete = (_ result:Bool, _ error:KBException?)->Void
         }
     }
     
-    //read config by json message
+    //read config by raw json message
     @objc public func readConfig(_ reqMsg: [String:Any], callback:onReadConfigComplete?)
     {
         if (mActionStatus != ActionType.ACTION_IDLE)
@@ -669,7 +680,8 @@ public typealias onActionComplete = (_ result:Bool, _ error:KBException?)->Void
         }
     }
     
-    //read device common config
+    //read common parameters from device,
+    //this function will force app to read common parameters again from device
     @objc public func readCommonConfig(_ callback: onReadConfigComplete?)
     {
         var reqPara = [String:Any]()
@@ -679,8 +691,9 @@ public typealias onActionComplete = (_ result:Bool, _ error:KBException?)->Void
         readConfig(reqPara, callback: callback)
     }
     
-    //read slot adv config
-    @objc public func readCommonConfig(_ slotIndex:Int, callback: onReadConfigComplete?)
+    //read specificed slot parameters from device,
+    //this function will force app to read slot parameters again from device
+    @objc public func readSlotConfig(_ slotIndex:Int, callback: onReadConfigComplete?)
     {
         var reqPara = [String:Any]()
         reqPara[KBCfgBase.JSON_MSG_TYPE_KEY] = KBCfgBase.JSON_MSG_TYPE_GET_PARA
@@ -690,7 +703,8 @@ public typealias onActionComplete = (_ result:Bool, _ error:KBException?)->Void
         readConfig(reqPara, callback: callback)
     }
     
-    //read trigger config
+    //read trigger parameters from device
+    //this function will force app to read trigger parameters again from device
     @objc public func readTriggerConfig(_ triggerType:Int, callback: onReadConfigComplete?)
     {
         var reqPara = [String:Any]()
@@ -701,7 +715,8 @@ public typealias onActionComplete = (_ result:Bool, _ error:KBException?)->Void
         readConfig(reqPara, callback: callback)
     }
     
-    //read trigger config
+    //read sensor parameters from device
+    //this function will force app to read sensor parameters again from device
     @objc public func readSensorConfig(_ sensorType: Int, callback: onReadConfigComplete?)
     {
         var reqPara = [String:Any]()
@@ -711,7 +726,6 @@ public typealias onActionComplete = (_ result:Bool, _ error:KBException?)->Void
         
         readConfig(reqPara, callback: callback)
     }
-    
     
     //modify config list
     @objc public func modifyConfig(array cfgArray:[KBCfgBase], callback: onActionComplete?)
