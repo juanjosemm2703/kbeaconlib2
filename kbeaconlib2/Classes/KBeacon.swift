@@ -315,6 +315,84 @@ public typealias onActionComplete = (_ result:Bool, _ error:KBException?)->Void
         return mAdvPacketMgr.getAdvPacket(advType)
     }
     
+    //remove buffered advertisement packet
+    @objc public func removeAdvPacket()
+    {
+        mAdvPacketMgr.removeAdvPacket()
+    }
+    
+    //connect to device with default parameters
+    //When the app is connected to the KBeacon device, the app can specify which the configuration parameters to be read,
+    //the app will read common parameters, advertisement parameters, trigger parameters by default
+    @objc @discardableResult public func connect(_ password:String, timeout:Double, delegate:ConnStateDelegate?)->Bool
+    {
+        return connectEnhanced(password, timeout:timeout, connPara:KBConnPara(), delegate: delegate);
+    }
+    
+    //connect to device with specified parameters
+    //When the app is connected to the KBeacon device, the app can specify which the configuration parameters to be read,
+    //The parameter that can be read include: common parameters, advertisement parameters, trigger parameters, and sensor parameters
+    @objc @discardableResult public func connectEnhanced(_ password: String, timeout:Double, connPara: KBConnPara, delegate:ConnStateDelegate?)->Bool
+    {
+        guard let cbCentral = mBeaconMgr?.cbBeaconMgr,
+              let cbPeripherial = cbPeripheral,
+              state == KBConnState.Disconnected,
+              timeout > 3.0,
+              password.count <= 16 && password.count >= 8 else
+        {
+            NSLog("input paramaters false");
+            return false
+        }
+        self.delegate = delegate
+        self.mAuthHandler = KBAuthHandler(password: password, connPara: connPara, delegate: self)
+        state = KBConnState.Connecting
+        
+        //start connect
+        cbPeripherial.delegate = self
+        cbCentral.connect(cbPeripherial, options: nil)
+        
+        //start connect timer
+        if let connTimer = mConnectingTimer,
+           connTimer.isValid
+        {
+            connTimer.invalidate()
+        }
+        
+        mConnectingTimer = Timer.scheduledTimer(timeInterval: timeout,
+                                 target: self,
+                                 selector: #selector(connectingTimeout(_:)),
+                                 userInfo: nil,
+                                 repeats: false)
+        
+        //cancel privous action
+        self.cancelActionTimer()
+        mCfgMgr.clearBufferConfig() //remove buffer paramaters
+        
+        //notify connecting
+        if let delegateConn = self.delegate
+        {
+            delegateConn.onConnStateChange(self, state: self.state, evt:KBConnEvtReason.ConnNull)
+        }
+        
+        return true;
+    }
+    
+    //the app can init disconnect with device
+    @objc public func disconnect() {
+        self.closeBeacon(reason: KBConnEvtReason.ConnManualDisconnting)
+    }
+    
+    //get common parameters that already read from device, if the SDK does not have common parameters,
+    //it wil return null. The app can specify whether to read common parameters when connecting.
+    // The common parameters include the capability information of the device, as well as some other public parameters.
+    @objc public func getCommonCfg()->KBCfgCommon?
+    {
+        if let cfgCommon = mCfgMgr.getCfgComm(){
+            return cfgCommon
+        }
+        return nil
+    }
+    
     //get trigger parameters that read from device
     @objc public func getTriggerCfgList()->[KBCfgTrigger]?
     {
@@ -406,16 +484,13 @@ public typealias onActionComplete = (_ result:Bool, _ error:KBException?)->Void
         return nil
     }
     
-    //get common parameters that read from device
-    @objc public func getCommonCfg()->KBCfgCommon?
+    //clear all buffered configruation parameter that read from device
+    @objc public func clearBufferConfig()
     {
-        if let cfgCommon = mCfgMgr.getCfgComm(){
-            return cfgCommon
-        }
-        return nil
+        self.mCfgMgr.clearBufferConfig()
     }
     
-    
+    //check if device was connected
     @objc public func isConnected()->Bool
     {
         return self.state == KBConnState.Connected
@@ -436,12 +511,6 @@ public typealias onActionComplete = (_ result:Bool, _ error:KBException?)->Void
         }
         
         return false
-    }
-    
-    //remove buffered advertisement packet
-    @objc public func removeAdvPacket()
-    {
-        mAdvPacketMgr.removeAdvPacket()
     }
     
     //subscribe trigger event notification
@@ -546,63 +615,6 @@ public typealias onActionComplete = (_ result:Bool, _ error:KBException?)->Void
                 ntfCallback(true, nil)
             }
         }
-    }
-    
-    //connect to device with default parameters
-    @objc @discardableResult public func connect(_ password:String, timeout:Double, delegate:ConnStateDelegate?)->Bool
-    {
-        return connectEnhanced(password, timeout:timeout, connPara:KBConnPara(), delegate: delegate);
-    }
-    
-    //connect to device with parameters
-    @objc @discardableResult public func connectEnhanced(_ password: String, timeout:Double, connPara: KBConnPara, delegate:ConnStateDelegate?)->Bool
-    {
-        guard let cbCentral = mBeaconMgr?.cbBeaconMgr,
-              let cbPeripherial = cbPeripheral,
-              state == KBConnState.Disconnected,
-              timeout > 3.0,
-              password.count <= 16 && password.count >= 8 else
-        {
-            NSLog("input paramaters false");
-            return false
-        }
-        self.delegate = delegate
-        self.mAuthHandler = KBAuthHandler(password: password, connPara: connPara, delegate: self)
-        state = KBConnState.Connecting
-        
-        //start connect
-        cbPeripherial.delegate = self
-        cbCentral.connect(cbPeripherial, options: nil)
-        
-        //start connect timer
-        if let connTimer = mConnectingTimer,
-           connTimer.isValid
-        {
-            connTimer.invalidate()
-        }
-        
-        mConnectingTimer = Timer.scheduledTimer(timeInterval: timeout,
-                                 target: self,
-                                 selector: #selector(connectingTimeout(_:)),
-                                 userInfo: nil,
-                                 repeats: false)
-        
-        //cancel privous action
-        self.cancelActionTimer()
-        mCfgMgr.clearBufferConfig() //remove buffer paramaters
-        
-        //notify connecting
-        if let delegateConn = self.delegate
-        {
-            delegateConn.onConnStateChange(self, state: self.state, evt:KBConnEvtReason.ConnNull)
-        }
-        
-        return true;
-    }
-    
-    //the app can init disconnect with device
-    @objc public func disconnect() {
-        self.closeBeacon(reason: KBConnEvtReason.ConnManualDisconnting)
     }
     
     //send json command message to device
