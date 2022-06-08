@@ -44,6 +44,12 @@
 		0C4E80842688B93E00D153BB /* KBAccSensorValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E80832688B93E00D153BB /* KBAccSensorValue.swift */; };
 		0C4E80892688B9C500D153BB /* KBAdvPacketHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E80882688B9C500D153BB /* KBAdvPacketHandler.swift */; };
 		10889B79F731865F2EBC584C5C293170 /* KBeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4115459211E5C9F9F5641D9E3D4FCC65 /* KBeacon.swift */; };
+		11B2A28A2850D9D300DE97FE /* KBPIRDataMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B2A2892850D9D300DE97FE /* KBPIRDataMsg.swift */; };
+		11B2A28C2850D9E800DE97FE /* KBPIRRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B2A28B2850D9E800DE97FE /* KBPIRRecord.swift */; };
+		11B2A28E2850D9F800DE97FE /* KBCutoffDataMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B2A28D2850D9F800DE97FE /* KBCutoffDataMsg.swift */; };
+		11B2A2902850DA0600DE97FE /* KBReadSensorRsp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B2A28F2850DA0600DE97FE /* KBReadSensorRsp.swift */; };
+		11B2A2922850DA2600DE97FE /* KBTimeRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B2A2912850DA2600DE97FE /* KBTimeRange.swift */; };
+		11B2A2942850DBE600DE97FE /* KBCutoffRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B2A2932850DBE600DE97FE /* KBCutoffRecord.swift */; };
 		1630F9EF84DAF4F56F656EDF3B7CF7F4 /* kbeaconlib2-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC28FE7C8C1593ED575B80A655A151CF /* kbeaconlib2-dummy.m */; };
 		1E5AED788ADE1E73A97A7727C2884F4F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		2218493EBD4E8F999064B6B6278BB7FB /* ByteConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB6C847C262C002E623815D5FDDECE8 /* ByteConvert.swift */; };
@@ -117,6 +123,12 @@
 		0C4E807E2688B8FA00D153BB /* KBCfgTrigger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBCfgTrigger.swift; path = kbeaconlib2/Classes/KBCfgTrigger.swift; sourceTree = "<group>"; };
 		0C4E80832688B93E00D153BB /* KBAccSensorValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBAccSensorValue.swift; path = kbeaconlib2/Classes/KBAccSensorValue.swift; sourceTree = "<group>"; };
 		0C4E80882688B9C500D153BB /* KBAdvPacketHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBAdvPacketHandler.swift; path = kbeaconlib2/Classes/KBAdvPacketHandler.swift; sourceTree = "<group>"; };
+		11B2A2892850D9D300DE97FE /* KBPIRDataMsg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBPIRDataMsg.swift; path = kbeaconlib2/Classes/KBPIRDataMsg.swift; sourceTree = "<group>"; };
+		11B2A28B2850D9E800DE97FE /* KBPIRRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBPIRRecord.swift; path = kbeaconlib2/Classes/KBPIRRecord.swift; sourceTree = "<group>"; };
+		11B2A28D2850D9F800DE97FE /* KBCutoffDataMsg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBCutoffDataMsg.swift; path = kbeaconlib2/Classes/KBCutoffDataMsg.swift; sourceTree = "<group>"; };
+		11B2A28F2850DA0600DE97FE /* KBReadSensorRsp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBReadSensorRsp.swift; path = kbeaconlib2/Classes/KBReadSensorRsp.swift; sourceTree = "<group>"; };
+		11B2A2912850DA2600DE97FE /* KBTimeRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBTimeRange.swift; path = kbeaconlib2/Classes/KBTimeRange.swift; sourceTree = "<group>"; };
+		11B2A2932850DBE600DE97FE /* KBCutoffRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBCutoffRecord.swift; path = kbeaconlib2/Classes/KBCutoffRecord.swift; sourceTree = "<group>"; };
 		16C9F2E3E9F49C40BEEB44C5349D571F /* Pods-kbeaconlib2_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-kbeaconlib2_Tests-umbrella.h"; sourceTree = "<group>"; };
 		1FCE1C3EC51C4534A5BC46542271C48A /* KBException.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBException.swift; path = kbeaconlib2/Classes/KBException.swift; sourceTree = "<group>"; };
 		20B7971E8F170833F7355AF208BC3462 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -231,6 +243,12 @@
 		0C4E800C2688B6DB00D153BB /* KBSensor */ = {
 			isa = PBXGroup;
 			children = (
+				11B2A2932850DBE600DE97FE /* KBCutoffRecord.swift */,
+				11B2A2912850DA2600DE97FE /* KBTimeRange.swift */,
+				11B2A28F2850DA0600DE97FE /* KBReadSensorRsp.swift */,
+				11B2A28D2850D9F800DE97FE /* KBCutoffDataMsg.swift */,
+				11B2A28B2850D9E800DE97FE /* KBPIRRecord.swift */,
+				11B2A2892850D9D300DE97FE /* KBPIRDataMsg.swift */,
 				0C4E80652688B8A700D153BB /* KBHumidityDataMsg.swift */,
 				0C4E80632688B8A700D153BB /* KBHumidityRecord.swift */,
 				0C4E80642688B8A700D153BB /* KBSensorDataMsgBase.swift */,
@@ -547,8 +565,10 @@
 				0C4E80842688B93E00D153BB /* KBAccSensorValue.swift in Sources */,
 				0C4E804A2688B82900D153BB /* KBCfgAdvBase.swift in Sources */,
 				2218493EBD4E8F999064B6B6278BB7FB /* ByteConvert.swift in Sources */,
+				11B2A2902850DA0600DE97FE /* KBReadSensorRsp.swift in Sources */,
 				0C4E80752688B8D000D153BB /* KBTriggerAdvChgMode.swift in Sources */,
 				0C4E804E2688B82900D153BB /* KBCfgBase.swift in Sources */,
+				11B2A28E2850D9F800DE97FE /* KBCutoffDataMsg.swift in Sources */,
 				0C4E804B2688B82900D153BB /* KBCfgCommon.swift in Sources */,
 				0C4E80512688B82900D153BB /* KBCfgSensorBase.swift in Sources */,
 				0C4E80352688B80600D153BB /* KBAdvType.swift in Sources */,
@@ -559,11 +579,13 @@
 				0C4E802F2688B80600D153BB /* KBAdvTxPower.swift in Sources */,
 				0C4E804C2688B82900D153BB /* KBCfgAdvKSensor.swift in Sources */,
 				0C4E80342688B80600D153BB /* KBAdvPacketIBeacon.swift in Sources */,
+				11B2A2922850DA2600DE97FE /* KBTimeRange.swift in Sources */,
 				A5698761A640D96E42BAA9E48636FDBA /* KBAuthHandler.swift in Sources */,
 				0C4E80322688B80600D153BB /* KBAdvPacketBase.swift in Sources */,
 				0C4E802B2688B80600D153BB /* KBAdvPacketSystem.swift in Sources */,
 				0C4E805E2688B88800D153BB /* KBCfgHandler.swift in Sources */,
 				0C4E804F2688B82900D153BB /* KBCfgAdvEddyUID.swift in Sources */,
+				11B2A28A2850D9D300DE97FE /* KBPIRDataMsg.swift in Sources */,
 				0C4E80542688B82900D153BB /* KBCfgAdvEddyURL.swift in Sources */,
 				0C4E806E2688B8BF00D153BB /* KBTLMElapseTime.swift in Sources */,
 				0C4E80692688B8A800D153BB /* KBHumidityDataMsg.swift in Sources */,
@@ -581,6 +603,8 @@
 				0C4E80502688B82900D153BB /* KBCfgSensorHT.swift in Sources */,
 				0C4E80332688B80600D153BB /* KBAdvPacketEddyUID.swift in Sources */,
 				38806C3520F7B6280204DD46A2214B18 /* KBException.swift in Sources */,
+				11B2A28C2850D9E800DE97FE /* KBPIRRecord.swift in Sources */,
+				11B2A2942850DBE600DE97FE /* KBCutoffRecord.swift in Sources */,
 				0C4E80522688B82900D153BB /* KBCfgAdvEddyTLM.swift in Sources */,
 				0C4E802D2688B80600D153BB /* KBAdvPacketSensor.swift in Sources */,
 				7A94C5B2AD2F95BACD87494A5BE5E9A5 /* KBUtility.swift in Sources */,

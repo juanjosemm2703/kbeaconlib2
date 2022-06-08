@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import kbeaconlib2
 
 class ViewController: UIViewController {
 
