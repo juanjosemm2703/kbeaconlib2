@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0479805A296C3D1600164CF4 /* KBCfgSensorLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04798059296C3D1600164CF4 /* KBCfgSensorLight.swift */; };
+		0479805D296C3D2500164CF4 /* KBLightDataMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0479805B296C3D2500164CF4 /* KBLightDataMsg.swift */; };
+		0479805E296C3D2500164CF4 /* KBLightRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0479805C296C3D2500164CF4 /* KBLightRecord.swift */; };
 		0C4E802B2688B80600D153BB /* KBAdvPacketSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E80202688B80500D153BB /* KBAdvPacketSystem.swift */; };
 		0C4E802C2688B80600D153BB /* KBAdvPacketEddyTLM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E80212688B80600D153BB /* KBAdvPacketEddyTLM.swift */; };
 		0C4E802D2688B80600D153BB /* KBAdvPacketSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E80222688B80600D153BB /* KBAdvPacketSensor.swift */; };
@@ -88,6 +91,9 @@
 
 /* Begin PBXFileReference section */
 		01A4C2CD8322DA751BFA621B896A329A /* Pods_kbeaconlib2_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kbeaconlib2_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		04798059296C3D1600164CF4 /* KBCfgSensorLight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBCfgSensorLight.swift; path = kbeaconlib2/Classes/KBCfgSensorLight.swift; sourceTree = "<group>"; };
+		0479805B296C3D2500164CF4 /* KBLightDataMsg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBLightDataMsg.swift; path = kbeaconlib2/Classes/KBLightDataMsg.swift; sourceTree = "<group>"; };
+		0479805C296C3D2500164CF4 /* KBLightRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBLightRecord.swift; path = kbeaconlib2/Classes/KBLightRecord.swift; sourceTree = "<group>"; };
 		0C4E80202688B80500D153BB /* KBAdvPacketSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBAdvPacketSystem.swift; path = kbeaconlib2/Classes/KBAdvPacketSystem.swift; sourceTree = "<group>"; };
 		0C4E80212688B80600D153BB /* KBAdvPacketEddyTLM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBAdvPacketEddyTLM.swift; path = kbeaconlib2/Classes/KBAdvPacketEddyTLM.swift; sourceTree = "<group>"; };
 		0C4E80222688B80600D153BB /* KBAdvPacketSensor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBAdvPacketSensor.swift; path = kbeaconlib2/Classes/KBAdvPacketSensor.swift; sourceTree = "<group>"; };
@@ -235,6 +241,7 @@
 				0C4E803F2688B82800D153BB /* KBCfgBase.swift */,
 				0C4E803C2688B82800D153BB /* KBCfgCommon.swift */,
 				0C4E80392688B82800D153BB /* KBCfgHandler.swift */,
+				04798059296C3D1600164CF4 /* KBCfgSensorLight.swift */,
 				0C4E80422688B82800D153BB /* KBCfgSensorBase.swift */,
 				0C4E80412688B82800D153BB /* KBCfgSensorHT.swift */,
 				0C4E80472688B82900D153BB /* KBCfgType.swift */,
@@ -245,11 +252,13 @@
 		0C4E800C2688B6DB00D153BB /* KBSensor */ = {
 			isa = PBXGroup;
 			children = (
+				0479805C296C3D2500164CF4 /* KBLightRecord.swift */,
 				11B2A2932850DBE600DE97FE /* KBCutoffRecord.swift */,
 				11B2A2912850DA2600DE97FE /* KBTimeRange.swift */,
 				11B2A28F2850DA0600DE97FE /* KBReadSensorRsp.swift */,
 				11B2A28D2850D9F800DE97FE /* KBCutoffDataMsg.swift */,
 				11B2A28B2850D9E800DE97FE /* KBPIRRecord.swift */,
+				0479805B296C3D2500164CF4 /* KBLightDataMsg.swift */,
 				11B2A2892850D9D300DE97FE /* KBPIRDataMsg.swift */,
 				0C4E80652688B8A700D153BB /* KBHumidityDataMsg.swift */,
 				0C4E80632688B8A700D153BB /* KBHumidityRecord.swift */,
@@ -594,6 +603,7 @@
 				0C4E806E2688B8BF00D153BB /* KBTLMElapseTime.swift in Sources */,
 				0C4E80692688B8A800D153BB /* KBHumidityDataMsg.swift in Sources */,
 				0C4E80482688B82900D153BB /* KBCfgHandler.swift in Sources */,
+				0479805D296C3D2500164CF4 /* KBLightDataMsg.swift in Sources */,
 				3972AFAF785403EB0C115E2DAC0847C3 /* KBConnPara.swift in Sources */,
 				0C4E80892688B9C500D153BB /* KBAdvPacketHandler.swift in Sources */,
 				0C4E80562688B82900D153BB /* KBCfgType.swift in Sources */,
@@ -605,6 +615,7 @@
 				7CE94DCB62688D56553DBFB72DAB3AA6 /* KBeaconsMgr.swift in Sources */,
 				0C4E80312688B80600D153BB /* KBAdvPacketEddyURL.swift in Sources */,
 				0C4E80502688B82900D153BB /* KBCfgSensorHT.swift in Sources */,
+				0479805A296C3D1600164CF4 /* KBCfgSensorLight.swift in Sources */,
 				0C4E80332688B80600D153BB /* KBAdvPacketEddyUID.swift in Sources */,
 				38806C3520F7B6280204DD46A2214B18 /* KBException.swift in Sources */,
 				11B2A28C2850D9E800DE97FE /* KBPIRRecord.swift in Sources */,
@@ -617,6 +628,7 @@
 				0C4E80762688B8D000D153BB /* KBTriggerType.swift in Sources */,
 				0C4E80672688B8A800D153BB /* KBHumidityRecord.swift in Sources */,
 				0C4E80772688B8D000D153BB /* KBTriggerAction.swift in Sources */,
+				0479805E296C3D2500164CF4 /* KBLightRecord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
