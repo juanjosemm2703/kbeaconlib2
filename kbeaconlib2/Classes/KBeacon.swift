@@ -320,7 +320,7 @@ public typealias onActionComplete = (_ result:Bool, _ error:KBException?)->Void
     //buffer size
     private static let MAX_BUFFER_DATA_SIZE = 1024
     
-    internal override init()
+    public override init()
     {
         mNotifyData2ClassMap = [Int:NotifyDataDelegate]()
         mActionDoing = false
@@ -332,7 +332,7 @@ public typealias onActionComplete = (_ result:Bool, _ error:KBException?)->Void
         mCfgMgr = KBCfgHandler()
     }
     
-    internal func attach2Device(peripheral:CBPeripheral, beaconMgr:KBeaconsMgr)
+    public func attach2Device(peripheral:CBPeripheral, beaconMgr:KBeaconsMgr)
     {
         cbPeripheral = peripheral
         peripheral.delegate = self
@@ -799,7 +799,7 @@ public typealias onActionComplete = (_ result:Bool, _ error:KBException?)->Void
         return KBCfgHandler.createCfgSensorObject(sensorType)
     }
     
-    internal func parseAdvPacket(advData:[String:Any], rssi:Int8)->Bool
+    public func parseAdvPacket(advData:[String:Any], rssi:Int8)->Bool
     {
         if let beaconName = advData["kCBAdvDataLocalName"] as? String{
             self.name = beaconName
