@@ -160,6 +160,8 @@ class DeviceViewController :UIViewController, ConnStateDelegate, UITextFieldDele
             print("support humidity:\(pCommonCfg.isSupportHumiditySensor())")
             print("support pir:\(pCommonCfg.isSupportPIRSensor())")
             print("support light sensor:\(pCommonCfg.isSupportLightSensor())")
+            print("support voc sensor:\(pCommonCfg.isSupportVOCSensor())")
+            print("support co2 sensor:\(pCommonCfg.isSupportCO2Sensor())")
             print("support max Tx power:\(pCommonCfg.getMaxTxPower())")
             print("support min Tx power:\(pCommonCfg.getMinTxPower())")
             
@@ -1284,6 +1286,47 @@ class DeviceViewController :UIViewController, ConnStateDelegate, UITextFieldDele
             }
         }
     }
+    
+    func setPIRSensorParameters()
+    {
+        if (!self.beacon!.isConnected())
+        {
+            print("Device is not connected")
+            return
+        }
+
+        //check device capability
+        if let oldCommonCfg = self.beacon!.getCommonCfg(),
+           oldCommonCfg.isSupportPIRSensor()
+        {
+            print("Device does not supported light sensor")
+            return
+        }
+
+        let sensorPara = KBCfgSensorPIR()
+        //enable logger
+        sensorPara.setLogEnable(true)
+
+        //unit is second, set measure interval
+        sensorPara.setMeasureInterval(2)
+
+        //set backoff time to 30 seconds
+        //After the beacon detects and log a PIR event, if a new PIR is detected in the next 30 seconds,
+        //the event will be ignored.
+        sensorPara.setLogBackoffTime(30)
+
+        //enable sensor
+        self.beacon!.modifyConfig(obj: sensorPara) { (result, exception) in
+            if (result)
+            {
+                print("update pir parameters success")
+            }
+            else
+            {
+                print("update pir parameters failed")
+            }
+        }
+    }
                               
     func setLightSensorMeasureParameters()
     {
@@ -1311,7 +1354,6 @@ class DeviceViewController :UIViewController, ConnStateDelegate, UITextFieldDele
         //if abs(current light level - last saved light level) > 30, then save new record
         sensorPara.setLogChangeThreshold(30)
 
-        //enable sensor advertisement
         self.beacon!.modifyConfig(obj: sensorPara) { (result, exception) in
             if (result)
             {
