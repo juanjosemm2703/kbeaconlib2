@@ -7,9 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		043531F02A2103C0004027F6 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043531EF2A2103C0004027F6 /* RootViewController.swift */; };
+		043531F32A210438004027F6 /* CfgHTHistoryRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043531F12A210438004027F6 /* CfgHTHistoryRecord.swift */; };
+		043531F42A210438004027F6 /* CfgHTRecordFileMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043531F22A210438004027F6 /* CfgHTRecordFileMgr.swift */; };
+		043531F72A210444004027F6 /* KBeaconViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043531F52A210444004027F6 /* KBeaconViewCell.swift */; };
+		043531F82A210444004027F6 /* KBPreferance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043531F62A210444004027F6 /* KBPreferance.swift */; };
+		043531FA2A21044B004027F6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 043531F92A21044B004027F6 /* Localizable.strings */; };
+		043531FC2A2104A5004027F6 /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043531FB2A2104A5004027F6 /* DeviceViewController.swift */; };
+		043531FE2A2104B3004027F6 /* IndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043531FD2A2104B3004027F6 /* IndicatorViewController.swift */; };
+		043532002A2105BC004027F6 /* CfgHTHistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043531FF2A2105BC004027F6 /* CfgHTHistoryController.swift */; };
 		243FD52BD300D9620E76E1A4 /* Pods_kbeaconlib2_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0823A6B24AF191D1E12DB55 /* Pods_kbeaconlib2_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
@@ -29,12 +37,20 @@
 
 /* Begin PBXFileReference section */
 		0286232B4BFBE520AE831286 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		043531EF2A2103C0004027F6 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		043531F12A210438004027F6 /* CfgHTHistoryRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CfgHTHistoryRecord.swift; sourceTree = "<group>"; };
+		043531F22A210438004027F6 /* CfgHTRecordFileMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CfgHTRecordFileMgr.swift; sourceTree = "<group>"; };
+		043531F52A210444004027F6 /* KBeaconViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KBeaconViewCell.swift; sourceTree = "<group>"; };
+		043531F62A210444004027F6 /* KBPreferance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KBPreferance.swift; sourceTree = "<group>"; };
+		043531F92A21044B004027F6 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		043531FB2A2104A5004027F6 /* DeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceViewController.swift; sourceTree = "<group>"; };
+		043531FD2A2104B3004027F6 /* IndicatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorViewController.swift; sourceTree = "<group>"; };
+		043531FF2A2105BC004027F6 /* CfgHTHistoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CfgHTHistoryController.swift; sourceTree = "<group>"; };
 		2566F6BA8B76B5E638656137 /* Pods-kbeaconlib2_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kbeaconlib2_Tests.debug.xcconfig"; path = "Target Support Files/Pods-kbeaconlib2_Tests/Pods-kbeaconlib2_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		2AEB65A585AEBAE0BBB0603F /* Pods_kbeaconlib2_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kbeaconlib2_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* kbeaconlib2_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kbeaconlib2_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -114,7 +130,15 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				043531F52A210444004027F6 /* KBeaconViewCell.swift */,
+				043531FD2A2104B3004027F6 /* IndicatorViewController.swift */,
+				043531FB2A2104A5004027F6 /* DeviceViewController.swift */,
+				043531F62A210444004027F6 /* KBPreferance.swift */,
+				043531F92A21044B004027F6 /* Localizable.strings */,
+				043531FF2A2105BC004027F6 /* CfgHTHistoryController.swift */,
+				043531EF2A2103C0004027F6 /* RootViewController.swift */,
+				043531F12A210438004027F6 /* CfgHTHistoryRecord.swift */,
+				043531F22A210438004027F6 /* CfgHTRecordFileMgr.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -248,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				043531FA2A21044B004027F6 /* Localizable.strings in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
@@ -332,8 +357,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				043531F32A210438004027F6 /* CfgHTHistoryRecord.swift in Sources */,
+				043531F42A210438004027F6 /* CfgHTRecordFileMgr.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				043531FC2A2104A5004027F6 /* DeviceViewController.swift in Sources */,
+				043532002A2105BC004027F6 /* CfgHTHistoryController.swift in Sources */,
+				043531FE2A2104B3004027F6 /* IndicatorViewController.swift in Sources */,
+				043531F82A210444004027F6 /* KBPreferance.swift in Sources */,
+				043531F72A210444004027F6 /* KBeaconViewCell.swift in Sources */,
+				043531F02A2103C0004027F6 /* RootViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
