@@ -1363,7 +1363,6 @@ public typealias onActionComplete = (_ result:Bool, _ error:KBException?)->Void
         let msgBodyLen = dataLen - KBeacon.DATA_ACK_HEAD_LEN
         if mActionList.isEmpty
         {
-            NSLog("action list is empty, discard ack message");
             return
         }
         
