@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'kbeaconlib2'
-  s.version          = '1.1.2'
-  s.summary          = 'add voc and co2 sensor'
+  s.version          = '1.1.3'
+  s.summary          = 'bug fix for temperature'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
