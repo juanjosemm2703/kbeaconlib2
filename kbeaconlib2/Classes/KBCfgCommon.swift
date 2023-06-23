@@ -38,7 +38,16 @@ import Foundation
     @objc public static let  JSON_FIELD_PWD = "pwd"
     @objc public static let  JSON_FIELD_MEA_PWR = "meaPwr"
     @objc public static let  JSON_FIELD_AUTO_POWER_ON = "atPwr"
-    @objc public static let  JSON_FIELD_MAX_ADV_PERIOD = "maxPrd";
+    @objc public static let  JSON_FIELD_MAX_ADV_PERIOD = "maxPrd"
+    
+    //adv channel mask
+    @objc public static let  JSON_FIELD_CHANNEL_MASK = "chMsk"
+
+    //flash led interval
+    @objc public static let  JSON_FIELD_BLINK_LED_INTERVAL = "led"
+    
+    //low battery blink only
+    @objc public static let  JSON_FIELD_LED_BLINK_ONLY_IN_LOW_BATTERY = "lwBlk"
 
     //basic capiblity
     private var maxSlot: Int?
@@ -71,6 +80,13 @@ import Foundation
     private var name: String?
 
     private var alwaysPowerOn : Bool? //beacon automatic start advertisement after powen on
+    
+    //advertisement channel mask
+    private var advChanelMask : UInt8?
+    
+    //led flash when power on
+    private var alwaysLedBlinkInterval: UInt8?
+    private var lowBatteryLedBlinkOnly : Bool?
 
     @objc public func getMaxSlot()->Int
     {
@@ -209,6 +225,16 @@ import Foundation
         }
     }
     
+    //is support channel mask
+    @objc public func isSupportAdvChannelMask()->Bool
+    {
+        if let tempAdvCap = self.basicCapability{
+            return (tempAdvCap & 0x200000) > 0
+        }else{
+            return false
+        }
+    }
+    
     //is support humidity voc
     @objc public func isSupportVOCSensor()->Bool
     {
@@ -330,7 +356,21 @@ import Foundation
     {
         return alwaysPowerOn ?? false
     }
+    
+    @objc public func getAdvchannelMask()->UInt8
+    {
+        return advChanelMask ?? KBCfgBase.INVALID_UINT8
+    }
+    
+    @objc public func getAlwaysLedBlinkInterval()->UInt8
+    {
+        return alwaysLedBlinkInterval ?? KBCfgBase.INVALID_UINT8
+    }
 
+    @objc public func isLowBatteryBlinkOnly()->Bool
+    {
+        return lowBatteryLedBlinkOnly ?? false
+    }
 
     @objc @discardableResult public func setRefPower1Meters(_ value: Int)->Bool{
         if (value < -10 && value > -100) {
@@ -363,6 +403,28 @@ import Foundation
 
     @objc public func setAlwaysPowerOn(_ isEnable: Bool) {
         self.alwaysPowerOn = isEnable
+    }
+    
+    @objc @discardableResult public func setAdvChanelMask(_ chMask: UInt8) -> Bool {
+        if (chMask < 7) {
+            self.advChanelMask = chMask;
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    @objc @discardableResult public func setAlwaysFlashLedInterval(_ alwaysFlashLedInterval: UInt8)  -> Bool{
+        if (alwaysFlashLedInterval <= 100) {
+            self.alwaysLedBlinkInterval = alwaysFlashLedInterval;
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    @objc public func setLowBatteryLedBlinkOnly(_ lowBatteryFlash: Bool) {
+        self.lowBatteryLedBlinkOnly = lowBatteryFlash
     }
 
     @objc @discardableResult public override func updateConfig(_ para:Dictionary<String, Any>)->Int
@@ -447,6 +509,24 @@ import Foundation
             batteryPercent = tempValue
             nUpdatePara += 1
         }
+        
+        //channel mask
+        if let tempValue = para[KBCfgCommon.JSON_FIELD_CHANNEL_MASK] as? UInt8 {
+            advChanelMask = tempValue
+            nUpdatePara += 1
+        }
+        
+        //blink interval
+        if let tempValue = para[KBCfgCommon.JSON_FIELD_BLINK_LED_INTERVAL] as? UInt8 {
+            alwaysLedBlinkInterval = tempValue
+            nUpdatePara += 1
+        }
+        
+        //low battery blink only
+        if let tempValue = para[KBCfgCommon.JSON_FIELD_LED_BLINK_ONLY_IN_LOW_BATTERY] as? Int {
+            lowBatteryLedBlinkOnly = (tempValue > 0)
+            nUpdatePara += 1
+        }
 
         return nUpdatePara;
     }
@@ -473,6 +553,21 @@ import Foundation
         //auto power
         if let tempValue = alwaysPowerOn {
             configDicts[KBCfgCommon.JSON_FIELD_AUTO_POWER_ON] = tempValue ? 1 : 0;
+        }
+        
+        //channel mask
+        if let tempValue = advChanelMask {
+            configDicts[KBCfgCommon.JSON_FIELD_CHANNEL_MASK] = tempValue;
+        }
+        
+        //led blink interval
+        if let tempValue = alwaysLedBlinkInterval {
+            configDicts[KBCfgCommon.JSON_FIELD_BLINK_LED_INTERVAL] = tempValue;
+        }
+        
+        //low battery blink
+        if let tempValue = lowBatteryLedBlinkOnly {
+            configDicts[KBCfgCommon.JSON_FIELD_LED_BLINK_ONLY_IN_LOW_BATTERY] = tempValue ? 1 : 0;
         }
 
         return configDicts;

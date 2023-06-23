@@ -67,10 +67,10 @@ import Foundation
         return humidityChangeThreshold ?? KBCfgBase.INVALID_INT
     }
 
-    @objc @discardableResult public func setSensorMeasureInterval(_ interval :Int)->Bool
+    @objc @discardableResult public func setMeasureInterval(_ interval :Int)->Bool
     {
-        if (KBCfgSensorHT.MIN_MEASURE_INTERVAL >= interval
-            && KBCfgSensorHT.MAX_MEASURE_INTERVAL <= interval)
+        if (KBCfgSensorHT.MIN_MEASURE_INTERVAL <= interval
+            && KBCfgSensorHT.MAX_MEASURE_INTERVAL >= interval)
         {
             measureInterval = interval
             return true
@@ -83,8 +83,8 @@ import Foundation
 
     @objc @discardableResult public func setTemperatureChangeThreshold(_ threshold:Int)->Bool
     {
-        if (KBCfgSensorHT.MIN_HT_TEMP_CHANGE_LOG_THD >= threshold
-            && KBCfgSensorHT.MAX_HT_TEMP_CHANGE_LOG_THD <= threshold)
+        if (KBCfgSensorHT.MIN_HT_TEMP_CHANGE_LOG_THD <= threshold
+            && KBCfgSensorHT.MAX_HT_TEMP_CHANGE_LOG_THD >= threshold)
         {
             temperatureChangeThreshold = threshold
             return true
@@ -97,8 +97,8 @@ import Foundation
 
     @objc @discardableResult public func setHumidityChangeThreshold(_ threshold:Int)->Bool
     {
-        if (KBCfgSensorHT.MIN_HT_HUMIDITY_CHANGE_LOG_THD >= threshold
-            && KBCfgSensorHT.MAX_HT_HUMIDITY_CHANGE_LOG_THD <= threshold)
+        if (KBCfgSensorHT.MIN_HT_HUMIDITY_CHANGE_LOG_THD <= threshold
+            && KBCfgSensorHT.MAX_HT_HUMIDITY_CHANGE_LOG_THD >= threshold)
         {
             humidityChangeThreshold = threshold
             return true

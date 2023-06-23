@@ -816,7 +816,7 @@ class DeviceViewController :UIViewController, ConnStateDelegate, UITextFieldDele
         sensorHTPara.setLogEnable(true)
 
         //unit is second, set measure temperature and humidity interval
-        sensorHTPara.setSensorMeasureInterval(2)
+        sensorHTPara.setMeasureInterval(2)
 
         //unit is 0.1%, if abs(current humidity - last saved humidity) > 3, then save new record
         sensorHTPara.setHumidityChangeThreshold(30)

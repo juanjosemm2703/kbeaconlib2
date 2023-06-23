@@ -57,8 +57,8 @@ import Foundation
 
     @objc @discardableResult public func setMeasureInterval(_ interval :Int)->Bool
     {
-        if (KBCfgSensorLight.MIN_MEASURE_INTERVAL >= interval
-            && KBCfgSensorLight.MAX_MEASURE_INTERVAL <= interval)
+        if (KBCfgSensorLight.MIN_MEASURE_INTERVAL <= interval
+            && KBCfgSensorLight.MAX_MEASURE_INTERVAL >= interval)
         {
             measureInterval = interval
             return true
