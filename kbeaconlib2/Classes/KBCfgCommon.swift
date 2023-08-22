@@ -33,15 +33,17 @@ import Foundation
     @objc public static let JSON_FIELD_TRIG_CAPABILITY = "trCap"
     @objc public static let JSON_FIELD_BATTERY_PERCENT = "btPt"
 
+    @objc public static let ADV_CHANNEL_37_MASK = 0x4;
+    @objc public static let ADV_CHANNEL_38_MASK = 0x2;
+    @objc public static let ADV_CHANNEL_39_MASK = 0x1;
+    
     //configurable parameters
     @objc public static let  JSON_FIELD_DEV_NAME = "name"
     @objc public static let  JSON_FIELD_PWD = "pwd"
     @objc public static let  JSON_FIELD_MEA_PWR = "meaPwr"
     @objc public static let  JSON_FIELD_AUTO_POWER_ON = "atPwr"
     @objc public static let  JSON_FIELD_MAX_ADV_PERIOD = "maxPrd"
-    
-    //adv channel mask
-    @objc public static let  JSON_FIELD_CHANNEL_MASK = "chMsk"
+
 
     //flash led interval
     @objc public static let  JSON_FIELD_BLINK_LED_INTERVAL = "led"
@@ -80,9 +82,6 @@ import Foundation
     private var name: String?
 
     private var alwaysPowerOn : Bool? //beacon automatic start advertisement after powen on
-    
-    //advertisement channel mask
-    private var advChanelMask : UInt8?
     
     //led flash when power on
     private var alwaysLedBlinkInterval: UInt8?
@@ -357,10 +356,6 @@ import Foundation
         return alwaysPowerOn ?? false
     }
     
-    @objc public func getAdvchannelMask()->UInt8
-    {
-        return advChanelMask ?? KBCfgBase.INVALID_UINT8
-    }
     
     @objc public func getAlwaysLedBlinkInterval()->UInt8
     {
@@ -404,15 +399,7 @@ import Foundation
     @objc public func setAlwaysPowerOn(_ isEnable: Bool) {
         self.alwaysPowerOn = isEnable
     }
-    
-    @objc @discardableResult public func setAdvChanelMask(_ chMask: UInt8) -> Bool {
-        if (chMask < 7) {
-            self.advChanelMask = chMask;
-            return true
-        } else {
-            return false
-        }
-    }
+
     
     @objc @discardableResult public func setAlwaysFlashLedInterval(_ alwaysFlashLedInterval: UInt8)  -> Bool{
         if (alwaysFlashLedInterval <= 100) {
@@ -510,11 +497,6 @@ import Foundation
             nUpdatePara += 1
         }
         
-        //channel mask
-        if let tempValue = para[KBCfgCommon.JSON_FIELD_CHANNEL_MASK] as? UInt8 {
-            advChanelMask = tempValue
-            nUpdatePara += 1
-        }
         
         //blink interval
         if let tempValue = para[KBCfgCommon.JSON_FIELD_BLINK_LED_INTERVAL] as? UInt8 {
@@ -554,11 +536,7 @@ import Foundation
         if let tempValue = alwaysPowerOn {
             configDicts[KBCfgCommon.JSON_FIELD_AUTO_POWER_ON] = tempValue ? 1 : 0;
         }
-        
-        //channel mask
-        if let tempValue = advChanelMask {
-            configDicts[KBCfgCommon.JSON_FIELD_CHANNEL_MASK] = tempValue;
-        }
+    
         
         //led blink interval
         if let tempValue = alwaysLedBlinkInterval {

@@ -47,7 +47,8 @@ internal class KBCfgHandler {
         KBSensorType.PIR: KBCfgSensorPIR.self,
         KBSensorType.Light: KBCfgSensorLight.self,
         KBSensorType.VOC: KBCfgSensorVOC.self,
-        KBSensorType.CO2: KBCfgSensorCO2.self
+        KBSensorType.CO2: KBCfgSensorCO2.self,
+        KBSensorType.Acc: KBCfgSensorAcc.self
     ]
     
     internal init()
@@ -101,13 +102,21 @@ internal class KBCfgHandler {
         var cfgList:[KBCfgTrigger]?
         for triggerCfg in kbDeviceCfgTriggerLists
         {
-            if slotIndex == triggerCfg.getTriggerAdvSlot()
+            let triggerAction = triggerCfg.getTriggerAction()
+            let triggerSlotIndex = triggerCfg.getTriggerAdvSlot()
+            
+            if (triggerAction != KBCfgBase.INVALID_INT
+                && triggerSlotIndex != KBCfgBase.INVALID_INT)
             {
-                if (cfgList == nil)
+                if (triggerAction & KBTriggerAction.Advertisement) > 0
+                    && slotIndex == triggerSlotIndex
                 {
-                    cfgList = [KBCfgTrigger]()
+                    if (cfgList == nil)
+                    {
+                        cfgList = [KBCfgTrigger]()
+                    }
+                    cfgList!.append(triggerCfg)
                 }
-                cfgList!.append(triggerCfg)
             }
         }
         return cfgList

@@ -30,6 +30,9 @@ import Foundation
 
     //log enable
     private var logEnable: Bool?
+    
+    //log interval
+    private var logInterval: Int?
 
     //asc enable
     private var ascEnable: Bool?
@@ -54,6 +57,24 @@ import Foundation
     
     @objc public func setLogEnable(_ enable:Bool) {
         self.logEnable = enable
+    }
+    
+    @objc public func getLogInterval() ->Int{
+        return logInterval ?? KBCfgBase.INVALID_INT
+    }
+
+    @objc @discardableResult public func setLogInterval(_ interval :Int)->Bool
+    {
+        if (KBCfgSensorBase.MIN_LOG_INTERVAL <= interval
+            && KBCfgSensorBase.MAX_LOG_INTERVAL >= interval)
+        {
+            logInterval = interval
+            return true
+        }
+        else
+        {
+            return false
+        }
     }
     
     @objc @discardableResult public func setMeasureInterval(_ interval :Int)->Bool
@@ -121,6 +142,11 @@ import Foundation
             logEnable = (tempValue > 0)
             nUpdatePara += 1
         }
+        
+        if let tempValue = para[KBCfgSensorBase.JSON_SENSOR_TYPE_LOG_INTERVAL] as? Int {
+            logInterval = tempValue
+            nUpdatePara += 1
+        }
 
         if let tempValue = para[KBCfgSensorBase.JSON_SENSOR_TYPE_MEASURE_INTERVAL] as? Int {
             measureInterval = tempValue
@@ -150,6 +176,10 @@ import Foundation
         
         if let tempValue = measureInterval{
             cfgDicts[KBCfgSensorBase.JSON_SENSOR_TYPE_MEASURE_INTERVAL] = tempValue
+        }
+
+        if let tempValue = logInterval{
+            cfgDicts[KBCfgSensorBase.JSON_SENSOR_TYPE_LOG_INTERVAL] = tempValue
         }
 
         if let tempValue = logVocChangeThreshold{

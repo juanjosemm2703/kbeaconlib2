@@ -1587,7 +1587,10 @@ public typealias onActionComplete = (_ result:Bool, _ error:KBException?)->Void
         {
             //new read message command
             action.receiveData = data.subdata(in: readIndex..<data.count)
-            //[self configSendDataRptAck: mReceiveData.length dataType:dataType  cause: 0];
+            
+            self.configSendDataRptAck(ackSeq: UInt16(action.receiveData!.count),
+                                      dataType: dataType,
+                                      cause: 0)
             bRcvDataCmp = true;
         }
         

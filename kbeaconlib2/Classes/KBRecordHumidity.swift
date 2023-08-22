@@ -33,7 +33,7 @@ import Foundation
     
     public override func getSenorType()->Int
     {
-        return KBSensorType.Cutoff
+        return KBSensorType.HTHumidity
     }
     
     public override func parseRecord(utcOffset: UInt32, response: Data, dataPtr: Int)->Bool

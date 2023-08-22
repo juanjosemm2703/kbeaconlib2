@@ -817,12 +817,15 @@ class DeviceViewController :UIViewController, ConnStateDelegate, UITextFieldDele
 
         //unit is second, set measure temperature and humidity interval
         sensorHTPara.setMeasureInterval(2)
+        
+        //unit is second, the log interval should be 2, 4, 6, 8
+        sensorHTPara.setLogInterval(10)
 
         //unit is 0.1%, if abs(current humidity - last saved humidity) > 3, then save new record
-        sensorHTPara.setHumidityChangeThreshold(30)
+        sensorHTPara.setHumidityLogThreshold(30)
 
         //unit is 0.1 Celsius, if abs(current temperature - last saved temperature) > 0.5, then save new record
-        sensorHTPara.setTemperatureChangeThreshold(5)
+        sensorHTPara.setTemperatureLogThreshold(5)
 
         //enable sensor advertisement
         self.beacon!.modifyConfig(obj: sensorHTPara) { (result, exception) in

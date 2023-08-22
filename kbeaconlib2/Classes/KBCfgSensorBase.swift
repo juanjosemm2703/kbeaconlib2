@@ -10,7 +10,9 @@ import Foundation
 @objc public class KBCfgSensorBase : KBCfgBase{
     @objc public static let JSON_SENSOR_TYPE_LOG_ENABLE = "log"
     @objc public static let JSON_SENSOR_TYPE_MEASURE_INTERVAL = "msItvl"
-
+    
+    @objc public static let  JSON_SENSOR_TYPE_LOG_INTERVAL = "lgItvl";
+    
     @objc public static let JSON_FIELD_SENSOR_OBJ_LIST = "srObj"
     
     @objc public static let JSON_FIELD_SENSOR_TYPE = "srType"
@@ -18,6 +20,11 @@ import Foundation
     @objc public static let JSON_SENSOR_DISABLE_PERIOD0 = "dPrd0"
     @objc public static let JSON_SENSOR_DISABLE_PERIOD1 = "dPrd1"
     @objc public static let JSON_SENSOR_DISABLE_PERIOD2 = "dPrd2"
+    
+    //Log interval
+    @objc public static let DEFAULT_LOG_INTERVAL = 300;
+    @objc public static let MAX_LOG_INTERVAL = 14400;
+    @objc public static let MIN_LOG_INTERVAL = 1;
     
     //sensor type
     internal var sensorType: Int
@@ -149,5 +156,9 @@ import Foundation
         }
                 
         return cfgDicts;
+    }
+    
+    public override func toJsonObject() -> [String : Any] {
+        return toDictionary()
     }
 }
