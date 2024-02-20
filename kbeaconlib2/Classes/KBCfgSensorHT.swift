@@ -33,7 +33,7 @@ import Foundation
     private var measureInterval: Int?
     
     //log interval
-    private var logInterval: Int?
+//    private var logInterval: Int?
 
     //temperature interval
     private var temperatureChangeThreshold: Int?
@@ -55,9 +55,6 @@ import Foundation
         self.logEnable = enable
     }
     
-    @objc public func getLogInterval() ->Int{
-        return logInterval ?? KBCfgBase.INVALID_INT
-    }
 
     @objc public func getMeasureInterval()->Int
     {
@@ -80,20 +77,6 @@ import Foundation
             && KBCfgSensorHT.MAX_MEASURE_INTERVAL >= interval)
         {
             measureInterval = interval
-            return true
-        }
-        else
-        {
-            return false
-        }
-    }
-
-    @objc @discardableResult public func setLogInterval(_ interval :Int)->Bool
-    {
-        if (KBCfgSensorBase.MIN_LOG_INTERVAL <= interval
-            && KBCfgSensorBase.MAX_LOG_INTERVAL >= interval)
-        {
-            logInterval = interval
             return true
         }
         else
@@ -144,10 +127,10 @@ import Foundation
             nUpdatePara += 1
         }
         
-        if let tempValue = para[KBCfgSensorBase.JSON_SENSOR_TYPE_LOG_INTERVAL] as? Int {
-            logInterval = tempValue
-            nUpdatePara += 1
-        }
+//        if let tempValue = para[KBCfgSensorBase.JSON_SENSOR_TYPE_LOG_INTERVAL] as? Int {
+//            logInterval = tempValue
+//            nUpdatePara += 1
+//        }
 
         if let tempValue = para[KBCfgSensorHT.JSON_SENSOR_TYPE_HT_TEMP_CHANGE_THD] as? Int {
             temperatureChangeThreshold = tempValue

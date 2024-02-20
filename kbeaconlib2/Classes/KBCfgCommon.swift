@@ -32,6 +32,7 @@ import Foundation
     @objc public static let  JSON_FIELD_BASIC_CAPABILITY = "bCap"
     @objc public static let JSON_FIELD_TRIG_CAPABILITY = "trCap"
     @objc public static let JSON_FIELD_BATTERY_PERCENT = "btPt"
+    @objc public static let  JSON_FIELD_IDENTIFY = "id"
 
     @objc public static let ADV_CHANNEL_37_MASK = 0x4;
     @objc public static let ADV_CHANNEL_38_MASK = 0x2;
@@ -74,6 +75,8 @@ import Foundation
 
     private var hversion : String?
 
+    private var serialNo:Int?
+    
     ////////////////////can be configruation able///////////////////////
     private var refPower1Meters:Int?   //received RSSI at 1 meters
 
@@ -101,7 +104,17 @@ import Foundation
     {
         return maxTrigger ?? 5
     }
-
+    
+    @objc public func getBatteryPercent()->Int
+    {
+        return batteryPercent ?? 0
+    }
+    
+    @objc public func getSerialNo()->Int
+    {
+        return serialNo ?? KBCfgBase.INVALID_INT
+    }
+    
     //basic capability
     @objc public func getBasicCapability()->Int
     {
@@ -152,6 +165,12 @@ import Foundation
     @objc public func isSupportKBSystem()->Bool
     {
         return isSupportAdvType(KBAdvType.System)
+    }
+    
+    //is support AOA advType
+    @objc public func isSupportAOA()->Bool
+    {
+       return isSupportAdvType(KBAdvType.AOA)
     }
 
     //support BLE5 LongRange
@@ -497,6 +516,11 @@ import Foundation
             nUpdatePara += 1
         }
         
+        //identify
+        if let tempValue = para[KBCfgCommon.JSON_FIELD_IDENTIFY] as? Int {
+            serialNo = tempValue
+            nUpdatePara += 1
+        }
         
         //blink interval
         if let tempValue = para[KBCfgCommon.JSON_FIELD_BLINK_LED_INTERVAL] as? UInt8 {

@@ -241,6 +241,7 @@
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 2VXEGF9FRK;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -546,6 +547,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2566F6BA8B76B5E638656137 /* Pods-kbeaconlib2_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 2VXEGF9FRK;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -568,6 +570,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DB8C79A8F608289BBE9DB4DE /* Pods-kbeaconlib2_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 2VXEGF9FRK;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",

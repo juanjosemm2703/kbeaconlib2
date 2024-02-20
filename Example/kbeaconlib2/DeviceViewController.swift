@@ -1129,6 +1129,32 @@ class DeviceViewController :UIViewController, ConnStateDelegate, UITextFieldDele
     
     }
     
+    //read battery level
+    func readBatteryLevel()
+    {
+        guard self.beacon!.isConnected() else
+        {
+            print("device does not connected")
+            return
+        }
+        
+        //get battery percent(the SDK will read battery level after authentication)
+        if let commPara = self.beacon!.getCommonCfg()
+        {
+            print("battery percent:\(commPara.getBatteryPercent())")
+        }
+        
+        //read battery percent from device again
+        self.beacon!.readCommonConfig { result, rspData, error in
+            if (result){
+                if let newCommPara = self.beacon!.getCommonCfg()
+                {
+                    print("new battery percent:\(newCommPara.getBatteryPercent())")
+                }
+            }
+        }
+    }
+    
     func onEnableCutoffTrigger()
     {
         guard self.beacon!.isConnected(),
@@ -1154,6 +1180,38 @@ class DeviceViewController :UIViewController, ConnStateDelegate, UITextFieldDele
             else
             {
                 print("Enable cutoff trigger failed")
+            }
+        }
+    }
+    
+    func enableAccAngleTrigger()
+    {
+        guard self.beacon!.isConnected(),
+            let commCfg = self.beacon!.getCommonCfg(),
+              commCfg.isSupportTrigger(KBTriggerType.AccAngle) else
+        {
+            print("device does not support cut off trigger")
+            return
+        }
+        
+        //set tilt angle trigger
+        let angleTrigger = KBCfgTriggerAngle()
+        angleTrigger.setTriggerAction(KBTriggerAction.Advertisement | KBTriggerAction.ReportToApp)
+        angleTrigger.setTriggerAdvSlot(0)
+        
+        //set trigger angle
+        angleTrigger.setTriggerPara(45)        //set below angle threashold
+        angleTrigger.setAboveAngle(angle: 90)  //set above angle threashold
+        angleTrigger.setReportingInterval(1)   //set repeat report interval to 1 minutes
+        
+        self.beacon!.modifyConfig(obj: angleTrigger) { (result, exception) in
+            if (result)
+            {
+                print("Enable angle trigger success")
+            }
+            else
+            {
+                print("Enable angle trigger failed")
             }
         }
     }
@@ -1377,7 +1435,6 @@ class DeviceViewController :UIViewController, ConnStateDelegate, UITextFieldDele
             print("devie not allowed beep")
             return
         }
-        
 
         var paraDicts = [String:Any]()
         paraDicts["msg"] = "ring"

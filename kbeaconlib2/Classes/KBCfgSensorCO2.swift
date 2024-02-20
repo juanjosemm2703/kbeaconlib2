@@ -27,7 +27,7 @@ import Foundation
     private var logEnable: Bool?
     
     //log interval
-    private var logInterval: Int?
+//    private var logInterval: Int?
 
     //asc enable
     private var ascEnable: Bool?
@@ -58,25 +58,7 @@ import Foundation
     @objc public func setAscEnable(_ enable:Bool) {
         self.ascEnable = enable
     }
-    
-    @objc public func getLogInterval() ->Int{
-        return logInterval ?? KBCfgBase.INVALID_INT
-    }
 
-    @objc @discardableResult public func setLogInterval(_ interval :Int)->Bool
-    {
-        if (KBCfgSensorBase.MIN_LOG_INTERVAL <= interval
-            && KBCfgSensorBase.MAX_LOG_INTERVAL >= interval)
-        {
-            logInterval = interval
-            return true
-        }
-        else
-        {
-            return false
-        }
-    }
-    
     @objc public func getMeasureInterval()->Int
     {
         return measureInterval ?? KBCfgBase.INVALID_INT

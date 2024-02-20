@@ -22,10 +22,13 @@ internal class KBCfgHandler {
         KBAdvType.EddyTLM: KBCfgAdvEddyTLM.self,
         KBAdvType.EddyURL: KBCfgAdvEddyURL.self,
         KBAdvType.IBeacon: KBCfgAdvIBeacon.self,
-        KBAdvType.System: KBCfgAdvSystem.self]
+        KBAdvType.System: KBCfgAdvSystem.self,
+        KBAdvType.AOA: KBCfgAdvAOA.self,
+    ]
     
     static var kbCfgTriggerObjects : Dictionary<Int, KBCfgTrigger.Type> = [
         KBTriggerType.AccMotion: KBCfgTriggerMotion.self,
+        KBTriggerType.AccAngle: KBCfgTriggerAngle.self,
         KBTriggerType.TriggerNull: KBCfgTrigger.self,
         KBTriggerType.BtnLongPress: KBCfgTrigger.self,
         KBTriggerType.BtnSingleClick: KBCfgTrigger.self,
