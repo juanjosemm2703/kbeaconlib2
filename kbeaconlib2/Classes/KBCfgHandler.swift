@@ -51,7 +51,8 @@ internal class KBCfgHandler {
         KBSensorType.Light: KBCfgSensorLight.self,
         KBSensorType.VOC: KBCfgSensorVOC.self,
         KBSensorType.CO2: KBCfgSensorCO2.self,
-        KBSensorType.Acc: KBCfgSensorAcc.self
+        KBSensorType.Acc: KBCfgSensorAcc.self,
+        KBSensorType.GEO: KBCfgSensorGEO.self
     ]
     
     internal init()
@@ -261,11 +262,11 @@ internal class KBCfgHandler {
         return cfgList
     }
 
-    private func getDeviceTriggerObj(_ triggerType:Int)->KBCfgTrigger?
+    private func getDeviceTriggerObj(_ triggerIndex:Int)->KBCfgTrigger?
     {
         for obj in kbDeviceCfgTriggerLists
         {
-            if (obj.getTriggerType() == triggerType)
+            if (obj.getTriggerIndex() == triggerIndex)
             {
                 return obj
             }
@@ -285,20 +286,26 @@ internal class KBCfgHandler {
             NSLog("updateDeviceCfgAdvObjFromParas update device configuration failed during slot index is null");
             return nil
         }
-
-        if let deviceAdvObj = getDeviceAdvSlotObj(slotIndex)
+        
+        let deviceAdvObj = getDeviceAdvSlotObj(slotIndex)
+        if deviceAdvObj != nil,deviceAdvObj!.getAdvType() == advType
         {
-            deviceAdvObj.updateConfig(advPara)
+            deviceAdvObj!.updateConfig(advPara)
             return deviceAdvObj
         }
         else
         {
-            if let deviceAdvObj = KBCfgHandler.createCfgAdvObject(advType)
+            if let tempAdv = KBCfgHandler.createCfgAdvObject(advType)
             {
-                deviceAdvObj.updateConfig(advPara)
-                kbDeviceCfgAdvSlotLists.append(deviceAdvObj)
+                tempAdv.updateConfig(advPara)
+                if deviceAdvObj != nil{
+                    kbDeviceCfgAdvSlotLists.removeAll { advObj in
+                        advObj == deviceAdvObj
+                    }
+                }
+                kbDeviceCfgAdvSlotLists.append(tempAdv)
                 print("add new adv object(slot:\(slotIndex), type:\(advType)) to device config buffer\n");
-                return deviceAdvObj
+                return tempAdv
             }
             else
             {
@@ -315,24 +322,33 @@ internal class KBCfgHandler {
             NSLog("updateDeviceCfgTriggerFromParas update device configuration failed during trigger type is null")
             return nil
         }
-
-        if let deviceTriggerObj = getDeviceTriggerObj(triggerType){
-            deviceTriggerObj.updateConfig(triggerPara)
+        guard let triggerIdx = triggerPara[KBCfgTrigger.JSON_FIELD_TRIGGER_INDEX] as? Int else {
+            NSLog("updateDeviceCfgTriggerFromParas update device configuration failed during trigger index is null")
+            return nil
+        }
+        let deviceTriggerObj = getDeviceTriggerObj(triggerIdx)
+        if  deviceTriggerObj != nil,deviceTriggerObj!.getTriggerType() == triggerType{
+            deviceTriggerObj!.updateConfig(triggerPara)
             return deviceTriggerObj
         }
         else
         {
-            if let deviceTriggerObj = KBCfgHandler.createCfgTriggerObject(triggerType){
-                deviceTriggerObj.updateConfig(triggerPara)
-                kbDeviceCfgTriggerLists.append(deviceTriggerObj)
+            if let tempTrigger = KBCfgHandler.createCfgTriggerObject(triggerType){
+                tempTrigger.updateConfig(triggerPara)
+                if deviceTriggerObj != nil{
+                    kbDeviceCfgTriggerLists.removeAll { trigger in
+                        trigger == deviceTriggerObj
+                    }
+                }
+                kbDeviceCfgTriggerLists.append(tempTrigger)
                 print("add new trigger object type:\(triggerType) to device config buffer\n")
-                return deviceTriggerObj
+               return tempTrigger
             }else{
                 NSLog("updateDeviceCfgTriggerFromParas update device create trigger object failed, trigger type:%d", triggerType)
             }
         }
 
-        return nil;
+        return nil
     }
 
     @discardableResult private func updateDeviceCfgSensorFromParas(_ sensorPara: Dictionary<String, Any>  )->KBCfgSensorBase?

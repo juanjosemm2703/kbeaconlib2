@@ -28,6 +28,7 @@
 		0473483F2B8455F7001BC186 /* KBAdvPacketAOA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0473483E2B8455F7001BC186 /* KBAdvPacketAOA.swift */; };
 		0479805A296C3D1600164CF4 /* KBCfgSensorLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04798059296C3D1600164CF4 /* KBCfgSensorLight.swift */; };
 		04B5ED482A94C0DA002EE781 /* KBCfgSensorAcc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5ED472A94C0DA002EE781 /* KBCfgSensorAcc.swift */; };
+		04C90C012C4DFF44005C5D89 /* KBCfgSensorGEO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C90C002C4DFF44005C5D89 /* KBCfgSensorGEO.swift */; };
 		0C4E802B2688B80600D153BB /* KBAdvPacketSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E80202688B80500D153BB /* KBAdvPacketSystem.swift */; };
 		0C4E802C2688B80600D153BB /* KBAdvPacketEddyTLM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E80212688B80600D153BB /* KBAdvPacketEddyTLM.swift */; };
 		0C4E802D2688B80600D153BB /* KBAdvPacketSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E80222688B80600D153BB /* KBAdvPacketSensor.swift */; };
@@ -121,6 +122,7 @@
 		0473483E2B8455F7001BC186 /* KBAdvPacketAOA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBAdvPacketAOA.swift; path = kbeaconlib2/Classes/KBAdvPacketAOA.swift; sourceTree = "<group>"; };
 		04798059296C3D1600164CF4 /* KBCfgSensorLight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBCfgSensorLight.swift; path = kbeaconlib2/Classes/KBCfgSensorLight.swift; sourceTree = "<group>"; };
 		04B5ED472A94C0DA002EE781 /* KBCfgSensorAcc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBCfgSensorAcc.swift; path = kbeaconlib2/Classes/KBCfgSensorAcc.swift; sourceTree = "<group>"; };
+		04C90C002C4DFF44005C5D89 /* KBCfgSensorGEO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBCfgSensorGEO.swift; path = kbeaconlib2/Classes/KBCfgSensorGEO.swift; sourceTree = "<group>"; };
 		0C4E80202688B80500D153BB /* KBAdvPacketSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBAdvPacketSystem.swift; path = kbeaconlib2/Classes/KBAdvPacketSystem.swift; sourceTree = "<group>"; };
 		0C4E80212688B80600D153BB /* KBAdvPacketEddyTLM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBAdvPacketEddyTLM.swift; path = kbeaconlib2/Classes/KBAdvPacketEddyTLM.swift; sourceTree = "<group>"; };
 		0C4E80222688B80600D153BB /* KBAdvPacketSensor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBAdvPacketSensor.swift; path = kbeaconlib2/Classes/KBAdvPacketSensor.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 		0C4E80022688B67C00D153BB /* KBCfgAdv */ = {
 			isa = PBXGroup;
 			children = (
+				04C90C002C4DFF44005C5D89 /* KBCfgSensorGEO.swift */,
 				0473483A2B84555F001BC186 /* KBCfgAdvAOA.swift */,
 				04B5ED472A94C0DA002EE781 /* KBCfgSensorAcc.swift */,
 				043531CF2A20F1CE004027F6 /* KBCfgSensorBase.swift */,
@@ -654,6 +657,7 @@
 				043531EA2A210042004027F6 /* KBRecordBase.swift in Sources */,
 				043531CA2A20F0DD004027F6 /* KBCfgSensorHT.swift in Sources */,
 				0C4E80522688B82900D153BB /* KBCfgAdvEddyTLM.swift in Sources */,
+				04C90C012C4DFF44005C5D89 /* KBCfgSensorGEO.swift in Sources */,
 				0C4E802D2688B80600D153BB /* KBAdvPacketSensor.swift in Sources */,
 				7A94C5B2AD2F95BACD87494A5BE5E9A5 /* KBUtility.swift in Sources */,
 				B8079798BBD20DAEAA532214730F5045 /* UTCTime.swift in Sources */,

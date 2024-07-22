@@ -16,4 +16,5 @@ import Foundation
     @objc public static let Light = 0x20
     @objc public static let VOC = 0x40
     @objc public static let CO2 = 0x41
+    @objc public static let GEO = 0x42
 }

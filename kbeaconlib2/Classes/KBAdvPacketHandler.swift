@@ -114,6 +114,7 @@ internal class KBAdvPacketHandler : NSObject
                     advType = KBAdvType.AOA
                 }
             }
+           
             advDataIndex = 3
             pAdvData = kkmManufactureData
         }
@@ -211,7 +212,6 @@ internal class KBAdvPacketHandler : NSObject
                                           rssi: rssi,
                                           isConnect: advConnable.boolValue)
                 bParseDataRslt = true;
-                
             }
         }
         

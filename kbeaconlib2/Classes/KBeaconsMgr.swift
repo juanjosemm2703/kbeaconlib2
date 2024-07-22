@@ -174,7 +174,7 @@ let MAX_TIMER_OUT_INTERVAL = 0.3;
         var nRssi:Int8
         
         //rssi
-        if RSSI.intValue < -100 || RSSI.intValue > 100{
+        if RSSI.intValue < -100 || RSSI.intValue > 20{
             nRssi = -100
         }else{
             nRssi = Int8(RSSI.intValue)
@@ -234,10 +234,10 @@ let MAX_TIMER_OUT_INTERVAL = 0.3;
             {
                 if beacons[uuidString] == nil
                 {
-                    pUnknownBeacon!.attach2Device(peripheral: peripheral, beaconMgr: self)
                     beacons[uuidString] = pUnknownBeacon
                 }
-                
+                //peripheral 后台久置可能会被系统释放
+                pUnknownBeacon!.attach2Device(peripheral: peripheral, beaconMgr: self)
                 //add to beacon notify list
                 mCBNtfBeacons[uuidString] = pUnknownBeacon
                 

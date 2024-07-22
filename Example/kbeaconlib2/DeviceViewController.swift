@@ -1201,7 +1201,7 @@ class DeviceViewController :UIViewController, ConnStateDelegate, UITextFieldDele
         
         //set trigger angle
         angleTrigger.setTriggerPara(45)        //set below angle threashold
-        angleTrigger.setAboveAngle(angle: 90)  //set above angle threashold
+        angleTrigger.setAboveAngle(90)  //set above angle threashold
         angleTrigger.setReportingInterval(1)   //set repeat report interval to 1 minutes
         
         self.beacon!.modifyConfig(obj: angleTrigger) { (result, exception) in
@@ -1423,6 +1423,39 @@ class DeviceViewController :UIViewController, ConnStateDelegate, UITextFieldDele
             else
             {
                 print("update light parameters failed")
+            }
+        }
+    }
+    
+    func setGEOSensorParameters()
+    {
+        if (!self.beacon!.isConnected())
+        {
+            print("Device is not connected")
+            return
+        }
+
+        //check device capability
+        if let oldCommonCfg = self.beacon!.getCommonCfg(),
+           oldCommonCfg.isSupportGEOSensor()
+        {
+            print("Device does not supported GEO sensor")
+            return
+        }
+
+        let sensorPara = KBCfgSensorGEO()
+        sensorPara.setParkingDelay(3)
+        sensorPara.setParkingThreshold(3000)
+
+        //enable sensor
+        self.beacon!.modifyConfig(obj: sensorPara) { (result, exception) in
+            if (result)
+            {
+                print("update pir parameters success")
+            }
+            else
+            {
+                print("update pir parameters failed")
             }
         }
     }

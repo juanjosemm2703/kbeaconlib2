@@ -21,8 +21,10 @@ public extension Data {
     {
         let str = String(data:self, encoding:.utf8)!
         
-        return str.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "\n", with: "")
-            .replacingOccurrences(of: "\\", with: "");
+        //证书有空格和\\n不能去掉并且\\/ 替换 /
+        return str.replacingOccurrences(of: "\\/", with: "/")
+//            .replacingOccurrences(of: " ", with: "")
+//            .replacingOccurrences(of: "\n", with: "")
     }
 }
 

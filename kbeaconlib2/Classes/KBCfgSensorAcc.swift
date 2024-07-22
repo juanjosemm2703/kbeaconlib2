@@ -7,13 +7,13 @@
 
 import UIKit
 
-class KBCfgSensorAcc: KBCfgSensorBase {
+public class KBCfgSensorAcc: KBCfgSensorBase {
     public static let JSON_SENSOR_TYPE_ACC_MODEL = "model"
     
     //Acc type
     private var accModel:Int?
     
-    required init() {
+    public required init() {
         super.init()
         sensorType = KBSensorType.Acc
     }
@@ -39,7 +39,7 @@ class KBCfgSensorAcc: KBCfgSensorBase {
         return super.toJsonObject();
     }
     
-    override func toDictionary() -> Dictionary<String, Any> {
+    public override func toDictionary() -> Dictionary<String, Any> {
         return super.toDictionary()
     }
 }

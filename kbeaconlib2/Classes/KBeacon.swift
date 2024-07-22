@@ -804,9 +804,9 @@ public typealias onActionComplete = (_ result:Bool, _ error:KBException?)->Void
         if let beaconName = advData["kCBAdvDataLocalName"] as? String{
             self.name = beaconName
         }
-        
-        if (rssi <= Int8.max && rssi >= Int8.min)
-        {
+        if rssi > 20 {
+            self.rssi = -100
+        }else{
             self.rssi = Int8(rssi)
         }
         
@@ -1216,16 +1216,19 @@ public typealias onActionComplete = (_ result:Bool, _ error:KBException?)->Void
         }
         
         //discover characteristic
+        var isSystemSrvExist = false
         for cbService in cbServices
         {
             if (cbService.uuid.isEqual(KBUtility.KB_SYSTEM_SERVICE_UUID))
             {
                 peripheral.discoverCharacteristics(nil, for: cbService)
+                isSystemSrvExist = true
+                break
             }
-            if (cbService.uuid.isEqual(KBUtility.KB_CFG_SERVICES_UUID))
-            {
-                peripheral.discoverCharacteristics(nil, for: cbService)
-            }
+        }
+        //check if has system services
+        if !isSystemSrvExist{
+            closeBeacon(reason: KBConnEvtReason.ConnServiceNotSupport)
         }
     }
     
@@ -1239,12 +1242,21 @@ public typealias onActionComplete = (_ result:Bool, _ error:KBException?)->Void
             
             //send close notify
             self.closeBeacon(reason: KBConnEvtReason.ConnException)
+            return
         }
         
         if (service.uuid.isEqual(KBUtility.KB_SYSTEM_SERVICE_UUID))
         {
             //read mac address
-            self.startReadCharatics(service.uuid, charUUID: KBUtility.KB_MAC_CHAR_UUID)
+            if !startReadCharatics(service.uuid, charUUID: KBUtility.KB_MAC_CHAR_UUID){
+                closeBeacon(reason: KBConnEvtReason.ConnServiceNotSupport)
+            }
+        }else if service.uuid.isEqual(KBUtility.KB_CFG_SERVICES_UUID)
+        {
+            if (!startEnableNotification(serviceID: KBUtility.KB_CFG_SERVICES_UUID, charID: KBUtility.KB_NTF_CHAR_UUID, enable: true))
+            {
+                closeBeacon(reason: KBConnEvtReason.ConnServiceNotSupport)
+            }
         }
     }
     
@@ -1264,7 +1276,12 @@ public typealias onActionComplete = (_ result:Bool, _ error:KBException?)->Void
         {
             if (state == KBConnState.Connecting)
             {
-                mAuthHandler?.authSendMd5Request(mac:self.connectionMac!)
+                if let mac = connectionMac, mAuthHandler!.authSendMd5Request(mac: mac) {
+                    NSLog("send auth success")
+                }else{
+                    closeBeacon(reason: KBConnEvtReason.ConnServiceNotSupport)
+                    return
+                }
             }
         }
         else if (characteristic.uuid.isEqual(KBUtility.KB_IND_CHAR_UUID))
@@ -1822,15 +1839,14 @@ public typealias onActionComplete = (_ result:Bool, _ error:KBException?)->Void
         return false
     }
     
-    internal func writeAuthData(_ data: Data)
+    internal func writeAuthData(_ data: Data) -> Bool
     {
-        self.startWriteCfgValue(data: data)
+        return self.startWriteCfgValue(data: data)
     }
     
     internal func closeBeacon(reason:KBConnEvtReason)
     {
         mCloseReason = reason
-        
         //clear action timer
         self.cancelActionTimer()
         
@@ -1916,9 +1932,14 @@ public typealias onActionComplete = (_ result:Bool, _ error:KBException?)->Void
         UserDefaults.standard.setValue(self.connectionMac, forKey: strMacKey)
         
         //start auth entication
-        if (state == KBConnState.Connecting)
-        {
-            self.startEnableNotification(serviceID: KBUtility.KB_CFG_SERVICES_UUID, charID: KBUtility.KB_NTF_CHAR_UUID, enable: true)
+        if state == KBConnState.Connecting {
+            let cbServiceID = KBUtility.findService(peripherial: cbPeripheral, sUUID: KBUtility.KB_CFG_SERVICES_UUID)
+            if let cfgService = cbServiceID, let peripherial = cbPeripheral{
+                peripherial.discoverCharacteristics(nil, for: cfgService)
+            }else{
+                NSLog("config services not support")
+                closeBeacon(reason: KBConnEvtReason.ConnServiceNotSupport)
+            }
         }
     }
     

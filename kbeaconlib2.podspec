@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'kbeaconlib2'
-  s.version          = '1.1.6'
-  s.summary          = 'add acc tilt angle trigger. Support AOA advertisement'
+  s.version          = '1.1.7'
+  s.summary          = 'add GEO sensor. Bug fix for connecting device timeout'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?

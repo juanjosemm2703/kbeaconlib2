@@ -45,7 +45,6 @@ import Foundation
     @objc public static let  JSON_FIELD_AUTO_POWER_ON = "atPwr"
     @objc public static let  JSON_FIELD_MAX_ADV_PERIOD = "maxPrd"
 
-
     //flash led interval
     @objc public static let  JSON_FIELD_BLINK_LED_INTERVAL = "led"
     
@@ -97,7 +96,7 @@ import Foundation
     
     @objc public func getMaxAdvPeriod()->Float
     {
-        return maxAdvPeriod ?? 10000.0
+        return maxAdvPeriod ?? KBCfgCommon.MAX_ADV_PERIOD_MS
     }
     
     @objc public func getMaxTrigger()->Int
@@ -314,6 +313,16 @@ import Foundation
         }
     }
     
+    //is support Sensor
+    @objc public func isSupportGEOSensor()->Bool
+    {
+        if let tempAdvCap = self.basicCapability{
+            return (tempAdvCap & 0x2000000) > 0
+        }else{
+            return false
+        }
+    }
+    
     //is support button
     @objc public func isSupportTrigger(_ triggerType:Int)->Bool
     {
@@ -361,9 +370,9 @@ import Foundation
         return hversion
     }
 
-    @objc public func getName()->String?
+    @objc public func getName()->String
     {
-        return name
+        return name ?? "NA"
     }
 
     @objc public override init() {
