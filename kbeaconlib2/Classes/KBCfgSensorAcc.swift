@@ -35,11 +35,13 @@ public class KBCfgSensorAcc: KBCfgSensorBase {
         return nUpdatePara
     }
     
-    public override func toJsonObject() -> [String : Any] {
-        return super.toJsonObject();
-    }
     
     public override func toDictionary() -> Dictionary<String, Any> {
-        return super.toDictionary()
+        var cfgDicts = super.toDictionary()
+
+        if let tempValue = accModel {
+            cfgDicts[KBCfgSensorAcc.JSON_SENSOR_TYPE_ACC_MODEL]  = tempValue
+        }
+        return cfgDicts
     }
 }

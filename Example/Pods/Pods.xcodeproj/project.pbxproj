@@ -7,329 +7,530 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		043531CA2A20F0DD004027F6 /* KBCfgSensorHT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043531C52A20F0DD004027F6 /* KBCfgSensorHT.swift */; };
-		043531CB2A20F0DD004027F6 /* KBCfgSensorVOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043531C62A20F0DD004027F6 /* KBCfgSensorVOC.swift */; };
-		043531CC2A20F0DD004027F6 /* KBCfgSensorCO2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043531C72A20F0DD004027F6 /* KBCfgSensorCO2.swift */; };
-		043531CD2A20F0DD004027F6 /* KBCfgSensorPIR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043531C82A20F0DD004027F6 /* KBCfgSensorPIR.swift */; };
-		043531CE2A20F0DD004027F6 /* KBCfgSensorLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043531C92A20F0DD004027F6 /* KBCfgSensorLight.swift */; };
-		043531D02A20F1CE004027F6 /* KBCfgSensorBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043531CF2A20F1CE004027F6 /* KBCfgSensorBase.swift */; };
-		043531E52A210042004027F6 /* KBRecordHumidity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043531DB2A210041004027F6 /* KBRecordHumidity.swift */; };
-		043531E62A210042004027F6 /* KBRecordCutoff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043531DC2A210041004027F6 /* KBRecordCutoff.swift */; };
-		043531E72A210042004027F6 /* KBRecordDataRsp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043531DD2A210041004027F6 /* KBRecordDataRsp.swift */; };
-		043531E82A210042004027F6 /* KBRecordDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043531DE2A210041004027F6 /* KBRecordDataHandler.swift */; };
-		043531E92A210042004027F6 /* KBRecordPIR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043531DF2A210041004027F6 /* KBRecordPIR.swift */; };
-		043531EA2A210042004027F6 /* KBRecordBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043531E02A210042004027F6 /* KBRecordBase.swift */; };
-		043531EB2A210042004027F6 /* KBRecordCO2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043531E12A210042004027F6 /* KBRecordCO2.swift */; };
-		043531EC2A210042004027F6 /* KBRecordInfoRsp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043531E22A210042004027F6 /* KBRecordInfoRsp.swift */; };
-		043531ED2A210042004027F6 /* KBRecordLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043531E32A210042004027F6 /* KBRecordLight.swift */; };
-		043531EE2A210042004027F6 /* KBRecordVOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043531E42A210042004027F6 /* KBRecordVOC.swift */; };
-		0473483B2B84555F001BC186 /* KBCfgAdvAOA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0473483A2B84555F001BC186 /* KBCfgAdvAOA.swift */; };
-		0473483D2B84557C001BC186 /* KBCfgTriggerAngle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0473483C2B84557C001BC186 /* KBCfgTriggerAngle.swift */; };
-		0473483F2B8455F7001BC186 /* KBAdvPacketAOA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0473483E2B8455F7001BC186 /* KBAdvPacketAOA.swift */; };
-		0479805A296C3D1600164CF4 /* KBCfgSensorLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04798059296C3D1600164CF4 /* KBCfgSensorLight.swift */; };
-		04B5ED482A94C0DA002EE781 /* KBCfgSensorAcc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5ED472A94C0DA002EE781 /* KBCfgSensorAcc.swift */; };
-		04C90C012C4DFF44005C5D89 /* KBCfgSensorGEO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C90C002C4DFF44005C5D89 /* KBCfgSensorGEO.swift */; };
-		0C4E802B2688B80600D153BB /* KBAdvPacketSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E80202688B80500D153BB /* KBAdvPacketSystem.swift */; };
-		0C4E802C2688B80600D153BB /* KBAdvPacketEddyTLM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E80212688B80600D153BB /* KBAdvPacketEddyTLM.swift */; };
-		0C4E802D2688B80600D153BB /* KBAdvPacketSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E80222688B80600D153BB /* KBAdvPacketSensor.swift */; };
-		0C4E802E2688B80600D153BB /* KBAdvMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E80232688B80600D153BB /* KBAdvMode.swift */; };
-		0C4E802F2688B80600D153BB /* KBAdvTxPower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E80242688B80600D153BB /* KBAdvTxPower.swift */; };
-		0C4E80312688B80600D153BB /* KBAdvPacketEddyURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E80262688B80600D153BB /* KBAdvPacketEddyURL.swift */; };
-		0C4E80322688B80600D153BB /* KBAdvPacketBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E80272688B80600D153BB /* KBAdvPacketBase.swift */; };
-		0C4E80332688B80600D153BB /* KBAdvPacketEddyUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E80282688B80600D153BB /* KBAdvPacketEddyUID.swift */; };
-		0C4E80342688B80600D153BB /* KBAdvPacketIBeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E80292688B80600D153BB /* KBAdvPacketIBeacon.swift */; };
-		0C4E80352688B80600D153BB /* KBAdvType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E802A2688B80600D153BB /* KBAdvType.swift */; };
-		0C4E80482688B82900D153BB /* KBCfgHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E80392688B82800D153BB /* KBCfgHandler.swift */; };
-		0C4E804A2688B82900D153BB /* KBCfgAdvBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E803B2688B82800D153BB /* KBCfgAdvBase.swift */; };
-		0C4E804B2688B82900D153BB /* KBCfgCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E803C2688B82800D153BB /* KBCfgCommon.swift */; };
-		0C4E804C2688B82900D153BB /* KBCfgAdvKSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E803D2688B82800D153BB /* KBCfgAdvKSensor.swift */; };
-		0C4E804D2688B82900D153BB /* KBCfgAdvIBeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E803E2688B82800D153BB /* KBCfgAdvIBeacon.swift */; };
-		0C4E804E2688B82900D153BB /* KBCfgBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E803F2688B82800D153BB /* KBCfgBase.swift */; };
-		0C4E804F2688B82900D153BB /* KBCfgAdvEddyUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E80402688B82800D153BB /* KBCfgAdvEddyUID.swift */; };
-		0C4E80502688B82900D153BB /* KBCfgSensorHT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E80412688B82800D153BB /* KBCfgSensorHT.swift */; };
-		0C4E80522688B82900D153BB /* KBCfgAdvEddyTLM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E80432688B82800D153BB /* KBCfgAdvEddyTLM.swift */; };
-		0C4E80532688B82900D153BB /* KBCfgAdvSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E80442688B82900D153BB /* KBCfgAdvSystem.swift */; };
-		0C4E80542688B82900D153BB /* KBCfgAdvEddyURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E80452688B82900D153BB /* KBCfgAdvEddyURL.swift */; };
-		0C4E80552688B82900D153BB /* KBCfgAdvNull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E80462688B82900D153BB /* KBCfgAdvNull.swift */; };
-		0C4E80562688B82900D153BB /* KBCfgType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E80472688B82900D153BB /* KBCfgType.swift */; };
-		0C4E805E2688B88800D153BB /* KBCfgHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E805D2688B88700D153BB /* KBCfgHandler.swift */; };
-		0C4E80662688B8A800D153BB /* KBSensorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E80622688B8A700D153BB /* KBSensorType.swift */; };
-		0C4E806E2688B8BF00D153BB /* KBTLMElapseTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E806D2688B8BF00D153BB /* KBTLMElapseTime.swift */; };
-		0C4E80752688B8D000D153BB /* KBTriggerAdvChgMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E80722688B8CF00D153BB /* KBTriggerAdvChgMode.swift */; };
-		0C4E80762688B8D000D153BB /* KBTriggerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E80732688B8CF00D153BB /* KBTriggerType.swift */; };
-		0C4E80772688B8D000D153BB /* KBTriggerAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E80742688B8CF00D153BB /* KBTriggerAction.swift */; };
-		0C4E807F2688B8FA00D153BB /* KBCfgTrigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E807E2688B8FA00D153BB /* KBCfgTrigger.swift */; };
-		0C4E80842688B93E00D153BB /* KBAccSensorValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E80832688B93E00D153BB /* KBAccSensorValue.swift */; };
-		0C4E80892688B9C500D153BB /* KBAdvPacketHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E80882688B9C500D153BB /* KBAdvPacketHandler.swift */; };
-		10889B79F731865F2EBC584C5C293170 /* KBeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4115459211E5C9F9F5641D9E3D4FCC65 /* KBeacon.swift */; };
-		11B2A2922850DA2600DE97FE /* KBTimeRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B2A2912850DA2600DE97FE /* KBTimeRange.swift */; };
-		11D1FC8928C7907700B08A6E /* KBCfgTriggerMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D1FC8828C7907700B08A6E /* KBCfgTriggerMotion.swift */; };
-		1630F9EF84DAF4F56F656EDF3B7CF7F4 /* kbeaconlib2-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC28FE7C8C1593ED575B80A655A151CF /* kbeaconlib2-dummy.m */; };
-		1E5AED788ADE1E73A97A7727C2884F4F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		2218493EBD4E8F999064B6B6278BB7FB /* ByteConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB6C847C262C002E623815D5FDDECE8 /* ByteConvert.swift */; };
-		38806C3520F7B6280204DD46A2214B18 /* KBException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCE1C3EC51C4534A5BC46542271C48A /* KBException.swift */; };
-		3972AFAF785403EB0C115E2DAC0847C3 /* KBConnPara.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2176DFD1554465F94399D94D58B6599 /* KBConnPara.swift */; };
-		5129266E33F04DF244DED619EA650683 /* kbeaconlib2-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F8B2D63D7367A42788DD712EED4BC8AF /* kbeaconlib2-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		753A45C714A24F244E5F305A44483451 /* Pods-kbeaconlib2_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB63517BC30C652D860B36047201540 /* Pods-kbeaconlib2_Tests-dummy.m */; };
-		7A94C5B2AD2F95BACD87494A5BE5E9A5 /* KBUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6C97133C091DA1741A1A7F08FD6EE5 /* KBUtility.swift */; };
-		7CE94DCB62688D56553DBFB72DAB3AA6 /* KBeaconsMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1EF534135CA1A2F205CDCFA886A9FE /* KBeaconsMgr.swift */; };
-		A5698761A640D96E42BAA9E48636FDBA /* KBAuthHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89789C5C2FDB27870614B5501EA7942F /* KBAuthHandler.swift */; };
-		B8079798BBD20DAEAA532214730F5045 /* UTCTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EA36EFEB6790DD73456B266B779F01 /* UTCTime.swift */; };
-		BBF2E5FA2EEEFEF2A40690BED58BCCBE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		CA6ACC660A977D3E1F84AC32278DB046 /* Pods-kbeaconlib2_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 16C9F2E3E9F49C40BEEB44C5349D571F /* Pods-kbeaconlib2_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CD64A7D3A326AA0DADD7F16A51CE511D /* Pods-kbeaconlib2_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EB14166894DCF140BF336D52BD15F1F4 /* Pods-kbeaconlib2_Example-dummy.m */; };
-		DB8943110BB3C97BBFD528CE302C9CD4 /* Pods-kbeaconlib2_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AF5139CB86846C526CBE51FCFEA8B32 /* Pods-kbeaconlib2_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FF30024397034D0A73A60EEACA0CFEA0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		00B97278A4AFEE5DF5A6E222F101D9AA /* Cipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06C399A2BC7D0B87A689C2BC0DDD820 /* Cipher.swift */; };
+		026DD76DD6A38D393127C6190F30C8A4 /* UInt128.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1633811B151F68520F375272ABB2F3 /* UInt128.swift */; };
+		0273CA677D68F1A7CB7FFC5AFE881C3C /* BigInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95528319B86ECF236A6D4E03684C33C /* BigInt.swift */; };
+		04A5638772B67513986F9C47D5773D02 /* KBCfgTrigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C50576B1DA21A80F868B306A172C122 /* KBCfgTrigger.swift */; };
+		052CAE0F86812E1F9C44FBA541C06673 /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015E019AD1ED8F595204E035B20A5AC1 /* Updatable.swift */; };
+		0662D94CF105654B5F6B1A05F2FAC8EC /* KBAuthHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479EF739DFDCCE7943FC197B3B671524 /* KBAuthHandler.swift */; };
+		0697775380D82F213C70072376B27ECF /* CryptoSwift-CryptoSwift in Resources */ = {isa = PBXBuildFile; fileRef = 409A40F21065BFF2199E91A10A27F9DA /* CryptoSwift-CryptoSwift */; };
+		073B36C56B7C9AA96C0C6A01F345F2EF /* KBPreferance.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED979F830745E83F0CE951BC07D806D /* KBPreferance.swift */; };
+		094678419EBED3486880603F3ADE1A69 /* Checksum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C434FE319CDFCE8025C29B83CE6C1 /* Checksum.swift */; };
+		0D0EC33BEB59805ED5CE1E30BD0C34CB /* KBCfgAdvEddyTLM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596E03422AA7354B905A8190CCCA890D /* KBCfgAdvEddyTLM.swift */; };
+		1415C68A64D0DE6DF9A1074525EA2BE9 /* CBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FC5CD0388215302838C5AE852BDCA9 /* CBC.swift */; };
+		1943249988A7BAC3B636725B0D0D622E /* CryptoSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 811890D96BA2FA60CAC84D2084CB9F45 /* CryptoSwift-dummy.m */; };
+		1AECDB109C0313FC2D3FF54FC559A314 /* KBAdvPacketHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E3F08EA67C83FBD21C7C0854164EFA /* KBAdvPacketHandler.swift */; };
+		1B616BBC8C6AACFBB871F74BFB5657EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		1B9B29F961D7999F2798ACAA932CE6C6 /* FloatingPointConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B8568EDC4D0A72AAE34DE4A93848EC /* FloatingPointConversion.swift */; };
+		1BAA54A204DA7EC5843011D8B6ED34C0 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD547A16919800AFF2C9E6A083FE63F7 /* Collection+Extension.swift */; };
+		1CCEE863CEFEC6537CCD75F9298DA825 /* KBAccSensorValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBA919AA74616A56D589468EDF1AF77 /* KBAccSensorValue.swift */; };
+		1E18487637CEB9654E496A00A90C929C /* KBCfgAdvIBeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1318132A2760A9C260F09F65915DC212 /* KBCfgAdvIBeacon.swift */; };
+		1F3CDC90508F32E5423264E652937CA3 /* KBeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B68C187D3877F222C61B07A48783331 /* KBeacon.swift */; };
+		1F4E854DD8DB21F427A8EEB74EC1206F /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA3B15EF4597A51714818F6A42371EA /* Int+Extension.swift */; };
+		2050FAFACB410F149D17EBA3167B4047 /* RSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC327828EEAEA4C32010325E4A698D8 /* RSA.swift */; };
+		20E22143031EE14594A2E0D4DF748AE6 /* CTR.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B5A944FB8662FEA1D3B3EA1E07A928 /* CTR.swift */; };
+		20E5B3464766A72C4BA2884F423CBCF8 /* ISO78164Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBF0F9DB3DB18737AF7F3088B608005 /* ISO78164Padding.swift */; };
+		214A82651021588A358B3F4323CB4A44 /* Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D3F471E281FB0A9DB3C24B2B6151CB /* Addition.swift */; };
+		226EEACB2A04417AF345BAD79E0845AB /* KBCfgAdvEBeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F66C55055B491388ACA6BD5B986899 /* KBCfgAdvEBeacon.swift */; };
+		22A2AD8A5D0BCEC7788DC1F60C4BE702 /* KBAdvPacketIBeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B471109DC49B850E29716B9EC7F1A866 /* KBAdvPacketIBeacon.swift */; };
+		232C9BF562926A8778AE523F34351DCE /* KBUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3025B0AAD8FC84E874B3B8AAF51ED6BA /* KBUtility.swift */; };
+		239374CF04AB41D316A5F43907A90530 /* KBCfgSensorAcc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C9B023221C6877520461D9DC03C573 /* KBCfgSensorAcc.swift */; };
+		23A8C84790760F6C70582B49F7E55D17 /* BlockMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D48B8BA78B4A41A47BAB0387B2133B /* BlockMode.swift */; };
+		24C5F3AAD419B2C7C50FF620BE5342D8 /* PKCS7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E13D365327ADA39611A9148F9CA3D7 /* PKCS7.swift */; };
+		2678AF749BEA83CB7A81B53D800329AF /* Cryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6722E0C68E09DBF4A003E0B0A1DA0F /* Cryptor.swift */; };
+		2724AED2051DF6E7D96EBB6A7A2D6F4F /* Strideable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF13607722DE49AB303A15C4C773D16 /* Strideable.swift */; };
+		2859BA898633F3F9EF1D71C513833AA8 /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F8D316F8AD69C6D451B96BAE3F60CF /* Authenticator.swift */; };
+		297C2A040F1AA09415987197066FE3D4 /* CompactMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32E41B35BB1C39CABAA4D8029C5414D /* CompactMap.swift */; };
+		2B1A5EF6CF0C60E2190A3AE3296ACF96 /* KBAdvType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7728C6695D45B9562396D6F256D6B86 /* KBAdvType.swift */; };
+		2BE544C736C972DE164B6390417FF18D /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E15D88376BD757BD238C0EB3CA917B /* Padding.swift */; };
+		2E75CBEA253D0FB93F309CBB50BD9FAA /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECACFA3A684443178280D3A4DC16D194 /* GCD.swift */; };
+		2F6F65B8CA281BF20EA5203A43759899 /* BlockCipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F9D95A8D7C0DA2087A8C5F6C5D756 /* BlockCipher.swift */; };
+		309ECDB05C2B74B09162264275C4ADB9 /* AEAD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94928F29C1B9AF2DE556C9B5F514F332 /* AEAD.swift */; };
+		3231951592248AFDAFEA73E8AAB6FA34 /* CipherModeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EF95A95D59131012DF7D7FFFFC76D3 /* CipherModeWorker.swift */; };
+		32414BCD6220DC1EAD0FD75C99ED6A19 /* KBRecordVOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02729B582928A4FFCFF26863CB43DA6A /* KBRecordVOC.swift */; };
+		32A727FA3E6ACA1D4289A76EDA66CCBA /* KBCfgSensorBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A209649DF5E88AF807D915107B9609 /* KBCfgSensorBase.swift */; };
+		375D519ACBDD0AF70093DEDB0DF34968 /* KBCfgSensorGEO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CC2B87E80B4272BF00B92FEEF48A99 /* KBCfgSensorGEO.swift */; };
+		37EC02C060BADD9556F035D187810484 /* KBTriggerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F6394C0255260127DFFE3BA3931B6 /* KBTriggerType.swift */; };
+		382D8549E1DF4B18608093BF25C3BA8C /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB82C9AD0AF478C2FDA1CDE4DBA6DAE /* HMAC.swift */; };
+		38F27853229457884541E9B9E531CF17 /* SHA3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F8DDE6241437AA18D81288E510A7BE /* SHA3.swift */; };
+		390CF8FA401DCFA5541CF3AA9D3D965C /* Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9436F7F7A9BD8242AFF7E592DDF5C6A /* Codable.swift */; };
+		3B348ADDB9ECA73BB9EA058C733DE84D /* KBException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570798BD02AFDD8E4567DCD1274FA8C /* KBException.swift */; };
+		3C442D6C609FB421D6E90B3D8AFDB14B /* KBRecordLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F11F0CF272A31975AA248D389B145DB /* KBRecordLight.swift */; };
+		3C48E118FDA8B8FD9EF1509BC16B6EC6 /* KBCfgSensorVOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9245C8D7DE6EC185D3D63F1E00AAA2C0 /* KBCfgSensorVOC.swift */; };
+		3D205C4BE556D0EE5B691ADFA73550F1 /* AES+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEB0F03C4951056C8C3F1E775CEFD57 /* AES+Foundation.swift */; };
+		3E49CB87BDAE70F3F6D4ACC636C6FA3E /* KBRecordCO2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781D058183D4D85E3A3AD79CCAF71675 /* KBRecordCO2.swift */; };
+		3F35BB7E6DB7AE73CB507D4DF4A909C1 /* KBTriggerAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3256A2D0F070A3B37EC1E9D9927B9267 /* KBTriggerAction.swift */; };
+		4048E5CAC5075A5F9D98DCE4C2AC4EEF /* OFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7829E4957836786E842EA28FBD6F5EDD /* OFB.swift */; };
+		405BDA965CA81ABDBC173BE62E9223AA /* Array+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05984C1C3421E9D0BBA202CBFB171ED6 /* Array+Foundation.swift */; };
+		413EA9780639BCA3E045DCAF88930402 /* ECB.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4589E164A132D10722B48FE524349F /* ECB.swift */; };
+		424536DEB568124B4B9637D833367D05 /* XChaCha20.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88262C677E2C96637626205EB17CD185 /* XChaCha20.swift */; };
+		44C6756E528D519EE034E25DC5FE8DE1 /* StreamEncryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C69FE96784344983E4F767963A8D1 /* StreamEncryptor.swift */; };
+		44F00B0C9F1E9123489023F08583DA46 /* SecureBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450FCFFAAB517E41164FDE3C226EF97A /* SecureBytes.swift */; };
+		46B4321ECA5C4ED935B29723B56D4EDC /* Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD10B60F0E005E2271D1F8FC1F63C175 /* Hashable.swift */; };
+		46C244B48833A634B13535E7524923C8 /* KBRecordAlarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F43A3F6077E2882DFFC864CA63A7BA /* KBRecordAlarm.swift */; };
+		473C3A0312818A7E369FAB849C11152F /* KBSensorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9123E536FDEB4A1643987ECACCF446 /* KBSensorType.swift */; };
+		47992DF408D422E82D87A907733DEAEA /* PKCS7Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1B2F5474A70B09EE7341FC996D12F6 /* PKCS7Padding.swift */; };
+		4908E4B9CA43AC3E6118B0D6F0387FC4 /* PKCS5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CFBBB1941B12C445D414F2E8451AA1 /* PKCS5.swift */; };
+		49A47F69808F4BDFC96E3E10D558D793 /* Blowfish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1213453C28425385314C016E8D4D8D5A /* Blowfish.swift */; };
+		4F206F0AAC9AC3904676C3CBF6304DC0 /* kbeaconlib2-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B48741C166433706F5DE78311B6B307 /* kbeaconlib2-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F63A67E94F3297CBC55ABC48B993200 /* CBCMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE552E0A6AF32C83219B7A589E95DAF5 /* CBCMAC.swift */; };
+		4FF05A71BF928F02703C436B63F2B4A7 /* Digest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88511455577765072BCA01634C8B4CB /* Digest.swift */; };
+		5051EFCD0B99125A084319BE7545534B /* ASN1Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658D57648626016A93BEFB1BE418CD1 /* ASN1Encoder.swift */; };
+		527123BB3DF90853F6104D537CC5128D /* KBCfgCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6E93247AC8C2A3A39CEBCDD4D0C480 /* KBCfgCommon.swift */; };
+		5277086367177CAF157D4BCC33DD2173 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		53A96739B316065AE0BEFD00B92F53B9 /* Exponentiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90044B719A004BDBD8AF28D892B6BCF1 /* Exponentiation.swift */; };
+		57EA5571AA050FA14F202A1F1837898E /* ISO10126Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD9ECEEF4864EF11E57CB47DEEE559 /* ISO10126Padding.swift */; };
+		58E765D116FFDF1200EEFAA2B32C2CF6 /* KBCfgTriggerAngle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1143A7F0D4D36E3556BF4E28A08D86 /* KBCfgTriggerAngle.swift */; };
+		5B1B9D4D216194F068CE55D0712BD18E /* DataConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84873A561CE7852714F1E125A6D589D4 /* DataConversion.swift */; };
+		5B2D937F083BFFD69339FA20752F33E7 /* UTCTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44D9B10B56D9D9EAA8234D764E5E11F /* UTCTime.swift */; };
+		5B58D23DFF882EC40B95FE03EC193632 /* Poly1305.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6969D2C88760ECF58B13DD51428657D7 /* Poly1305.swift */; };
+		5BF0309549F6B1BD09113DF4038C5ACE /* KBAdvPacketEddyUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8612DCD7666A894390A6B1FF44A89713 /* KBAdvPacketEddyUID.swift */; };
+		5FB8B7878387B785A0F2D7E052383E89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		61A4481B733C8D48DEBE7DD7CF451903 /* ChaCha20+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AC84584C8CBDB9D93678F4B055D0E9 /* ChaCha20+Foundation.swift */; };
+		637FD2ADED562987CF5B26121E020E9E /* UInt64+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FC9080C4D3A94D887B17B78035D40A /* UInt64+Extension.swift */; };
+		6536B7F37A5D9330155E060B93A97C52 /* KBCfgAdvBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1A98F6EF39941097BBA0FFE5B6247B /* KBCfgAdvBase.swift */; };
+		65F7B6952EAF05898F1484A02E9998C3 /* KBCfgAdvEddyURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD54585689045BDCEE67F4B00A62A087 /* KBCfgAdvEddyURL.swift */; };
+		6938587F46DD7B47F4CD4C094356E457 /* KBCfgTriggerMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCF2B9ACBA956FC9D10EC76BBE056B0 /* KBCfgTriggerMotion.swift */; };
+		6A115C8EC5AD970CD7ED23D1E9988876 /* XChaCha20+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D9CAE0A375949BAF3BA1F5E57FED50 /* XChaCha20+Foundation.swift */; };
+		6B5182748D64734C662465F98AC44D22 /* PrimeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBF5B1336CB634244AED4B1CD89C6A2 /* PrimeTest.swift */; };
+		6D88CBA19E61A13D0BBD713DB04CD548 /* KBAdvPacketBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A1DE76A323AEA95CD55FCEBF649035 /* KBAdvPacketBase.swift */; };
+		6E42FBC9A2FB8549008E18EC718187F7 /* PBKDF1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17724333930D7B5993698AAD28276880 /* PBKDF1.swift */; };
+		7106053786C64AE8A1DE06F8A25824AE /* KBRecordDataRsp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D8B8C2B5F9C1739981C1A66D8060A /* KBRecordDataRsp.swift */; };
+		71230EA989E78FB947C9E1AE313657C6 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2989C03E85C017E2727695632D29E6FF /* Data+Extension.swift */; };
+		72495714F37A198085F93E0910C6BD17 /* Signature.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59F8715CEC4A711F06DC180A44359D3 /* Signature.swift */; };
+		72E29DEC2570F78C8496F1CCB34F4C76 /* KBCfgAdvKSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AADEAA860247712D66CA3596893F8F3 /* KBCfgAdvKSensor.swift */; };
+		74DD84DD19398A7A301B4993ADFAE94B /* Multiplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84184249CCF8B7ECB526594A3AB240F /* Multiplication.swift */; };
+		765347E1D6AA3B26D3E5A500757D9088 /* KBCfgSensorHT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F9BEE4D6AB6E21EA2AB293D1274050 /* KBCfgSensorHT.swift */; };
+		76C26E07D00328B09025FDE8B095F0AD /* AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27E27C7ADFC3A97935DC60DD6DFC098 /* AES.swift */; };
+		77054D344EE23AAC557116CCE7A2E4E3 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 7341046DA652B338549EFD44F9083BB3 /* PrivacyInfo.xcprivacy */; };
+		789C5099BA0C26BE5A8D2CE50C3F2FB6 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AFFDA5E2AB720499FE37D6AB3F03BF /* Utils.swift */; };
+		7ACD62BDB86EC94CA8FC2774561C2BA7 /* Generics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E81991C8600CFD4984E38C3C5AD590A /* Generics.swift */; };
+		7B25DB35F39BB03F836B9A6BC2773429 /* KBAdvTxPower.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF74289D1114CD56DF4659C92DB7CFA0 /* KBAdvTxPower.swift */; };
+		7C0BB54E5448EC74E4721C895868A0C2 /* ASN1Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1286E3A070A65FA26674E20FA6BA341 /* ASN1Decoder.swift */; };
+		7E3EF62A17611B9992C09E9C92D1DCB3 /* WordsAndBits.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD3BDD43BE48484046E500E8EADCE3E /* WordsAndBits.swift */; };
+		7F4A5EDE169A8CB1963DE4285413D0AF /* SHA2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD04F4CB49ABCF8FEE897DE63A4C7DA /* SHA2.swift */; };
+		800E8EF7C48F5D0CC33CF6931AB62C9C /* IntegerConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC47D38EA599A88CB21D0003932CB87 /* IntegerConversion.swift */; };
+		83FB43C3A710AAE553BC196A8E3BCC7E /* KBCfgHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F04AEA13D4FFB9E1A40C65E0C5DCE /* KBCfgHandler.swift */; };
+		856D7BE0A0DB79A78E0BEE49DCF0D6D4 /* DER.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47B867C63FDC59F00547D5E15664F3C /* DER.swift */; };
+		8681782F18CC3B6738A0C343EB868CB7 /* StringConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D635DDC9C4F2B8006FC1BA43B61935 /* StringConversion.swift */; };
+		86FC81498E540536E42CD7D40A2E4CB7 /* KBCfgType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AB9466B6C41C9AB5491DDFD9DAA33 /* KBCfgType.swift */; };
+		876792E26B7AEB928496F254ECFEF327 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		877DFCE39645F9A25D16B7C0F27D6011 /* Subtraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B9273DDB212858D34A7128679B8E6B /* Subtraction.swift */; };
+		88758749A41E35E396D01248F7CA31B6 /* Utils+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BC97ED10390CD35D0E812D446322B5 /* Utils+Foundation.swift */; };
+		89D3D268939106CC561C7793A2F95376 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88178C84539570690BF5834B54A6B77E /* Random.swift */; };
+		8CB6D345C454C0FFE92DFE561B381D7A /* KBRecordInfoRsp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5938F9FDF3181915028CB14EEAA2FE76 /* KBRecordInfoRsp.swift */; };
+		8D2CB74CDC67BFC6272D8A7258160189 /* UInt8+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1EA221E07257C40AAE3E41CCCEF74A /* UInt8+Extension.swift */; };
+		8D5877DCA19DCFEB8930682B9EB2AE49 /* BitwiseOps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828C0216646F7FA7561577D8A0990543 /* BitwiseOps.swift */; };
+		8E9BFF46DE47D563574F1644B2687AA6 /* UInt16+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C496FE4AB63FFF6AEF9670024CC620C /* UInt16+Extension.swift */; };
+		8EAEA61129B7E2D2EA4BDCC7D041B6A3 /* KBTLMElapseTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = F099A6DDAEEE2379D6A06AA9C98B4E4B /* KBTLMElapseTime.swift */; };
+		90B64D8D456A3969B7BB421BA05D5BE6 /* ZeroPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BE0B566031D7AE2219A5A113255A29 /* ZeroPadding.swift */; };
+		90C004E412169634DFE00E72D4010347 /* KBAdvPacketEBeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31CDDE96BF626A5CA27B9482B4EE63C2 /* KBAdvPacketEBeacon.swift */; };
+		919EF818CB6565CAE6EC83193ABF395C /* SquareRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFECCF8066B4CEA91A646F605E239A /* SquareRoot.swift */; };
+		9345BDA61C01546A192DAF7DB42D4F7C /* CryptoSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0597DF5FDFB61D966D9C3E310B9B5F10 /* CryptoSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		93BF7A55D7D3BAA670F554EF507DBCE2 /* Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC466A90D42550DDCFC1395DAAC98F /* Comparable.swift */; };
+		945C5C02C891589974E4F405AF7E1C98 /* CS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9A23A3D28C282E225973465E0E7DA6 /* CS.swift */; };
+		9525B3559C712A9198D05E42E91E30F7 /* KBAdvPacketSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EAEA6D211CA4AFFE8B322B4F9C018B /* KBAdvPacketSensor.swift */; };
+		96674C477D8B7B46271C5B4109B51CA7 /* BlockModeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC0EC9CA5B1AC3C167E28882364F38C /* BlockModeOptions.swift */; };
+		9922457D93ABCC97F6EEB1EE6794A7AF /* BigUInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65448C1CC2FF943E2E1B4DB3E5ADDAE1 /* BigUInt.swift */; };
+		99F32B64A8357FD08D8594FB6BADF71F /* KBCfgSensorScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C01C0D162582427C1A49745AB26C5A /* KBCfgSensorScan.swift */; };
+		9AEDF9E07BA63D228C0422258192553B /* ChaCha20.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C36C7552455A644E07DC62787846E41 /* ChaCha20.swift */; };
+		9B89DDAD4078481A4514449DCA3B7FAF /* CMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CB27EEEE128258722D5EBFD6C483BA /* CMAC.swift */; };
+		9CBE18838984F00F1E5A9CD8293C7675 /* Pods-kbeaconlib2_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB63517BC30C652D860B36047201540 /* Pods-kbeaconlib2_Tests-dummy.m */; };
+		9CC6473D8DEE15111004C0BB892449EA /* ASN1.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD43FEA1132D5767B49DBDC170ED7A2 /* ASN1.swift */; };
+		A10B93F256A77A3E41BC562697CEFA03 /* CCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9806862EFBC150BE16C7FB3889E3E817 /* CCM.swift */; };
+		A317C775E5481B05614B3DADF6CB0238 /* KBTriggerAdvChgMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23D12142874C8CE7C7E13DB02EC6FDF /* KBTriggerAdvChgMode.swift */; };
+		A453169A10D909AFB814B670C35FCE50 /* ASN1Scanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58FC99CF4B524B429601F58B77E7CE4 /* ASN1Scanner.swift */; };
+		A499ADC2FDBC89B2E43481DAB16F4210 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF76A1AF2A848D31BABDF777E21096CD /* String+Extension.swift */; };
+		A51A14D0D6150C640F92AE520B38D892 /* Pods-kbeaconlib2_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AF5139CB86846C526CBE51FCFEA8B32 /* Pods-kbeaconlib2_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A8BD878D5043C16D4D15F9BC7FE14B4C /* KBCfgBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170983BA0E196CBA5CD3C792C892E925 /* KBCfgBase.swift */; };
+		A95EB519D49DF76545BBEDA77DA18E69 /* StreamDecryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A81AD0023AE23417D08FDC7A9CB977C /* StreamDecryptor.swift */; };
+		AC88DD95306F6544F2427BEFD7CB6D1A /* KBCfgAdvAOA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9B687E345632064CC4FF918B4B0FEC /* KBCfgAdvAOA.swift */; };
+		AD903D513CAB2CB76ECCA31EDC6D48CE /* kbeaconlib2-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F5C563AC1B02D4EB6AE66EC5CEB77F /* kbeaconlib2-dummy.m */; };
+		B422CD4B46F3D3070B787C18C2D2903B /* KBCfgAdvSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8C471D858A86CEAC48630EDD37C90F /* KBCfgAdvSystem.swift */; };
+		B5EA6E97F1F3A2914F342EE4C21092BB /* Rabbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13149BABEF96076DB1C31B9ED24BA636 /* Rabbit.swift */; };
+		B81B1A353BFC12DC1808A09F68319A6E /* CFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F665F287C20C617D5D2564ABE08208 /* CFB.swift */; };
+		B8B341616F164F64282439E420CA4584 /* KBAdvPacketEddyURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FAACDE1321FC80F6C52CCB595E09F7 /* KBAdvPacketEddyURL.swift */; };
+		B984511AD4A48808CF73A75D93080487 /* BlockEncryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879488866D0FB5C3A52EB023A41DD98C /* BlockEncryptor.swift */; };
+		BA2FB2027765321ED2C3079AC49D617B /* Blowfish+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1922411111D965B39DE59CA1F763C6A2 /* Blowfish+Foundation.swift */; };
+		BA398D20D810347943F85C0C3F5A8048 /* Scrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DE0BEDC00507390661AE9EDAE97CB2 /* Scrypt.swift */; };
+		C08DA49D02C7EA50985A42B207FC8163 /* KBCfgSensorPIR.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07D001B9D3624D76A5421AC71F4934C /* KBCfgSensorPIR.swift */; };
+		C29B6DAB731279BA8663EF8A1414F71B /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE997AE29FE126BCA8C4650F816DC6 /* MD5.swift */; };
+		C32B9FBABFB53D3D68CF00ACE5F05C8B /* ByteConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7682AB328656E69B78BC0ADC397E437C /* ByteConvert.swift */; };
+		C60FA0D9EE6B630C11020981EE4B5BB7 /* UInt32+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C03D346E3C864319B14B7E590A1A054 /* UInt32+Extension.swift */; };
+		C9FED408654BF886DF3E995EE8B88D86 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9A58C759C13ECB652D5BFBCF39F5AB /* Operators.swift */; };
+		CB2B6CA48B7E5037D98C8E03C11F86DF /* KBTimeRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = F090B964A9138AB140DAF9F3FD2CD6C5 /* KBTimeRange.swift */; };
+		CCB0BDFFB6A7D5CAEEFCB721DDCABF10 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1C8277DC7841FD2F4E5BDD76A0EF41 /* Array+Extension.swift */; };
+		CDF8531700F4D5A05E15B96628E8C6EA /* NoPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4129410C647026786A3B15B6775F97B /* NoPadding.swift */; };
+		CED8B4EE050EF5949D2713F8FFC1FF99 /* PCBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6462B00E16D694449700E314F0D72619 /* PCBC.swift */; };
+		D0DF570430FB4B4758A8B8AB73FF279A /* HKDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CD50508946073C3DC8139F51089826 /* HKDF.swift */; };
+		D0F147671F5A0E573D5687654B274B8D /* SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262D81FAD91B4924903208CAEC4FD9AA /* SHA1.swift */; };
+		D202CB86E340A56D980106BE1A876158 /* Bit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62046FAF06D0905CBAE7EC67327BEFC5 /* Bit.swift */; };
+		D26D0D90EC38FB79BE1A58D4FDC7689A /* Pods-kbeaconlib2_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EB14166894DCF140BF336D52BD15F1F4 /* Pods-kbeaconlib2_Example-dummy.m */; };
+		D2B342A2733525C178E623F3ADEE7B32 /* BlockDecryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A524B734CD77BAA053CBC64B522ACFC1 /* BlockDecryptor.swift */; };
+		D5E7FAE79DF21FAE51799A1A2A3401C0 /* Rabbit+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1EE36716A9C13ED3FBA6852182FF61 /* Rabbit+Foundation.swift */; };
+		D5ECA32FA78180CE651C967DC2DF4B1E /* KBRecordPIR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D0E0C816257EBE1FC87AB130DCF9D2 /* KBRecordPIR.swift */; };
+		D823904503E9FA1CAFBFF5BB2873AD90 /* BatchedCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B86CE2A5B2BD0A5A584167FAB735F /* BatchedCollection.swift */; };
+		DA74348110ED1D879CBD069F086151CC /* GCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19AF5745474FB2A0AC0B643B0A76AE6 /* GCM.swift */; };
+		DBB93BA9A13A4DD712C6560EE6AB4373 /* KBCfgAdvNull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBE1C37FC58799FFC21C7E64177A4E8 /* KBCfgAdvNull.swift */; };
+		DEBFF12841CBE26E42DFED2C849BD3BF /* KBRecordDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EF45FE7EDE3CAE15074AC1F05125EF /* KBRecordDataHandler.swift */; };
+		DF2168316D5F02FDE9D210E136FA4B97 /* RSA+Signature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2E6DE28282269F3FB6FE1F55156283 /* RSA+Signature.swift */; };
+		E0069465050B324B1EE75BB925E7E5AB /* KBCfgAdvEddyUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4463DDBE05B662B18BF817FB5535B4 /* KBCfgAdvEddyUID.swift */; };
+		E1F9F6C0B4148C10839AAC0DED2E51C0 /* KBeaconsMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04FA8D8CFFD62126BF1711BD3FF3C07 /* KBeaconsMgr.swift */; };
+		E3F7C56D61C70D7315FC960D58357C4B /* AEADXChaCha20Poly1305.swift in Sources */ = {isa = PBXBuildFile; fileRef = A114D835C369C1DF5ABEFFAACDE60FDD /* AEADXChaCha20Poly1305.swift */; };
+		E6B40F19F3C6FB12EDE24533C520C4D6 /* Cryptors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFFD82522D8312307B097383188F7F8 /* Cryptors.swift */; };
+		E7E94D289E5EC7611958CE9B8715FFEA /* Division.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2897156627FB1BBD457EA08FE6B66BDD /* Division.swift */; };
+		E7FAD14FFA87BB1D4CB49760C613C97C /* KBConnPara.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4CD510138309AA06A6AE6C2C358AF1 /* KBConnPara.swift */; };
+		E853B8501BC3E7983555A08843555EF1 /* KBCfgSensorCO2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545168C08EC357C680DE184B3CA55895 /* KBCfgSensorCO2.swift */; };
+		E887CEF7906108C440653A1317338170 /* PKCS1v15.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB4B4AB771ACEA4BD0FA63B325F0C7C /* PKCS1v15.swift */; };
+		E948E80F782AB42C3A96D83C2A45D1B9 /* AEADChaCha20Poly1305.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFAF8B79B86FA3366DCF79ED80CEBCC /* AEADChaCha20Poly1305.swift */; };
+		EA89989D0AA7F34FFFB3FB655D65504A /* KBAdvPacketEddyTLM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F673220E974B6B13F149B5C9EC1D04C /* KBAdvPacketEddyTLM.swift */; };
+		EABCFE4E93C16565C34A94D08B83A0CF /* KBRecordBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE6282E772C1CF4A2162AE56285D83D /* KBRecordBase.swift */; };
+		EC8242C5B20AABDE7306A44F4117F7EF /* KBAdvPacketAOA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AE6A51E7FB701E49BDE29E64D993BE /* KBAdvPacketAOA.swift */; };
+		EFC8E6B98B7E14878B3F9B838F131035 /* KBRecordHumidity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CABA5CD57108C01CD069E310BCAD1B /* KBRecordHumidity.swift */; };
+		F2856EC97D781F3A490FF950DAA03EBC /* Shifts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F31A4B2C63E1241F83243E4AE54E64 /* Shifts.swift */; };
+		F339E4DEABDA64CEEF6F25C457A5A8CB /* DigestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9424D40E9538EE003E2D4FAB027907F9 /* DigestType.swift */; };
+		F39C0350F665E027F661D56848A9C9DB /* HMAC+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D8E6A0CE6FC78ECDE5FCDE1E09319C /* HMAC+Foundation.swift */; };
+		F4751F3CE7A5A93CEB916ABB879DBD2D /* AES.Cryptors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC27CA5C5A7E15E6689D53A4302BA22 /* AES.Cryptors.swift */; };
+		F5D866C38C4112CC488236E81CB8626B /* String+FoundationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DFA6C8510D3D3828A423614856DCBA /* String+FoundationExtension.swift */; };
+		F6632C5CC4C23A8DBB4DFADF76936CC5 /* OCB.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8614780CC85162025465E981810F00C /* OCB.swift */; };
+		F7EEE0965A620C5454D5FE80740B8969 /* Pods-kbeaconlib2_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 16C9F2E3E9F49C40BEEB44C5349D571F /* Pods-kbeaconlib2_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8BC4D6CE116E9CC59C4642DA7197CDF /* KBAdvMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DD8E9B21A2804DF7FC1904FDA7A0E /* KBAdvMode.swift */; };
+		FD4449FDFE982DAE0283C52F1AB477D6 /* RSA+Cipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A81612793EF3C665EC69174777730A5 /* RSA+Cipher.swift */; };
+		FE575B7BF2C1928DD118746E8EFF8DC9 /* PBKDF2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E363CC79F4BA866467DBD1857EF89F /* PBKDF2.swift */; };
+		FE69DA71797151C0D54DFDEB6A9F06C6 /* KBAdvPacketSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB28105FE40A77A250E105C661A3E86 /* KBAdvPacketSystem.swift */; };
+		FEB96D66746E528D7DEE7BFC2EB41301 /* KBCfgSensorLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1D57201E2FBF9BE5D0E7C5C32F3F5F /* KBCfgSensorLight.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2B515DEFB9E653C0136217DD89EE5985 /* PBXContainerItemProxy */ = {
+		2DB157B249880987407B16BE79FCCE12 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99313990C1D76A6D1D017868B6975CC8;
+			remoteInfo = CryptoSwift;
+		};
+		2EB22F183CD7187AA66D420D194CB306 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 989F78AFDFDA7F6A720659D6364CF384;
 			remoteInfo = kbeaconlib2;
 		};
-		895CA09367FCB7D3D8FA97230971D5A4 /* PBXContainerItemProxy */ = {
+		6CB295AF6D9A61CF62DC4093B304D5C5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 9E1C81D5ABBC244BD7BE70C92E004CA8;
 			remoteInfo = "Pods-kbeaconlib2_Example";
 		};
+		8DE89708DC8DF43A588624C9F775C074 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBC10B6451F5FE5244D138B5176C2A02;
+			remoteInfo = "CryptoSwift-CryptoSwift";
+		};
+		CF263AA610BBF439B27393E4BF852904 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99313990C1D76A6D1D017868B6975CC8;
+			remoteInfo = CryptoSwift;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01A4C2CD8322DA751BFA621B896A329A /* Pods_kbeaconlib2_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kbeaconlib2_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		043531C52A20F0DD004027F6 /* KBCfgSensorHT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBCfgSensorHT.swift; path = kbeaconlib2/Classes/KBCfgSensorHT.swift; sourceTree = "<group>"; };
-		043531C62A20F0DD004027F6 /* KBCfgSensorVOC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBCfgSensorVOC.swift; path = kbeaconlib2/Classes/KBCfgSensorVOC.swift; sourceTree = "<group>"; };
-		043531C72A20F0DD004027F6 /* KBCfgSensorCO2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBCfgSensorCO2.swift; path = kbeaconlib2/Classes/KBCfgSensorCO2.swift; sourceTree = "<group>"; };
-		043531C82A20F0DD004027F6 /* KBCfgSensorPIR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBCfgSensorPIR.swift; path = kbeaconlib2/Classes/KBCfgSensorPIR.swift; sourceTree = "<group>"; };
-		043531C92A20F0DD004027F6 /* KBCfgSensorLight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBCfgSensorLight.swift; path = kbeaconlib2/Classes/KBCfgSensorLight.swift; sourceTree = "<group>"; };
-		043531CF2A20F1CE004027F6 /* KBCfgSensorBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBCfgSensorBase.swift; path = kbeaconlib2/Classes/KBCfgSensorBase.swift; sourceTree = "<group>"; };
-		043531DB2A210041004027F6 /* KBRecordHumidity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBRecordHumidity.swift; path = kbeaconlib2/Classes/KBRecordHumidity.swift; sourceTree = "<group>"; };
-		043531DC2A210041004027F6 /* KBRecordCutoff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBRecordCutoff.swift; path = kbeaconlib2/Classes/KBRecordCutoff.swift; sourceTree = "<group>"; };
-		043531DD2A210041004027F6 /* KBRecordDataRsp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBRecordDataRsp.swift; path = kbeaconlib2/Classes/KBRecordDataRsp.swift; sourceTree = "<group>"; };
-		043531DE2A210041004027F6 /* KBRecordDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBRecordDataHandler.swift; path = kbeaconlib2/Classes/KBRecordDataHandler.swift; sourceTree = "<group>"; };
-		043531DF2A210041004027F6 /* KBRecordPIR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBRecordPIR.swift; path = kbeaconlib2/Classes/KBRecordPIR.swift; sourceTree = "<group>"; };
-		043531E02A210042004027F6 /* KBRecordBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBRecordBase.swift; path = kbeaconlib2/Classes/KBRecordBase.swift; sourceTree = "<group>"; };
-		043531E12A210042004027F6 /* KBRecordCO2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBRecordCO2.swift; path = kbeaconlib2/Classes/KBRecordCO2.swift; sourceTree = "<group>"; };
-		043531E22A210042004027F6 /* KBRecordInfoRsp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBRecordInfoRsp.swift; path = kbeaconlib2/Classes/KBRecordInfoRsp.swift; sourceTree = "<group>"; };
-		043531E32A210042004027F6 /* KBRecordLight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBRecordLight.swift; path = kbeaconlib2/Classes/KBRecordLight.swift; sourceTree = "<group>"; };
-		043531E42A210042004027F6 /* KBRecordVOC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBRecordVOC.swift; path = kbeaconlib2/Classes/KBRecordVOC.swift; sourceTree = "<group>"; };
-		0473483A2B84555F001BC186 /* KBCfgAdvAOA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBCfgAdvAOA.swift; path = kbeaconlib2/Classes/KBCfgAdvAOA.swift; sourceTree = "<group>"; };
-		0473483C2B84557C001BC186 /* KBCfgTriggerAngle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBCfgTriggerAngle.swift; path = kbeaconlib2/Classes/KBCfgTriggerAngle.swift; sourceTree = "<group>"; };
-		0473483E2B8455F7001BC186 /* KBAdvPacketAOA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBAdvPacketAOA.swift; path = kbeaconlib2/Classes/KBAdvPacketAOA.swift; sourceTree = "<group>"; };
-		04798059296C3D1600164CF4 /* KBCfgSensorLight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBCfgSensorLight.swift; path = kbeaconlib2/Classes/KBCfgSensorLight.swift; sourceTree = "<group>"; };
-		04B5ED472A94C0DA002EE781 /* KBCfgSensorAcc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBCfgSensorAcc.swift; path = kbeaconlib2/Classes/KBCfgSensorAcc.swift; sourceTree = "<group>"; };
-		04C90C002C4DFF44005C5D89 /* KBCfgSensorGEO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBCfgSensorGEO.swift; path = kbeaconlib2/Classes/KBCfgSensorGEO.swift; sourceTree = "<group>"; };
-		0C4E80202688B80500D153BB /* KBAdvPacketSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBAdvPacketSystem.swift; path = kbeaconlib2/Classes/KBAdvPacketSystem.swift; sourceTree = "<group>"; };
-		0C4E80212688B80600D153BB /* KBAdvPacketEddyTLM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBAdvPacketEddyTLM.swift; path = kbeaconlib2/Classes/KBAdvPacketEddyTLM.swift; sourceTree = "<group>"; };
-		0C4E80222688B80600D153BB /* KBAdvPacketSensor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBAdvPacketSensor.swift; path = kbeaconlib2/Classes/KBAdvPacketSensor.swift; sourceTree = "<group>"; };
-		0C4E80232688B80600D153BB /* KBAdvMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBAdvMode.swift; path = kbeaconlib2/Classes/KBAdvMode.swift; sourceTree = "<group>"; };
-		0C4E80242688B80600D153BB /* KBAdvTxPower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBAdvTxPower.swift; path = kbeaconlib2/Classes/KBAdvTxPower.swift; sourceTree = "<group>"; };
-		0C4E80262688B80600D153BB /* KBAdvPacketEddyURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBAdvPacketEddyURL.swift; path = kbeaconlib2/Classes/KBAdvPacketEddyURL.swift; sourceTree = "<group>"; };
-		0C4E80272688B80600D153BB /* KBAdvPacketBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBAdvPacketBase.swift; path = kbeaconlib2/Classes/KBAdvPacketBase.swift; sourceTree = "<group>"; };
-		0C4E80282688B80600D153BB /* KBAdvPacketEddyUID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBAdvPacketEddyUID.swift; path = kbeaconlib2/Classes/KBAdvPacketEddyUID.swift; sourceTree = "<group>"; };
-		0C4E80292688B80600D153BB /* KBAdvPacketIBeacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBAdvPacketIBeacon.swift; path = kbeaconlib2/Classes/KBAdvPacketIBeacon.swift; sourceTree = "<group>"; };
-		0C4E802A2688B80600D153BB /* KBAdvType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBAdvType.swift; path = kbeaconlib2/Classes/KBAdvType.swift; sourceTree = "<group>"; };
-		0C4E80392688B82800D153BB /* KBCfgHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBCfgHandler.swift; path = kbeaconlib2/Classes/KBCfgHandler.swift; sourceTree = "<group>"; };
-		0C4E803B2688B82800D153BB /* KBCfgAdvBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBCfgAdvBase.swift; path = kbeaconlib2/Classes/KBCfgAdvBase.swift; sourceTree = "<group>"; };
-		0C4E803C2688B82800D153BB /* KBCfgCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBCfgCommon.swift; path = kbeaconlib2/Classes/KBCfgCommon.swift; sourceTree = "<group>"; };
-		0C4E803D2688B82800D153BB /* KBCfgAdvKSensor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBCfgAdvKSensor.swift; path = kbeaconlib2/Classes/KBCfgAdvKSensor.swift; sourceTree = "<group>"; };
-		0C4E803E2688B82800D153BB /* KBCfgAdvIBeacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBCfgAdvIBeacon.swift; path = kbeaconlib2/Classes/KBCfgAdvIBeacon.swift; sourceTree = "<group>"; };
-		0C4E803F2688B82800D153BB /* KBCfgBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBCfgBase.swift; path = kbeaconlib2/Classes/KBCfgBase.swift; sourceTree = "<group>"; };
-		0C4E80402688B82800D153BB /* KBCfgAdvEddyUID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBCfgAdvEddyUID.swift; path = kbeaconlib2/Classes/KBCfgAdvEddyUID.swift; sourceTree = "<group>"; };
-		0C4E80412688B82800D153BB /* KBCfgSensorHT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBCfgSensorHT.swift; path = kbeaconlib2/Classes/KBCfgSensorHT.swift; sourceTree = "<group>"; };
-		0C4E80432688B82800D153BB /* KBCfgAdvEddyTLM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBCfgAdvEddyTLM.swift; path = kbeaconlib2/Classes/KBCfgAdvEddyTLM.swift; sourceTree = "<group>"; };
-		0C4E80442688B82900D153BB /* KBCfgAdvSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBCfgAdvSystem.swift; path = kbeaconlib2/Classes/KBCfgAdvSystem.swift; sourceTree = "<group>"; };
-		0C4E80452688B82900D153BB /* KBCfgAdvEddyURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBCfgAdvEddyURL.swift; path = kbeaconlib2/Classes/KBCfgAdvEddyURL.swift; sourceTree = "<group>"; };
-		0C4E80462688B82900D153BB /* KBCfgAdvNull.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBCfgAdvNull.swift; path = kbeaconlib2/Classes/KBCfgAdvNull.swift; sourceTree = "<group>"; };
-		0C4E80472688B82900D153BB /* KBCfgType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBCfgType.swift; path = kbeaconlib2/Classes/KBCfgType.swift; sourceTree = "<group>"; };
-		0C4E805D2688B88700D153BB /* KBCfgHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBCfgHandler.swift; path = kbeaconlib2/Classes/KBCfgHandler.swift; sourceTree = "<group>"; };
-		0C4E80622688B8A700D153BB /* KBSensorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBSensorType.swift; path = kbeaconlib2/Classes/KBSensorType.swift; sourceTree = "<group>"; };
-		0C4E806D2688B8BF00D153BB /* KBTLMElapseTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBTLMElapseTime.swift; path = kbeaconlib2/Classes/KBTLMElapseTime.swift; sourceTree = "<group>"; };
-		0C4E80722688B8CF00D153BB /* KBTriggerAdvChgMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBTriggerAdvChgMode.swift; path = kbeaconlib2/Classes/KBTriggerAdvChgMode.swift; sourceTree = "<group>"; };
-		0C4E80732688B8CF00D153BB /* KBTriggerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBTriggerType.swift; path = kbeaconlib2/Classes/KBTriggerType.swift; sourceTree = "<group>"; };
-		0C4E80742688B8CF00D153BB /* KBTriggerAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBTriggerAction.swift; path = kbeaconlib2/Classes/KBTriggerAction.swift; sourceTree = "<group>"; };
-		0C4E807E2688B8FA00D153BB /* KBCfgTrigger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBCfgTrigger.swift; path = kbeaconlib2/Classes/KBCfgTrigger.swift; sourceTree = "<group>"; };
-		0C4E80832688B93E00D153BB /* KBAccSensorValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBAccSensorValue.swift; path = kbeaconlib2/Classes/KBAccSensorValue.swift; sourceTree = "<group>"; };
-		0C4E80882688B9C500D153BB /* KBAdvPacketHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBAdvPacketHandler.swift; path = kbeaconlib2/Classes/KBAdvPacketHandler.swift; sourceTree = "<group>"; };
-		11B2A2912850DA2600DE97FE /* KBTimeRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBTimeRange.swift; path = kbeaconlib2/Classes/KBTimeRange.swift; sourceTree = "<group>"; };
-		11D1FC8828C7907700B08A6E /* KBCfgTriggerMotion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBCfgTriggerMotion.swift; path = kbeaconlib2/Classes/KBCfgTriggerMotion.swift; sourceTree = "<group>"; };
+		00EAEA6D211CA4AFFE8B322B4F9C018B /* KBAdvPacketSensor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBAdvPacketSensor.swift; path = kbeaconlib2/Classes/KBAdvPacketSensor.swift; sourceTree = "<group>"; };
+		015E019AD1ED8F595204E035B20A5AC1 /* Updatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Updatable.swift; path = Sources/CryptoSwift/Updatable.swift; sourceTree = "<group>"; };
+		01A4C2CD8322DA751BFA621B896A329A /* Pods-kbeaconlib2_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-kbeaconlib2_Tests"; path = Pods_kbeaconlib2_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		02729B582928A4FFCFF26863CB43DA6A /* KBRecordVOC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBRecordVOC.swift; path = kbeaconlib2/Classes/KBRecordVOC.swift; sourceTree = "<group>"; };
+		0597DF5FDFB61D966D9C3E310B9B5F10 /* CryptoSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CryptoSwift-umbrella.h"; sourceTree = "<group>"; };
+		05984C1C3421E9D0BBA202CBFB171ED6 /* Array+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/Array+Foundation.swift"; sourceTree = "<group>"; };
+		08FC5CD0388215302838C5AE852BDCA9 /* CBC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBC.swift; path = Sources/CryptoSwift/BlockMode/CBC.swift; sourceTree = "<group>"; };
+		09CC2B87E80B4272BF00B92FEEF48A99 /* KBCfgSensorGEO.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBCfgSensorGEO.swift; path = kbeaconlib2/Classes/KBCfgSensorGEO.swift; sourceTree = "<group>"; };
+		0B4463DDBE05B662B18BF817FB5535B4 /* KBCfgAdvEddyUID.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBCfgAdvEddyUID.swift; path = kbeaconlib2/Classes/KBCfgAdvEddyUID.swift; sourceTree = "<group>"; };
+		0CFE997AE29FE126BCA8C4650F816DC6 /* MD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MD5.swift; path = Sources/CryptoSwift/MD5.swift; sourceTree = "<group>"; };
+		0F9B687E345632064CC4FF918B4B0FEC /* KBCfgAdvAOA.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBCfgAdvAOA.swift; path = kbeaconlib2/Classes/KBCfgAdvAOA.swift; sourceTree = "<group>"; };
+		0FBF5B1336CB634244AED4B1CD89C6A2 /* PrimeTest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PrimeTest.swift; path = Sources/CryptoSwift/CS_BigInt/PrimeTest.swift; sourceTree = "<group>"; };
+		0FF13607722DE49AB303A15C4C773D16 /* Strideable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Strideable.swift; path = Sources/CryptoSwift/CS_BigInt/Strideable.swift; sourceTree = "<group>"; };
+		0FFFD82522D8312307B097383188F7F8 /* Cryptors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cryptors.swift; path = Sources/CryptoSwift/Cryptors.swift; sourceTree = "<group>"; };
+		1213453C28425385314C016E8D4D8D5A /* Blowfish.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Blowfish.swift; path = Sources/CryptoSwift/Blowfish.swift; sourceTree = "<group>"; };
+		12AE6A51E7FB701E49BDE29E64D993BE /* KBAdvPacketAOA.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBAdvPacketAOA.swift; path = kbeaconlib2/Classes/KBAdvPacketAOA.swift; sourceTree = "<group>"; };
+		13149BABEF96076DB1C31B9ED24BA636 /* Rabbit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Rabbit.swift; path = Sources/CryptoSwift/Rabbit.swift; sourceTree = "<group>"; };
+		1318132A2760A9C260F09F65915DC212 /* KBCfgAdvIBeacon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBCfgAdvIBeacon.swift; path = kbeaconlib2/Classes/KBCfgAdvIBeacon.swift; sourceTree = "<group>"; };
+		15EF95A95D59131012DF7D7FFFFC76D3 /* CipherModeWorker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CipherModeWorker.swift; path = Sources/CryptoSwift/BlockMode/CipherModeWorker.swift; sourceTree = "<group>"; };
 		16C9F2E3E9F49C40BEEB44C5349D571F /* Pods-kbeaconlib2_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-kbeaconlib2_Tests-umbrella.h"; sourceTree = "<group>"; };
-		1FCE1C3EC51C4534A5BC46542271C48A /* KBException.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBException.swift; path = kbeaconlib2/Classes/KBException.swift; sourceTree = "<group>"; };
-		20B7971E8F170833F7355AF208BC3462 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		170983BA0E196CBA5CD3C792C892E925 /* KBCfgBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBCfgBase.swift; path = kbeaconlib2/Classes/KBCfgBase.swift; sourceTree = "<group>"; };
+		17724333930D7B5993698AAD28276880 /* PBKDF1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PBKDF1.swift; path = Sources/CryptoSwift/PKCS/PBKDF1.swift; sourceTree = "<group>"; };
+		18CD50508946073C3DC8139F51089826 /* HKDF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HKDF.swift; path = Sources/CryptoSwift/HKDF.swift; sourceTree = "<group>"; };
+		1922411111D965B39DE59CA1F763C6A2 /* Blowfish+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Blowfish+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/Blowfish+Foundation.swift"; sourceTree = "<group>"; };
+		1A1F9D95A8D7C0DA2087A8C5F6C5D756 /* BlockCipher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockCipher.swift; path = Sources/CryptoSwift/BlockCipher.swift; sourceTree = "<group>"; };
+		1A81AD0023AE23417D08FDC7A9CB977C /* StreamDecryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StreamDecryptor.swift; path = Sources/CryptoSwift/StreamDecryptor.swift; sourceTree = "<group>"; };
+		1F673220E974B6B13F149B5C9EC1D04C /* KBAdvPacketEddyTLM.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBAdvPacketEddyTLM.swift; path = kbeaconlib2/Classes/KBAdvPacketEddyTLM.swift; sourceTree = "<group>"; };
+		1FCF2B9ACBA956FC9D10EC76BBE056B0 /* KBCfgTriggerMotion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBCfgTriggerMotion.swift; path = kbeaconlib2/Classes/KBCfgTriggerMotion.swift; sourceTree = "<group>"; };
+		20CFBBB1941B12C445D414F2E8451AA1 /* PKCS5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKCS5.swift; path = Sources/CryptoSwift/PKCS/PKCS5.swift; sourceTree = "<group>"; };
+		21F8D316F8AD69C6D451B96BAE3F60CF /* Authenticator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Authenticator.swift; path = Sources/CryptoSwift/Authenticator.swift; sourceTree = "<group>"; };
+		25AC84584C8CBDB9D93678F4B055D0E9 /* ChaCha20+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ChaCha20+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/ChaCha20+Foundation.swift"; sourceTree = "<group>"; };
+		262D81FAD91B4924903208CAEC4FD9AA /* SHA1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SHA1.swift; path = Sources/CryptoSwift/SHA1.swift; sourceTree = "<group>"; };
+		2658D57648626016A93BEFB1BE418CD1 /* ASN1Encoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ASN1Encoder.swift; path = Sources/CryptoSwift/ASN1/ASN1Encoder.swift; sourceTree = "<group>"; };
+		2897156627FB1BBD457EA08FE6B66BDD /* Division.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Division.swift; path = Sources/CryptoSwift/CS_BigInt/Division.swift; sourceTree = "<group>"; };
+		2989C03E85C017E2727695632D29E6FF /* Data+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+Extension.swift"; path = "Sources/CryptoSwift/Foundation/Data+Extension.swift"; sourceTree = "<group>"; };
 		2D881A07D01BD2AB91DF1E8239BDFD05 /* Pods-kbeaconlib2_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-kbeaconlib2_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		4115459211E5C9F9F5641D9E3D4FCC65 /* KBeacon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBeacon.swift; path = kbeaconlib2/Classes/KBeacon.swift; sourceTree = "<group>"; };
-		57AC36CAB7D1C2FFDEADA77F40BD8B4C /* kbeaconlib2.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = kbeaconlib2.modulemap; sourceTree = "<group>"; };
-		5AB6C847C262C002E623815D5FDDECE8 /* ByteConvert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ByteConvert.swift; path = kbeaconlib2/Classes/ByteConvert.swift; sourceTree = "<group>"; };
-		5B6C97133C091DA1741A1A7F08FD6EE5 /* KBUtility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBUtility.swift; path = kbeaconlib2/Classes/KBUtility.swift; sourceTree = "<group>"; };
-		612500BC8C2BA6D53F2874466D8F7DFA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		2DDFECCF8066B4CEA91A646F605E239A /* SquareRoot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SquareRoot.swift; path = Sources/CryptoSwift/CS_BigInt/SquareRoot.swift; sourceTree = "<group>"; };
+		3025B0AAD8FC84E874B3B8AAF51ED6BA /* KBUtility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBUtility.swift; path = kbeaconlib2/Classes/KBUtility.swift; sourceTree = "<group>"; };
+		30EF45FE7EDE3CAE15074AC1F05125EF /* KBRecordDataHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBRecordDataHandler.swift; path = kbeaconlib2/Classes/KBRecordDataHandler.swift; sourceTree = "<group>"; };
+		31CDDE96BF626A5CA27B9482B4EE63C2 /* KBAdvPacketEBeacon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBAdvPacketEBeacon.swift; path = kbeaconlib2/Classes/KBAdvPacketEBeacon.swift; sourceTree = "<group>"; };
+		3256A2D0F070A3B37EC1E9D9927B9267 /* KBTriggerAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBTriggerAction.swift; path = kbeaconlib2/Classes/KBTriggerAction.swift; sourceTree = "<group>"; };
+		33BABD760248EDA11BAF75783E3BA653 /* CryptoSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CryptoSwift-prefix.pch"; sourceTree = "<group>"; };
+		33F5C563AC1B02D4EB6AE66EC5CEB77F /* kbeaconlib2-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "kbeaconlib2-dummy.m"; sourceTree = "<group>"; };
+		3570798BD02AFDD8E4567DCD1274FA8C /* KBException.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBException.swift; path = kbeaconlib2/Classes/KBException.swift; sourceTree = "<group>"; };
+		39F43A3F6077E2882DFFC864CA63A7BA /* KBRecordAlarm.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBRecordAlarm.swift; path = kbeaconlib2/Classes/KBRecordAlarm.swift; sourceTree = "<group>"; };
+		3A2E6DE28282269F3FB6FE1F55156283 /* RSA+Signature.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "RSA+Signature.swift"; path = "Sources/CryptoSwift/RSA/RSA+Signature.swift"; sourceTree = "<group>"; };
+		3A6CABED9B7015B68F5BC289EE596AF1 /* kbeaconlib2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = kbeaconlib2.debug.xcconfig; sourceTree = "<group>"; };
+		3BB4B4AB771ACEA4BD0FA63B325F0C7C /* PKCS1v15.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKCS1v15.swift; path = Sources/CryptoSwift/PKCS/PKCS1v15.swift; sourceTree = "<group>"; };
+		3C03D346E3C864319B14B7E590A1A054 /* UInt32+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UInt32+Extension.swift"; path = "Sources/CryptoSwift/UInt32+Extension.swift"; sourceTree = "<group>"; };
+		3C50576B1DA21A80F868B306A172C122 /* KBCfgTrigger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBCfgTrigger.swift; path = kbeaconlib2/Classes/KBCfgTrigger.swift; sourceTree = "<group>"; };
+		3D6722E0C68E09DBF4A003E0B0A1DA0F /* Cryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cryptor.swift; path = Sources/CryptoSwift/Cryptor.swift; sourceTree = "<group>"; };
+		3FA3B15EF4597A51714818F6A42371EA /* Int+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Int+Extension.swift"; path = "Sources/CryptoSwift/Int+Extension.swift"; sourceTree = "<group>"; };
+		409A40F21065BFF2199E91A10A27F9DA /* CryptoSwift-CryptoSwift */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "CryptoSwift-CryptoSwift"; path = CryptoSwift.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		41A97B828A5E0EF4190513668959DFD6 /* CryptoSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CryptoSwift.modulemap; sourceTree = "<group>"; };
+		450FCFFAAB517E41164FDE3C226EF97A /* SecureBytes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureBytes.swift; path = Sources/CryptoSwift/SecureBytes.swift; sourceTree = "<group>"; };
+		45F31A4B2C63E1241F83243E4AE54E64 /* Shifts.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Shifts.swift; path = Sources/CryptoSwift/CS_BigInt/Shifts.swift; sourceTree = "<group>"; };
+		46D0E0C816257EBE1FC87AB130DCF9D2 /* KBRecordPIR.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBRecordPIR.swift; path = kbeaconlib2/Classes/KBRecordPIR.swift; sourceTree = "<group>"; };
+		479EF739DFDCCE7943FC197B3B671524 /* KBAuthHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBAuthHandler.swift; path = kbeaconlib2/Classes/KBAuthHandler.swift; sourceTree = "<group>"; };
+		47D9CAE0A375949BAF3BA1F5E57FED50 /* XChaCha20+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "XChaCha20+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/XChaCha20+Foundation.swift"; sourceTree = "<group>"; };
+		4A09FF3C7DE448C4FEBCF07FE5609C21 /* kbeaconlib2-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "kbeaconlib2-Info.plist"; sourceTree = "<group>"; };
+		4A4CD510138309AA06A6AE6C2C358AF1 /* KBConnPara.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBConnPara.swift; path = kbeaconlib2/Classes/KBConnPara.swift; sourceTree = "<group>"; };
+		4FB82C9AD0AF478C2FDA1CDE4DBA6DAE /* HMAC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HMAC.swift; path = Sources/CryptoSwift/HMAC.swift; sourceTree = "<group>"; };
+		4FBF0F9DB3DB18737AF7F3088B608005 /* ISO78164Padding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ISO78164Padding.swift; path = Sources/CryptoSwift/ISO78164Padding.swift; sourceTree = "<group>"; };
+		50CBE6D79E29BF52E833111EE7F8432C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		545168C08EC357C680DE184B3CA55895 /* KBCfgSensorCO2.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBCfgSensorCO2.swift; path = kbeaconlib2/Classes/KBCfgSensorCO2.swift; sourceTree = "<group>"; };
+		56DE0BEDC00507390661AE9EDAE97CB2 /* Scrypt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Scrypt.swift; path = Sources/CryptoSwift/Scrypt.swift; sourceTree = "<group>"; };
+		57C9B023221C6877520461D9DC03C573 /* KBCfgSensorAcc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBCfgSensorAcc.swift; path = kbeaconlib2/Classes/KBCfgSensorAcc.swift; sourceTree = "<group>"; };
+		5938F9FDF3181915028CB14EEAA2FE76 /* KBRecordInfoRsp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBRecordInfoRsp.swift; path = kbeaconlib2/Classes/KBRecordInfoRsp.swift; sourceTree = "<group>"; };
+		596E03422AA7354B905A8190CCCA890D /* KBCfgAdvEddyTLM.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBCfgAdvEddyTLM.swift; path = kbeaconlib2/Classes/KBCfgAdvEddyTLM.swift; sourceTree = "<group>"; };
+		5A81612793EF3C665EC69174777730A5 /* RSA+Cipher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "RSA+Cipher.swift"; path = "Sources/CryptoSwift/RSA/RSA+Cipher.swift"; sourceTree = "<group>"; };
+		5AADEAA860247712D66CA3596893F8F3 /* KBCfgAdvKSensor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBCfgAdvKSensor.swift; path = kbeaconlib2/Classes/KBCfgAdvKSensor.swift; sourceTree = "<group>"; };
+		5B48741C166433706F5DE78311B6B307 /* kbeaconlib2-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "kbeaconlib2-umbrella.h"; sourceTree = "<group>"; };
+		5C496FE4AB63FFF6AEF9670024CC620C /* UInt16+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UInt16+Extension.swift"; path = "Sources/CryptoSwift/UInt16+Extension.swift"; sourceTree = "<group>"; };
+		5CFAF8B79B86FA3366DCF79ED80CEBCC /* AEADChaCha20Poly1305.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AEADChaCha20Poly1305.swift; path = Sources/CryptoSwift/AEAD/AEADChaCha20Poly1305.swift; sourceTree = "<group>"; };
+		5FC47D38EA599A88CB21D0003932CB87 /* IntegerConversion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IntegerConversion.swift; path = Sources/CryptoSwift/CS_BigInt/IntegerConversion.swift; sourceTree = "<group>"; };
+		62046FAF06D0905CBAE7EC67327BEFC5 /* Bit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bit.swift; path = Sources/CryptoSwift/Bit.swift; sourceTree = "<group>"; };
+		6462B00E16D694449700E314F0D72619 /* PCBC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PCBC.swift; path = Sources/CryptoSwift/BlockMode/PCBC.swift; sourceTree = "<group>"; };
+		65448C1CC2FF943E2E1B4DB3E5ADDAE1 /* BigUInt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BigUInt.swift; path = Sources/CryptoSwift/CS_BigInt/BigUInt.swift; sourceTree = "<group>"; };
+		668C69FE96784344983E4F767963A8D1 /* StreamEncryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StreamEncryptor.swift; path = Sources/CryptoSwift/StreamEncryptor.swift; sourceTree = "<group>"; };
+		67B8568EDC4D0A72AAE34DE4A93848EC /* FloatingPointConversion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingPointConversion.swift; path = Sources/CryptoSwift/CS_BigInt/FloatingPointConversion.swift; sourceTree = "<group>"; };
+		68BFC20DE1E74DD3BE40C338D53A65F9 /* kbeaconlib2-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "kbeaconlib2-prefix.pch"; sourceTree = "<group>"; };
+		68E13D365327ADA39611A9148F9CA3D7 /* PKCS7.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKCS7.swift; path = Sources/CryptoSwift/PKCS/PKCS7.swift; sourceTree = "<group>"; };
+		6969D2C88760ECF58B13DD51428657D7 /* Poly1305.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Poly1305.swift; path = Sources/CryptoSwift/Poly1305.swift; sourceTree = "<group>"; };
+		6D8C471D858A86CEAC48630EDD37C90F /* KBCfgAdvSystem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBCfgAdvSystem.swift; path = kbeaconlib2/Classes/KBCfgAdvSystem.swift; sourceTree = "<group>"; };
+		71DFA6C8510D3D3828A423614856DCBA /* String+FoundationExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+FoundationExtension.swift"; path = "Sources/CryptoSwift/Foundation/String+FoundationExtension.swift"; sourceTree = "<group>"; };
+		71FC9080C4D3A94D887B17B78035D40A /* UInt64+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UInt64+Extension.swift"; path = "Sources/CryptoSwift/UInt64+Extension.swift"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7538B40DF9C2069F0F4B14585EC4998C /* kbeaconlib2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = kbeaconlib2.debug.xcconfig; sourceTree = "<group>"; };
+		7341046DA652B338549EFD44F9083BB3 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = Sources/CryptoSwift/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		73F9BEE4D6AB6E21EA2AB293D1274050 /* KBCfgSensorHT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBCfgSensorHT.swift; path = kbeaconlib2/Classes/KBCfgSensorHT.swift; sourceTree = "<group>"; };
 		7583FD2266627B3967F13CA5041F9D3B /* Pods-kbeaconlib2_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-kbeaconlib2_Tests-Info.plist"; sourceTree = "<group>"; };
+		75CB27EEEE128258722D5EBFD6C483BA /* CMAC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CMAC.swift; path = Sources/CryptoSwift/CMAC.swift; sourceTree = "<group>"; };
+		7682AB328656E69B78BC0ADC397E437C /* ByteConvert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ByteConvert.swift; path = kbeaconlib2/Classes/ByteConvert.swift; sourceTree = "<group>"; };
+		76AFFDA5E2AB720499FE37D6AB3F03BF /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = Sources/CryptoSwift/Utils.swift; sourceTree = "<group>"; };
+		781D058183D4D85E3A3AD79CCAF71675 /* KBRecordCO2.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBRecordCO2.swift; path = kbeaconlib2/Classes/KBRecordCO2.swift; sourceTree = "<group>"; };
+		7829E4957836786E842EA28FBD6F5EDD /* OFB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OFB.swift; path = Sources/CryptoSwift/BlockMode/OFB.swift; sourceTree = "<group>"; };
+		7B68C187D3877F222C61B07A48783331 /* KBeacon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBeacon.swift; path = kbeaconlib2/Classes/KBeacon.swift; sourceTree = "<group>"; };
 		7CB63517BC30C652D860B36047201540 /* Pods-kbeaconlib2_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-kbeaconlib2_Tests-dummy.m"; sourceTree = "<group>"; };
+		7CBE1C37FC58799FFC21C7E64177A4E8 /* KBCfgAdvNull.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBCfgAdvNull.swift; path = kbeaconlib2/Classes/KBCfgAdvNull.swift; sourceTree = "<group>"; };
+		7E9F04AEA13D4FFB9E1A40C65E0C5DCE /* KBCfgHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBCfgHandler.swift; path = kbeaconlib2/Classes/KBCfgHandler.swift; sourceTree = "<group>"; };
 		7EC4B2C9F85C9957C40ADDE9E820B60A /* Pods-kbeaconlib2_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-kbeaconlib2_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		82E84098ACCE73F1D6B7E6E2FD9A181D /* Pods_kbeaconlib2_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kbeaconlib2_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F1C8277DC7841FD2F4E5BDD76A0EF41 /* Array+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+Extension.swift"; path = "Sources/CryptoSwift/Array+Extension.swift"; sourceTree = "<group>"; };
+		80E3F08EA67C83FBD21C7C0854164EFA /* KBAdvPacketHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBAdvPacketHandler.swift; path = kbeaconlib2/Classes/KBAdvPacketHandler.swift; sourceTree = "<group>"; };
+		811890D96BA2FA60CAC84D2084CB9F45 /* CryptoSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CryptoSwift-dummy.m"; sourceTree = "<group>"; };
+		81BC97ED10390CD35D0E812D446322B5 /* Utils+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Utils+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/Utils+Foundation.swift"; sourceTree = "<group>"; };
+		828C0216646F7FA7561577D8A0990543 /* BitwiseOps.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BitwiseOps.swift; path = Sources/CryptoSwift/CS_BigInt/BitwiseOps.swift; sourceTree = "<group>"; };
+		82E84098ACCE73F1D6B7E6E2FD9A181D /* Pods-kbeaconlib2_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-kbeaconlib2_Example"; path = Pods_kbeaconlib2_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84494D9423127B45D89336A81F728B52 /* Pods-kbeaconlib2_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-kbeaconlib2_Example.modulemap"; sourceTree = "<group>"; };
-		89789C5C2FDB27870614B5501EA7942F /* KBAuthHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBAuthHandler.swift; path = kbeaconlib2/Classes/KBAuthHandler.swift; sourceTree = "<group>"; };
+		84873A561CE7852714F1E125A6D589D4 /* DataConversion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataConversion.swift; path = Sources/CryptoSwift/CS_BigInt/DataConversion.swift; sourceTree = "<group>"; };
+		8612DCD7666A894390A6B1FF44A89713 /* KBAdvPacketEddyUID.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBAdvPacketEddyUID.swift; path = kbeaconlib2/Classes/KBAdvPacketEddyUID.swift; sourceTree = "<group>"; };
+		879488866D0FB5C3A52EB023A41DD98C /* BlockEncryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockEncryptor.swift; path = Sources/CryptoSwift/BlockEncryptor.swift; sourceTree = "<group>"; };
+		88178C84539570690BF5834B54A6B77E /* Random.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Random.swift; path = Sources/CryptoSwift/CS_BigInt/Random.swift; sourceTree = "<group>"; };
+		881C434FE319CDFCE8025C29B83CE6C1 /* Checksum.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Checksum.swift; path = Sources/CryptoSwift/Checksum.swift; sourceTree = "<group>"; };
+		88262C677E2C96637626205EB17CD185 /* XChaCha20.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XChaCha20.swift; path = Sources/CryptoSwift/XChaCha20.swift; sourceTree = "<group>"; };
 		8AF5139CB86846C526CBE51FCFEA8B32 /* Pods-kbeaconlib2_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-kbeaconlib2_Example-umbrella.h"; sourceTree = "<group>"; };
-		90510AC9CE444C26E25C58426127890B /* kbeaconlib2.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = kbeaconlib2.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		907D7AD2D3A43A378D53E33DA8393169 /* kbeaconlib2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = kbeaconlib2.release.xcconfig; sourceTree = "<group>"; };
+		8C36C7552455A644E07DC62787846E41 /* ChaCha20.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChaCha20.swift; path = Sources/CryptoSwift/ChaCha20.swift; sourceTree = "<group>"; };
+		8D9A23A3D28C282E225973465E0E7DA6 /* CS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CS.swift; path = Sources/CryptoSwift/CS_BigInt/CS.swift; sourceTree = "<group>"; };
+		8E81991C8600CFD4984E38C3C5AD590A /* Generics.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Generics.swift; path = Sources/CryptoSwift/Generics.swift; sourceTree = "<group>"; };
+		8EC4304078EA1264FE2470328A07B0DF /* CryptoSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CryptoSwift.debug.xcconfig; sourceTree = "<group>"; };
+		8F11F0CF272A31975AA248D389B145DB /* KBRecordLight.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBRecordLight.swift; path = kbeaconlib2/Classes/KBRecordLight.swift; sourceTree = "<group>"; };
+		90044B719A004BDBD8AF28D892B6BCF1 /* Exponentiation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Exponentiation.swift; path = Sources/CryptoSwift/CS_BigInt/Exponentiation.swift; sourceTree = "<group>"; };
+		911DEF294B7ECE6C88CF721372AA302A /* kbeaconlib2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = kbeaconlib2.release.xcconfig; sourceTree = "<group>"; };
 		91C56CA0604A2C09A0934A18D5488095 /* Pods-kbeaconlib2_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-kbeaconlib2_Example-Info.plist"; sourceTree = "<group>"; };
+		9245C8D7DE6EC185D3D63F1E00AAA2C0 /* KBCfgSensorVOC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBCfgSensorVOC.swift; path = kbeaconlib2/Classes/KBCfgSensorVOC.swift; sourceTree = "<group>"; };
 		92509C475DB385885C22FC6C4CFA084C /* Pods-kbeaconlib2_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-kbeaconlib2_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		95665C2246D064ACB9CB5FA613F1149B /* kbeaconlib2-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "kbeaconlib2-prefix.pch"; sourceTree = "<group>"; };
-		95EA36EFEB6790DD73456B266B779F01 /* UTCTime.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UTCTime.swift; path = kbeaconlib2/Classes/UTCTime.swift; sourceTree = "<group>"; };
+		93F8DDE6241437AA18D81288E510A7BE /* SHA3.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SHA3.swift; path = Sources/CryptoSwift/SHA3.swift; sourceTree = "<group>"; };
+		9424D40E9538EE003E2D4FAB027907F9 /* DigestType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DigestType.swift; path = Sources/CryptoSwift/DigestType.swift; sourceTree = "<group>"; };
+		94928F29C1B9AF2DE556C9B5F514F332 /* AEAD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AEAD.swift; path = Sources/CryptoSwift/AEAD/AEAD.swift; sourceTree = "<group>"; };
+		94BE0B566031D7AE2219A5A113255A29 /* ZeroPadding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZeroPadding.swift; path = Sources/CryptoSwift/ZeroPadding.swift; sourceTree = "<group>"; };
 		967F010B1686CDFC864D33606AAC0174 /* Pods-kbeaconlib2_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-kbeaconlib2_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9806862EFBC150BE16C7FB3889E3E817 /* CCM.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CCM.swift; path = Sources/CryptoSwift/BlockMode/CCM.swift; sourceTree = "<group>"; };
+		9A5AB9466B6C41C9AB5491DDFD9DAA33 /* KBCfgType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBCfgType.swift; path = kbeaconlib2/Classes/KBCfgType.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DC327828EEAEA4C32010325E4A698D8 /* RSA.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSA.swift; path = Sources/CryptoSwift/RSA/RSA.swift; sourceTree = "<group>"; };
+		9EBA919AA74616A56D589468EDF1AF77 /* KBAccSensorValue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBAccSensorValue.swift; path = kbeaconlib2/Classes/KBAccSensorValue.swift; sourceTree = "<group>"; };
+		9EC27CA5C5A7E15E6689D53A4302BA22 /* AES.Cryptors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AES.Cryptors.swift; path = Sources/CryptoSwift/AES.Cryptors.swift; sourceTree = "<group>"; };
 		9F622C296CC4512356D9ED9AE3AAE699 /* Pods-kbeaconlib2_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-kbeaconlib2_Tests.modulemap"; sourceTree = "<group>"; };
-		A2176DFD1554465F94399D94D58B6599 /* KBConnPara.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBConnPara.swift; path = kbeaconlib2/Classes/KBConnPara.swift; sourceTree = "<group>"; };
-		AD1EF534135CA1A2F205CDCFA886A9FE /* KBeaconsMgr.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBeaconsMgr.swift; path = kbeaconlib2/Classes/KBeaconsMgr.swift; sourceTree = "<group>"; };
+		A114D835C369C1DF5ABEFFAACDE60FDD /* AEADXChaCha20Poly1305.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AEADXChaCha20Poly1305.swift; path = Sources/CryptoSwift/AEAD/AEADXChaCha20Poly1305.swift; sourceTree = "<group>"; };
+		A32E41B35BB1C39CABAA4D8029C5414D /* CompactMap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompactMap.swift; path = Sources/CryptoSwift/CompactMap.swift; sourceTree = "<group>"; };
+		A3C01C0D162582427C1A49745AB26C5A /* KBCfgSensorScan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBCfgSensorScan.swift; path = kbeaconlib2/Classes/KBCfgSensorScan.swift; sourceTree = "<group>"; };
+		A524B734CD77BAA053CBC64B522ACFC1 /* BlockDecryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockDecryptor.swift; path = Sources/CryptoSwift/BlockDecryptor.swift; sourceTree = "<group>"; };
+		A7D3F471E281FB0A9DB3C24B2B6151CB /* Addition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Addition.swift; path = Sources/CryptoSwift/CS_BigInt/Addition.swift; sourceTree = "<group>"; };
+		AA6E93247AC8C2A3A39CEBCDD4D0C480 /* KBCfgCommon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBCfgCommon.swift; path = kbeaconlib2/Classes/KBCfgCommon.swift; sourceTree = "<group>"; };
+		AA9A58C759C13ECB652D5BFBCF39F5AB /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Sources/CryptoSwift/Operators.swift; sourceTree = "<group>"; };
+		AAE6282E772C1CF4A2162AE56285D83D /* KBRecordBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBRecordBase.swift; path = kbeaconlib2/Classes/KBRecordBase.swift; sourceTree = "<group>"; };
+		AC1143A7F0D4D36E3556BF4E28A08D86 /* KBCfgTriggerAngle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBCfgTriggerAngle.swift; path = kbeaconlib2/Classes/KBCfgTriggerAngle.swift; sourceTree = "<group>"; };
+		AE552E0A6AF32C83219B7A589E95DAF5 /* CBCMAC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBCMAC.swift; path = Sources/CryptoSwift/CBCMAC.swift; sourceTree = "<group>"; };
+		AF76A1AF2A848D31BABDF777E21096CD /* String+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Extension.swift"; path = "Sources/CryptoSwift/String+Extension.swift"; sourceTree = "<group>"; };
+		B0D8E6A0CE6FC78ECDE5FCDE1E09319C /* HMAC+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HMAC+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/HMAC+Foundation.swift"; sourceTree = "<group>"; };
+		B1F66C55055B491388ACA6BD5B986899 /* KBCfgAdvEBeacon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBCfgAdvEBeacon.swift; path = kbeaconlib2/Classes/KBCfgAdvEBeacon.swift; sourceTree = "<group>"; };
+		B3CABA5CD57108C01CD069E310BCAD1B /* KBRecordHumidity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBRecordHumidity.swift; path = kbeaconlib2/Classes/KBRecordHumidity.swift; sourceTree = "<group>"; };
+		B471109DC49B850E29716B9EC7F1A866 /* KBAdvPacketIBeacon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBAdvPacketIBeacon.swift; path = kbeaconlib2/Classes/KBAdvPacketIBeacon.swift; sourceTree = "<group>"; };
+		B58FC99CF4B524B429601F58B77E7CE4 /* ASN1Scanner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ASN1Scanner.swift; path = Sources/CryptoSwift/ASN1/ASN1Scanner.swift; sourceTree = "<group>"; };
+		B84184249CCF8B7ECB526594A3AB240F /* Multiplication.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Multiplication.swift; path = Sources/CryptoSwift/CS_BigInt/Multiplication.swift; sourceTree = "<group>"; };
+		B88511455577765072BCA01634C8B4CB /* Digest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Digest.swift; path = Sources/CryptoSwift/Digest.swift; sourceTree = "<group>"; };
+		B8E15D88376BD757BD238C0EB3CA917B /* Padding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Padding.swift; path = Sources/CryptoSwift/Padding.swift; sourceTree = "<group>"; };
+		B95528319B86ECF236A6D4E03684C33C /* BigInt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BigInt.swift; path = Sources/CryptoSwift/CS_BigInt/BigInt.swift; sourceTree = "<group>"; };
+		BB9123E536FDEB4A1643987ECACCF446 /* KBSensorType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBSensorType.swift; path = kbeaconlib2/Classes/KBSensorType.swift; sourceTree = "<group>"; };
+		BC6B83A0C0A72C1059CFD24EB29B5DFE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		BE4F6394C0255260127DFFE3BA3931B6 /* KBTriggerType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBTriggerType.swift; path = kbeaconlib2/Classes/KBTriggerType.swift; sourceTree = "<group>"; };
+		BEA22A3DCDE2AC388FC33027D1218D50 /* ResourceBundle-CryptoSwift-CryptoSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-CryptoSwift-CryptoSwift-Info.plist"; sourceTree = "<group>"; };
+		C07D001B9D3624D76A5421AC71F4934C /* KBCfgSensorPIR.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBCfgSensorPIR.swift; path = kbeaconlib2/Classes/KBCfgSensorPIR.swift; sourceTree = "<group>"; };
 		C0953A02910B8FB6E4C64229E8CB0629 /* Pods-kbeaconlib2_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-kbeaconlib2_Example.release.xcconfig"; sourceTree = "<group>"; };
+		C1B9273DDB212858D34A7128679B8E6B /* Subtraction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Subtraction.swift; path = Sources/CryptoSwift/CS_BigInt/Subtraction.swift; sourceTree = "<group>"; };
 		C20DF99EB9364AAB081C32A4CE3CB148 /* Pods-kbeaconlib2_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-kbeaconlib2_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		E4119FFD2E18D069FA34FD4431B28DA7 /* kbeaconlib2-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "kbeaconlib2-Info.plist"; sourceTree = "<group>"; };
+		C27E27C7ADFC3A97935DC60DD6DFC098 /* AES.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AES.swift; path = Sources/CryptoSwift/AES.swift; sourceTree = "<group>"; };
+		C3D48B8BA78B4A41A47BAB0387B2133B /* BlockMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockMode.swift; path = Sources/CryptoSwift/BlockMode/BlockMode.swift; sourceTree = "<group>"; };
+		C47B867C63FDC59F00547D5E15664F3C /* DER.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DER.swift; path = Sources/CryptoSwift/PEM/DER.swift; sourceTree = "<group>"; };
+		C6E363CC79F4BA866467DBD1857EF89F /* PBKDF2.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PBKDF2.swift; path = Sources/CryptoSwift/PKCS/PBKDF2.swift; sourceTree = "<group>"; };
+		C7728C6695D45B9562396D6F256D6B86 /* KBAdvType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBAdvType.swift; path = kbeaconlib2/Classes/KBAdvType.swift; sourceTree = "<group>"; };
+		C8D635DDC9C4F2B8006FC1BA43B61935 /* StringConversion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringConversion.swift; path = Sources/CryptoSwift/CS_BigInt/StringConversion.swift; sourceTree = "<group>"; };
+		C9436F7F7A9BD8242AFF7E592DDF5C6A /* Codable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Codable.swift; path = Sources/CryptoSwift/CS_BigInt/Codable.swift; sourceTree = "<group>"; };
+		C9A1DE76A323AEA95CD55FCEBF649035 /* KBAdvPacketBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBAdvPacketBase.swift; path = kbeaconlib2/Classes/KBAdvPacketBase.swift; sourceTree = "<group>"; };
+		CACC466A90D42550DDCFC1395DAAC98F /* Comparable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Comparable.swift; path = Sources/CryptoSwift/CS_BigInt/Comparable.swift; sourceTree = "<group>"; };
+		CC1D57201E2FBF9BE5D0E7C5C32F3F5F /* KBCfgSensorLight.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBCfgSensorLight.swift; path = kbeaconlib2/Classes/KBCfgSensorLight.swift; sourceTree = "<group>"; };
+		CD10B60F0E005E2271D1F8FC1F63C175 /* Hashable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Hashable.swift; path = Sources/CryptoSwift/CS_BigInt/Hashable.swift; sourceTree = "<group>"; };
+		CD547A16919800AFF2C9E6A083FE63F7 /* Collection+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Collection+Extension.swift"; path = "Sources/CryptoSwift/Collection+Extension.swift"; sourceTree = "<group>"; };
+		CE9D8B8C2B5F9C1739981C1A66D8060A /* KBRecordDataRsp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBRecordDataRsp.swift; path = kbeaconlib2/Classes/KBRecordDataRsp.swift; sourceTree = "<group>"; };
+		CFC0EC9CA5B1AC3C167E28882364F38C /* BlockModeOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockModeOptions.swift; path = Sources/CryptoSwift/BlockMode/BlockModeOptions.swift; sourceTree = "<group>"; };
+		D06C399A2BC7D0B87A689C2BC0DDD820 /* Cipher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cipher.swift; path = Sources/CryptoSwift/Cipher.swift; sourceTree = "<group>"; };
+		D0F665F287C20C617D5D2564ABE08208 /* CFB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CFB.swift; path = Sources/CryptoSwift/BlockMode/CFB.swift; sourceTree = "<group>"; };
+		D1286E3A070A65FA26674E20FA6BA341 /* ASN1Decoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ASN1Decoder.swift; path = Sources/CryptoSwift/ASN1/ASN1Decoder.swift; sourceTree = "<group>"; };
+		D6B5A944FB8662FEA1D3B3EA1E07A928 /* CTR.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CTR.swift; path = Sources/CryptoSwift/BlockMode/CTR.swift; sourceTree = "<group>"; };
+		D7FAACDE1321FC80F6C52CCB595E09F7 /* KBAdvPacketEddyURL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBAdvPacketEddyURL.swift; path = kbeaconlib2/Classes/KBAdvPacketEddyURL.swift; sourceTree = "<group>"; };
+		D9A14B4967234FB4DD127AD2B4D6509D /* CryptoSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CryptoSwift.release.xcconfig; sourceTree = "<group>"; };
+		DA1EA221E07257C40AAE3E41CCCEF74A /* UInt8+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UInt8+Extension.swift"; path = "Sources/CryptoSwift/UInt8+Extension.swift"; sourceTree = "<group>"; };
+		DC1EE36716A9C13ED3FBA6852182FF61 /* Rabbit+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Rabbit+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/Rabbit+Foundation.swift"; sourceTree = "<group>"; };
+		DDEB0F03C4951056C8C3F1E775CEFD57 /* AES+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AES+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/AES+Foundation.swift"; sourceTree = "<group>"; };
+		DEB28105FE40A77A250E105C661A3E86 /* KBAdvPacketSystem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBAdvPacketSystem.swift; path = kbeaconlib2/Classes/KBAdvPacketSystem.swift; sourceTree = "<group>"; };
+		DF1B86CE2A5B2BD0A5A584167FAB735F /* BatchedCollection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BatchedCollection.swift; path = Sources/CryptoSwift/BatchedCollection.swift; sourceTree = "<group>"; };
+		E04FA8D8CFFD62126BF1711BD3FF3C07 /* KBeaconsMgr.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBeaconsMgr.swift; path = kbeaconlib2/Classes/KBeaconsMgr.swift; sourceTree = "<group>"; };
+		E4129410C647026786A3B15B6775F97B /* NoPadding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NoPadding.swift; path = Sources/CryptoSwift/NoPadding.swift; sourceTree = "<group>"; };
+		E59F8715CEC4A711F06DC180A44359D3 /* Signature.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Signature.swift; path = Sources/CryptoSwift/Signature.swift; sourceTree = "<group>"; };
 		EA694DD67954657EB2772BE0D46474E5 /* Pods-kbeaconlib2_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-kbeaconlib2_Example-frameworks.sh"; sourceTree = "<group>"; };
+		EAD3BDD43BE48484046E500E8EADCE3E /* WordsAndBits.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WordsAndBits.swift; path = Sources/CryptoSwift/CS_BigInt/WordsAndBits.swift; sourceTree = "<group>"; };
 		EB14166894DCF140BF336D52BD15F1F4 /* Pods-kbeaconlib2_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-kbeaconlib2_Example-dummy.m"; sourceTree = "<group>"; };
-		EC28FE7C8C1593ED575B80A655A151CF /* kbeaconlib2-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "kbeaconlib2-dummy.m"; sourceTree = "<group>"; };
+		ECACFA3A684443178280D3A4DC16D194 /* GCD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GCD.swift; path = Sources/CryptoSwift/CS_BigInt/GCD.swift; sourceTree = "<group>"; };
+		ED5DD8E9B21A2804DF7FC1904FDA7A0E /* KBAdvMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBAdvMode.swift; path = kbeaconlib2/Classes/KBAdvMode.swift; sourceTree = "<group>"; };
+		EED979F830745E83F0CE951BC07D806D /* KBPreferance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBPreferance.swift; path = kbeaconlib2/Classes/KBPreferance.swift; sourceTree = "<group>"; };
 		EFA4F91D2B511305440ACA4E66751C98 /* Pods-kbeaconlib2_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-kbeaconlib2_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		F3338390214B72D5C38D39C4CEDBAE0D /* kbeaconlib2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = kbeaconlib2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8B2D63D7367A42788DD712EED4BC8AF /* kbeaconlib2-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "kbeaconlib2-umbrella.h"; sourceTree = "<group>"; };
+		EFD43FEA1132D5767B49DBDC170ED7A2 /* ASN1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ASN1.swift; path = Sources/CryptoSwift/ASN1/ASN1.swift; sourceTree = "<group>"; };
+		F090B964A9138AB140DAF9F3FD2CD6C5 /* KBTimeRange.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBTimeRange.swift; path = kbeaconlib2/Classes/KBTimeRange.swift; sourceTree = "<group>"; };
+		F099A6DDAEEE2379D6A06AA9C98B4E4B /* KBTLMElapseTime.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBTLMElapseTime.swift; path = kbeaconlib2/Classes/KBTLMElapseTime.swift; sourceTree = "<group>"; };
+		F19AF5745474FB2A0AC0B643B0A76AE6 /* GCM.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GCM.swift; path = Sources/CryptoSwift/BlockMode/GCM.swift; sourceTree = "<group>"; };
+		F23D12142874C8CE7C7E13DB02EC6FDF /* KBTriggerAdvChgMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBTriggerAdvChgMode.swift; path = kbeaconlib2/Classes/KBTriggerAdvChgMode.swift; sourceTree = "<group>"; };
+		F2A209649DF5E88AF807D915107B9609 /* KBCfgSensorBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBCfgSensorBase.swift; path = kbeaconlib2/Classes/KBCfgSensorBase.swift; sourceTree = "<group>"; };
+		F3338390214B72D5C38D39C4CEDBAE0D /* kbeaconlib2 */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = kbeaconlib2; path = kbeaconlib2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F44D9B10B56D9D9EAA8234D764E5E11F /* UTCTime.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UTCTime.swift; path = kbeaconlib2/Classes/UTCTime.swift; sourceTree = "<group>"; };
+		F5AB1EC5421206EEA5817B4612BBE21A /* kbeaconlib2.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = kbeaconlib2.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F81274EDB681F11E7CB05F7DCA2BB33C /* CryptoSwift */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CryptoSwift; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8614780CC85162025465E981810F00C /* OCB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OCB.swift; path = Sources/CryptoSwift/BlockMode/OCB.swift; sourceTree = "<group>"; };
 		F8FE208B38456782B6BA84469C2F347D /* Pods-kbeaconlib2_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-kbeaconlib2_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F9AB21E649773F7ED183A2F2D64AB6B5 /* CryptoSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CryptoSwift-Info.plist"; sourceTree = "<group>"; };
+		FAAD9ECEEF4864EF11E57CB47DEEE559 /* ISO10126Padding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ISO10126Padding.swift; path = Sources/CryptoSwift/ISO10126Padding.swift; sourceTree = "<group>"; };
+		FC1A98F6EF39941097BBA0FFE5B6247B /* KBCfgAdvBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBCfgAdvBase.swift; path = kbeaconlib2/Classes/KBCfgAdvBase.swift; sourceTree = "<group>"; };
+		FC1B2F5474A70B09EE7341FC996D12F6 /* PKCS7Padding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKCS7Padding.swift; path = Sources/CryptoSwift/PKCS/PKCS7Padding.swift; sourceTree = "<group>"; };
+		FD54585689045BDCEE67F4B00A62A087 /* KBCfgAdvEddyURL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBCfgAdvEddyURL.swift; path = kbeaconlib2/Classes/KBCfgAdvEddyURL.swift; sourceTree = "<group>"; };
+		FDD04F4CB49ABCF8FEE897DE63A4C7DA /* SHA2.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SHA2.swift; path = Sources/CryptoSwift/SHA2.swift; sourceTree = "<group>"; };
+		FE1633811B151F68520F375272ABB2F3 /* UInt128.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UInt128.swift; path = Sources/CryptoSwift/UInt128.swift; sourceTree = "<group>"; };
+		FE4589E164A132D10722B48FE524349F /* ECB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ECB.swift; path = Sources/CryptoSwift/BlockMode/ECB.swift; sourceTree = "<group>"; };
+		FE8733C8DABAD6CB6AF68F1A143D5E40 /* kbeaconlib2.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = kbeaconlib2.modulemap; sourceTree = "<group>"; };
+		FF74289D1114CD56DF4659C92DB7CFA0 /* KBAdvTxPower.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KBAdvTxPower.swift; path = kbeaconlib2/Classes/KBAdvTxPower.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4904AF55C0E191DE0D4BFF47762BC747 /* Frameworks */ = {
+		08DE37C504F9FCD0B0D25BD694FB25C8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E5AED788ADE1E73A97A7727C2884F4F /* Foundation.framework in Frameworks */,
+				5FB8B7878387B785A0F2D7E052383E89 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4F42D167B2E4161897297177D00C282F /* Frameworks */ = {
+		0DE9B75F466A1B33FF4AD0C2334C0CBC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF30024397034D0A73A60EEACA0CFEA0 /* Foundation.framework in Frameworks */,
+				876792E26B7AEB928496F254ECFEF327 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F36C1B3063BCFC8D8E621C5658790F31 /* Frameworks */ = {
+		208FDCB736FF1AE53B98113A71D11A72 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBF2E5FA2EEEFEF2A40690BED58BCCBE /* Foundation.framework in Frameworks */,
+				1B616BBC8C6AACFBB871F74BFB5657EC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48899C24EC9373A78CC93AE25A358444 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CC77C6DA646C482CF9C03C003D046E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5277086367177CAF157D4BCC33DD2173 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0C4E80012688B65A00D153BB /* KBAdvPacket */ = {
+		0A5340F120F3BAEB9922A69193E500ED /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0473483E2B8455F7001BC186 /* KBAdvPacketAOA.swift */,
-				0C4E80232688B80600D153BB /* KBAdvMode.swift */,
-				0C4E80882688B9C500D153BB /* KBAdvPacketHandler.swift */,
-				0C4E80272688B80600D153BB /* KBAdvPacketBase.swift */,
-				0C4E80212688B80600D153BB /* KBAdvPacketEddyTLM.swift */,
-				0C4E80282688B80600D153BB /* KBAdvPacketEddyUID.swift */,
-				0C4E80262688B80600D153BB /* KBAdvPacketEddyURL.swift */,
-				0C4E80292688B80600D153BB /* KBAdvPacketIBeacon.swift */,
-				0C4E80222688B80600D153BB /* KBAdvPacketSensor.swift */,
-				0C4E80202688B80500D153BB /* KBAdvPacketSystem.swift */,
-				0C4E80242688B80600D153BB /* KBAdvTxPower.swift */,
-				0C4E806D2688B8BF00D153BB /* KBTLMElapseTime.swift */,
-				0C4E80832688B93E00D153BB /* KBAccSensorValue.swift */,
-				0C4E802A2688B80600D153BB /* KBAdvType.swift */,
+				F81274EDB681F11E7CB05F7DCA2BB33C /* CryptoSwift */,
+				409A40F21065BFF2199E91A10A27F9DA /* CryptoSwift-CryptoSwift */,
+				F3338390214B72D5C38D39C4CEDBAE0D /* kbeaconlib2 */,
+				82E84098ACCE73F1D6B7E6E2FD9A181D /* Pods-kbeaconlib2_Example */,
+				01A4C2CD8322DA751BFA621B896A329A /* Pods-kbeaconlib2_Tests */,
 			);
-			name = KBAdvPacket;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		0C4E80022688B67C00D153BB /* KBCfgAdv */ = {
+		3600515C3BAB17C7076F9BECAA3CBB55 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				04C90C002C4DFF44005C5D89 /* KBCfgSensorGEO.swift */,
-				0473483A2B84555F001BC186 /* KBCfgAdvAOA.swift */,
-				04B5ED472A94C0DA002EE781 /* KBCfgSensorAcc.swift */,
-				043531CF2A20F1CE004027F6 /* KBCfgSensorBase.swift */,
-				043531C72A20F0DD004027F6 /* KBCfgSensorCO2.swift */,
-				043531C52A20F0DD004027F6 /* KBCfgSensorHT.swift */,
-				043531C92A20F0DD004027F6 /* KBCfgSensorLight.swift */,
-				043531C82A20F0DD004027F6 /* KBCfgSensorPIR.swift */,
-				043531C62A20F0DD004027F6 /* KBCfgSensorVOC.swift */,
-				0C4E803B2688B82800D153BB /* KBCfgAdvBase.swift */,
-				0C4E805D2688B88700D153BB /* KBCfgHandler.swift */,
-				0C4E80432688B82800D153BB /* KBCfgAdvEddyTLM.swift */,
-				0C4E80402688B82800D153BB /* KBCfgAdvEddyUID.swift */,
-				0C4E80452688B82900D153BB /* KBCfgAdvEddyURL.swift */,
-				0C4E803E2688B82800D153BB /* KBCfgAdvIBeacon.swift */,
-				0C4E803D2688B82800D153BB /* KBCfgAdvKSensor.swift */,
-				0C4E80462688B82900D153BB /* KBCfgAdvNull.swift */,
-				0C4E80442688B82900D153BB /* KBCfgAdvSystem.swift */,
-				0C4E803F2688B82800D153BB /* KBCfgBase.swift */,
-				0C4E803C2688B82800D153BB /* KBCfgCommon.swift */,
-				0C4E80392688B82800D153BB /* KBCfgHandler.swift */,
-				04798059296C3D1600164CF4 /* KBCfgSensorLight.swift */,
-				0C4E80412688B82800D153BB /* KBCfgSensorHT.swift */,
-				0C4E80472688B82900D153BB /* KBCfgType.swift */,
+				FE8733C8DABAD6CB6AF68F1A143D5E40 /* kbeaconlib2.modulemap */,
+				33F5C563AC1B02D4EB6AE66EC5CEB77F /* kbeaconlib2-dummy.m */,
+				4A09FF3C7DE448C4FEBCF07FE5609C21 /* kbeaconlib2-Info.plist */,
+				68BFC20DE1E74DD3BE40C338D53A65F9 /* kbeaconlib2-prefix.pch */,
+				5B48741C166433706F5DE78311B6B307 /* kbeaconlib2-umbrella.h */,
+				3A6CABED9B7015B68F5BC289EE596AF1 /* kbeaconlib2.debug.xcconfig */,
+				911DEF294B7ECE6C88CF721372AA302A /* kbeaconlib2.release.xcconfig */,
 			);
-			name = KBCfgAdv;
-			sourceTree = "<group>";
-		};
-		0C4E800C2688B6DB00D153BB /* KBSensor */ = {
-			isa = PBXGroup;
-			children = (
-				043531E02A210042004027F6 /* KBRecordBase.swift */,
-				043531E12A210042004027F6 /* KBRecordCO2.swift */,
-				043531DC2A210041004027F6 /* KBRecordCutoff.swift */,
-				043531DE2A210041004027F6 /* KBRecordDataHandler.swift */,
-				043531DD2A210041004027F6 /* KBRecordDataRsp.swift */,
-				043531DB2A210041004027F6 /* KBRecordHumidity.swift */,
-				043531E22A210042004027F6 /* KBRecordInfoRsp.swift */,
-				043531E32A210042004027F6 /* KBRecordLight.swift */,
-				043531DF2A210041004027F6 /* KBRecordPIR.swift */,
-				043531E42A210042004027F6 /* KBRecordVOC.swift */,
-				11B2A2912850DA2600DE97FE /* KBTimeRange.swift */,
-				0C4E80622688B8A700D153BB /* KBSensorType.swift */,
-			);
-			name = KBSensor;
-			sourceTree = "<group>";
-		};
-		0C4E80132688B6EF00D153BB /* KBTrigger */ = {
-			isa = PBXGroup;
-			children = (
-				0473483C2B84557C001BC186 /* KBCfgTriggerAngle.swift */,
-				11D1FC8828C7907700B08A6E /* KBCfgTriggerMotion.swift */,
-				0C4E80742688B8CF00D153BB /* KBTriggerAction.swift */,
-				0C4E80722688B8CF00D153BB /* KBTriggerAdvChgMode.swift */,
-				0C4E80732688B8CF00D153BB /* KBTriggerType.swift */,
-				0C4E807E2688B8FA00D153BB /* KBCfgTrigger.swift */,
-			);
-			name = KBTrigger;
-			sourceTree = "<group>";
-		};
-		15035EC35D98FB7333BF1B95B2B8599C /* kbeaconlib2 */ = {
-			isa = PBXGroup;
-			children = (
-				0C4E80132688B6EF00D153BB /* KBTrigger */,
-				0C4E800C2688B6DB00D153BB /* KBSensor */,
-				0C4E80022688B67C00D153BB /* KBCfgAdv */,
-				0C4E80012688B65A00D153BB /* KBAdvPacket */,
-				5AB6C847C262C002E623815D5FDDECE8 /* ByteConvert.swift */,
-				89789C5C2FDB27870614B5501EA7942F /* KBAuthHandler.swift */,
-				A2176DFD1554465F94399D94D58B6599 /* KBConnPara.swift */,
-				4115459211E5C9F9F5641D9E3D4FCC65 /* KBeacon.swift */,
-				AD1EF534135CA1A2F205CDCFA886A9FE /* KBeaconsMgr.swift */,
-				1FCE1C3EC51C4534A5BC46542271C48A /* KBException.swift */,
-				5B6C97133C091DA1741A1A7F08FD6EE5 /* KBUtility.swift */,
-				95EA36EFEB6790DD73456B266B779F01 /* UTCTime.swift */,
-				58E178054BC8698DF2EC0528C5FBDDDB /* Pod */,
-				77743377116B53F25C7ABD4DE697F186 /* Support Files */,
-			);
-			name = kbeaconlib2;
-			path = ../..;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/kbeaconlib2";
 			sourceTree = "<group>";
 		};
 		423F85D8D36719E70DCBFE286C4C9A9C /* Pods-kbeaconlib2_Tests */ = {
@@ -357,45 +558,20 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		555F045414C0B07D19434B10DD4462D8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CAE2FE51E274B11F90C44DB7C7515554 /* CryptoSwift */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
 				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		58E178054BC8698DF2EC0528C5FBDDDB /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				90510AC9CE444C26E25C58426127890B /* kbeaconlib2.podspec */,
-				612500BC8C2BA6D53F2874466D8F7DFA /* LICENSE */,
-				20B7971E8F170833F7355AF208BC3462 /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		77743377116B53F25C7ABD4DE697F186 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				57AC36CAB7D1C2FFDEADA77F40BD8B4C /* kbeaconlib2.modulemap */,
-				EC28FE7C8C1593ED575B80A655A151CF /* kbeaconlib2-dummy.m */,
-				E4119FFD2E18D069FA34FD4431B28DA7 /* kbeaconlib2-Info.plist */,
-				95665C2246D064ACB9CB5FA613F1149B /* kbeaconlib2-prefix.pch */,
-				F8B2D63D7367A42788DD712EED4BC8AF /* kbeaconlib2-umbrella.h */,
-				7538B40DF9C2069F0F4B14585EC4998C /* kbeaconlib2.debug.xcconfig */,
-				907D7AD2D3A43A378D53E33DA8393169 /* kbeaconlib2.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/kbeaconlib2";
-			sourceTree = "<group>";
-		};
-		7F721C2FFCF1DEEA9DE0F046BBC971CC /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				15035EC35D98FB7333BF1B95B2B8599C /* kbeaconlib2 */,
-			);
-			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		7F94982BD40794E191973119E36F3DD1 /* Pods-kbeaconlib2_Example */ = {
@@ -415,23 +591,161 @@
 			path = "Target Support Files/Pods-kbeaconlib2_Example";
 			sourceTree = "<group>";
 		};
-		92B2118846A980A94556870CFA618CB9 /* Products */ = {
+		8E35C627A13352EFCE23A4E5DABB99B0 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				F3338390214B72D5C38D39C4CEDBAE0D /* kbeaconlib2.framework */,
-				82E84098ACCE73F1D6B7E6E2FD9A181D /* Pods_kbeaconlib2_Example.framework */,
-				01A4C2CD8322DA751BFA621B896A329A /* Pods_kbeaconlib2_Tests.framework */,
+				41A97B828A5E0EF4190513668959DFD6 /* CryptoSwift.modulemap */,
+				811890D96BA2FA60CAC84D2084CB9F45 /* CryptoSwift-dummy.m */,
+				F9AB21E649773F7ED183A2F2D64AB6B5 /* CryptoSwift-Info.plist */,
+				33BABD760248EDA11BAF75783E3BA653 /* CryptoSwift-prefix.pch */,
+				0597DF5FDFB61D966D9C3E310B9B5F10 /* CryptoSwift-umbrella.h */,
+				8EC4304078EA1264FE2470328A07B0DF /* CryptoSwift.debug.xcconfig */,
+				D9A14B4967234FB4DD127AD2B4D6509D /* CryptoSwift.release.xcconfig */,
+				BEA22A3DCDE2AC388FC33027D1218D50 /* ResourceBundle-CryptoSwift-CryptoSwift-Info.plist */,
 			);
-			name = Products;
+			name = "Support Files";
+			path = "../Target Support Files/CryptoSwift";
+			sourceTree = "<group>";
+		};
+		A6B463C27D145475E8DDF04CAB06752B /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DD8CE3E6C3A965C78FE56B30AEB99D46 /* kbeaconlib2 */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		CAE2FE51E274B11F90C44DB7C7515554 /* CryptoSwift */ = {
+			isa = PBXGroup;
+			children = (
+				A7D3F471E281FB0A9DB3C24B2B6151CB /* Addition.swift */,
+				94928F29C1B9AF2DE556C9B5F514F332 /* AEAD.swift */,
+				5CFAF8B79B86FA3366DCF79ED80CEBCC /* AEADChaCha20Poly1305.swift */,
+				A114D835C369C1DF5ABEFFAACDE60FDD /* AEADXChaCha20Poly1305.swift */,
+				C27E27C7ADFC3A97935DC60DD6DFC098 /* AES.swift */,
+				DDEB0F03C4951056C8C3F1E775CEFD57 /* AES+Foundation.swift */,
+				9EC27CA5C5A7E15E6689D53A4302BA22 /* AES.Cryptors.swift */,
+				7F1C8277DC7841FD2F4E5BDD76A0EF41 /* Array+Extension.swift */,
+				05984C1C3421E9D0BBA202CBFB171ED6 /* Array+Foundation.swift */,
+				EFD43FEA1132D5767B49DBDC170ED7A2 /* ASN1.swift */,
+				D1286E3A070A65FA26674E20FA6BA341 /* ASN1Decoder.swift */,
+				2658D57648626016A93BEFB1BE418CD1 /* ASN1Encoder.swift */,
+				B58FC99CF4B524B429601F58B77E7CE4 /* ASN1Scanner.swift */,
+				21F8D316F8AD69C6D451B96BAE3F60CF /* Authenticator.swift */,
+				DF1B86CE2A5B2BD0A5A584167FAB735F /* BatchedCollection.swift */,
+				B95528319B86ECF236A6D4E03684C33C /* BigInt.swift */,
+				65448C1CC2FF943E2E1B4DB3E5ADDAE1 /* BigUInt.swift */,
+				62046FAF06D0905CBAE7EC67327BEFC5 /* Bit.swift */,
+				828C0216646F7FA7561577D8A0990543 /* BitwiseOps.swift */,
+				1A1F9D95A8D7C0DA2087A8C5F6C5D756 /* BlockCipher.swift */,
+				A524B734CD77BAA053CBC64B522ACFC1 /* BlockDecryptor.swift */,
+				879488866D0FB5C3A52EB023A41DD98C /* BlockEncryptor.swift */,
+				C3D48B8BA78B4A41A47BAB0387B2133B /* BlockMode.swift */,
+				CFC0EC9CA5B1AC3C167E28882364F38C /* BlockModeOptions.swift */,
+				1213453C28425385314C016E8D4D8D5A /* Blowfish.swift */,
+				1922411111D965B39DE59CA1F763C6A2 /* Blowfish+Foundation.swift */,
+				08FC5CD0388215302838C5AE852BDCA9 /* CBC.swift */,
+				AE552E0A6AF32C83219B7A589E95DAF5 /* CBCMAC.swift */,
+				9806862EFBC150BE16C7FB3889E3E817 /* CCM.swift */,
+				D0F665F287C20C617D5D2564ABE08208 /* CFB.swift */,
+				8C36C7552455A644E07DC62787846E41 /* ChaCha20.swift */,
+				25AC84584C8CBDB9D93678F4B055D0E9 /* ChaCha20+Foundation.swift */,
+				881C434FE319CDFCE8025C29B83CE6C1 /* Checksum.swift */,
+				D06C399A2BC7D0B87A689C2BC0DDD820 /* Cipher.swift */,
+				15EF95A95D59131012DF7D7FFFFC76D3 /* CipherModeWorker.swift */,
+				75CB27EEEE128258722D5EBFD6C483BA /* CMAC.swift */,
+				C9436F7F7A9BD8242AFF7E592DDF5C6A /* Codable.swift */,
+				CD547A16919800AFF2C9E6A083FE63F7 /* Collection+Extension.swift */,
+				A32E41B35BB1C39CABAA4D8029C5414D /* CompactMap.swift */,
+				CACC466A90D42550DDCFC1395DAAC98F /* Comparable.swift */,
+				3D6722E0C68E09DBF4A003E0B0A1DA0F /* Cryptor.swift */,
+				0FFFD82522D8312307B097383188F7F8 /* Cryptors.swift */,
+				8D9A23A3D28C282E225973465E0E7DA6 /* CS.swift */,
+				D6B5A944FB8662FEA1D3B3EA1E07A928 /* CTR.swift */,
+				2989C03E85C017E2727695632D29E6FF /* Data+Extension.swift */,
+				84873A561CE7852714F1E125A6D589D4 /* DataConversion.swift */,
+				C47B867C63FDC59F00547D5E15664F3C /* DER.swift */,
+				B88511455577765072BCA01634C8B4CB /* Digest.swift */,
+				9424D40E9538EE003E2D4FAB027907F9 /* DigestType.swift */,
+				2897156627FB1BBD457EA08FE6B66BDD /* Division.swift */,
+				FE4589E164A132D10722B48FE524349F /* ECB.swift */,
+				90044B719A004BDBD8AF28D892B6BCF1 /* Exponentiation.swift */,
+				67B8568EDC4D0A72AAE34DE4A93848EC /* FloatingPointConversion.swift */,
+				ECACFA3A684443178280D3A4DC16D194 /* GCD.swift */,
+				F19AF5745474FB2A0AC0B643B0A76AE6 /* GCM.swift */,
+				8E81991C8600CFD4984E38C3C5AD590A /* Generics.swift */,
+				CD10B60F0E005E2271D1F8FC1F63C175 /* Hashable.swift */,
+				18CD50508946073C3DC8139F51089826 /* HKDF.swift */,
+				4FB82C9AD0AF478C2FDA1CDE4DBA6DAE /* HMAC.swift */,
+				B0D8E6A0CE6FC78ECDE5FCDE1E09319C /* HMAC+Foundation.swift */,
+				3FA3B15EF4597A51714818F6A42371EA /* Int+Extension.swift */,
+				5FC47D38EA599A88CB21D0003932CB87 /* IntegerConversion.swift */,
+				FAAD9ECEEF4864EF11E57CB47DEEE559 /* ISO10126Padding.swift */,
+				4FBF0F9DB3DB18737AF7F3088B608005 /* ISO78164Padding.swift */,
+				0CFE997AE29FE126BCA8C4650F816DC6 /* MD5.swift */,
+				B84184249CCF8B7ECB526594A3AB240F /* Multiplication.swift */,
+				E4129410C647026786A3B15B6775F97B /* NoPadding.swift */,
+				F8614780CC85162025465E981810F00C /* OCB.swift */,
+				7829E4957836786E842EA28FBD6F5EDD /* OFB.swift */,
+				AA9A58C759C13ECB652D5BFBCF39F5AB /* Operators.swift */,
+				B8E15D88376BD757BD238C0EB3CA917B /* Padding.swift */,
+				17724333930D7B5993698AAD28276880 /* PBKDF1.swift */,
+				C6E363CC79F4BA866467DBD1857EF89F /* PBKDF2.swift */,
+				6462B00E16D694449700E314F0D72619 /* PCBC.swift */,
+				3BB4B4AB771ACEA4BD0FA63B325F0C7C /* PKCS1v15.swift */,
+				20CFBBB1941B12C445D414F2E8451AA1 /* PKCS5.swift */,
+				68E13D365327ADA39611A9148F9CA3D7 /* PKCS7.swift */,
+				FC1B2F5474A70B09EE7341FC996D12F6 /* PKCS7Padding.swift */,
+				6969D2C88760ECF58B13DD51428657D7 /* Poly1305.swift */,
+				0FBF5B1336CB634244AED4B1CD89C6A2 /* PrimeTest.swift */,
+				13149BABEF96076DB1C31B9ED24BA636 /* Rabbit.swift */,
+				DC1EE36716A9C13ED3FBA6852182FF61 /* Rabbit+Foundation.swift */,
+				88178C84539570690BF5834B54A6B77E /* Random.swift */,
+				9DC327828EEAEA4C32010325E4A698D8 /* RSA.swift */,
+				5A81612793EF3C665EC69174777730A5 /* RSA+Cipher.swift */,
+				3A2E6DE28282269F3FB6FE1F55156283 /* RSA+Signature.swift */,
+				56DE0BEDC00507390661AE9EDAE97CB2 /* Scrypt.swift */,
+				450FCFFAAB517E41164FDE3C226EF97A /* SecureBytes.swift */,
+				262D81FAD91B4924903208CAEC4FD9AA /* SHA1.swift */,
+				FDD04F4CB49ABCF8FEE897DE63A4C7DA /* SHA2.swift */,
+				93F8DDE6241437AA18D81288E510A7BE /* SHA3.swift */,
+				45F31A4B2C63E1241F83243E4AE54E64 /* Shifts.swift */,
+				E59F8715CEC4A711F06DC180A44359D3 /* Signature.swift */,
+				2DDFECCF8066B4CEA91A646F605E239A /* SquareRoot.swift */,
+				1A81AD0023AE23417D08FDC7A9CB977C /* StreamDecryptor.swift */,
+				668C69FE96784344983E4F767963A8D1 /* StreamEncryptor.swift */,
+				0FF13607722DE49AB303A15C4C773D16 /* Strideable.swift */,
+				AF76A1AF2A848D31BABDF777E21096CD /* String+Extension.swift */,
+				71DFA6C8510D3D3828A423614856DCBA /* String+FoundationExtension.swift */,
+				C8D635DDC9C4F2B8006FC1BA43B61935 /* StringConversion.swift */,
+				C1B9273DDB212858D34A7128679B8E6B /* Subtraction.swift */,
+				FE1633811B151F68520F375272ABB2F3 /* UInt128.swift */,
+				5C496FE4AB63FFF6AEF9670024CC620C /* UInt16+Extension.swift */,
+				3C03D346E3C864319B14B7E590A1A054 /* UInt32+Extension.swift */,
+				71FC9080C4D3A94D887B17B78035D40A /* UInt64+Extension.swift */,
+				DA1EA221E07257C40AAE3E41CCCEF74A /* UInt8+Extension.swift */,
+				015E019AD1ED8F595204E035B20A5AC1 /* Updatable.swift */,
+				76AFFDA5E2AB720499FE37D6AB3F03BF /* Utils.swift */,
+				81BC97ED10390CD35D0E812D446322B5 /* Utils+Foundation.swift */,
+				EAD3BDD43BE48484046E500E8EADCE3E /* WordsAndBits.swift */,
+				88262C677E2C96637626205EB17CD185 /* XChaCha20.swift */,
+				47D9CAE0A375949BAF3BA1F5E57FED50 /* XChaCha20+Foundation.swift */,
+				94BE0B566031D7AE2219A5A113255A29 /* ZeroPadding.swift */,
+				EBBF8A37965C02629DDA7D2BB7582544 /* Resources */,
+				8E35C627A13352EFCE23A4E5DABB99B0 /* Support Files */,
+			);
+			name = CryptoSwift;
+			path = CryptoSwift;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				7F721C2FFCF1DEEA9DE0F046BBC971CC /* Development Pods */,
+				A6B463C27D145475E8DDF04CAB06752B /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				92B2118846A980A94556870CFA618CB9 /* Products */,
+				555F045414C0B07D19434B10DD4462D8 /* Pods */,
+				0A5340F120F3BAEB9922A69193E500ED /* Products */,
 				506E7B80BC50FECFA78BF891E7C3DEE9 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -444,30 +758,131 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D87FF88E555EAB098622804D09AB7A3B /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				F5AB1EC5421206EEA5817B4612BBE21A /* kbeaconlib2.podspec */,
+				50CBE6D79E29BF52E833111EE7F8432C /* LICENSE */,
+				BC6B83A0C0A72C1059CFD24EB29B5DFE /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		DD8CE3E6C3A965C78FE56B30AEB99D46 /* kbeaconlib2 */ = {
+			isa = PBXGroup;
+			children = (
+				7682AB328656E69B78BC0ADC397E437C /* ByteConvert.swift */,
+				9EBA919AA74616A56D589468EDF1AF77 /* KBAccSensorValue.swift */,
+				ED5DD8E9B21A2804DF7FC1904FDA7A0E /* KBAdvMode.swift */,
+				12AE6A51E7FB701E49BDE29E64D993BE /* KBAdvPacketAOA.swift */,
+				C9A1DE76A323AEA95CD55FCEBF649035 /* KBAdvPacketBase.swift */,
+				31CDDE96BF626A5CA27B9482B4EE63C2 /* KBAdvPacketEBeacon.swift */,
+				1F673220E974B6B13F149B5C9EC1D04C /* KBAdvPacketEddyTLM.swift */,
+				8612DCD7666A894390A6B1FF44A89713 /* KBAdvPacketEddyUID.swift */,
+				D7FAACDE1321FC80F6C52CCB595E09F7 /* KBAdvPacketEddyURL.swift */,
+				80E3F08EA67C83FBD21C7C0854164EFA /* KBAdvPacketHandler.swift */,
+				B471109DC49B850E29716B9EC7F1A866 /* KBAdvPacketIBeacon.swift */,
+				00EAEA6D211CA4AFFE8B322B4F9C018B /* KBAdvPacketSensor.swift */,
+				DEB28105FE40A77A250E105C661A3E86 /* KBAdvPacketSystem.swift */,
+				FF74289D1114CD56DF4659C92DB7CFA0 /* KBAdvTxPower.swift */,
+				C7728C6695D45B9562396D6F256D6B86 /* KBAdvType.swift */,
+				479EF739DFDCCE7943FC197B3B671524 /* KBAuthHandler.swift */,
+				0F9B687E345632064CC4FF918B4B0FEC /* KBCfgAdvAOA.swift */,
+				FC1A98F6EF39941097BBA0FFE5B6247B /* KBCfgAdvBase.swift */,
+				B1F66C55055B491388ACA6BD5B986899 /* KBCfgAdvEBeacon.swift */,
+				596E03422AA7354B905A8190CCCA890D /* KBCfgAdvEddyTLM.swift */,
+				0B4463DDBE05B662B18BF817FB5535B4 /* KBCfgAdvEddyUID.swift */,
+				FD54585689045BDCEE67F4B00A62A087 /* KBCfgAdvEddyURL.swift */,
+				1318132A2760A9C260F09F65915DC212 /* KBCfgAdvIBeacon.swift */,
+				5AADEAA860247712D66CA3596893F8F3 /* KBCfgAdvKSensor.swift */,
+				7CBE1C37FC58799FFC21C7E64177A4E8 /* KBCfgAdvNull.swift */,
+				6D8C471D858A86CEAC48630EDD37C90F /* KBCfgAdvSystem.swift */,
+				170983BA0E196CBA5CD3C792C892E925 /* KBCfgBase.swift */,
+				AA6E93247AC8C2A3A39CEBCDD4D0C480 /* KBCfgCommon.swift */,
+				7E9F04AEA13D4FFB9E1A40C65E0C5DCE /* KBCfgHandler.swift */,
+				57C9B023221C6877520461D9DC03C573 /* KBCfgSensorAcc.swift */,
+				F2A209649DF5E88AF807D915107B9609 /* KBCfgSensorBase.swift */,
+				545168C08EC357C680DE184B3CA55895 /* KBCfgSensorCO2.swift */,
+				09CC2B87E80B4272BF00B92FEEF48A99 /* KBCfgSensorGEO.swift */,
+				73F9BEE4D6AB6E21EA2AB293D1274050 /* KBCfgSensorHT.swift */,
+				CC1D57201E2FBF9BE5D0E7C5C32F3F5F /* KBCfgSensorLight.swift */,
+				C07D001B9D3624D76A5421AC71F4934C /* KBCfgSensorPIR.swift */,
+				A3C01C0D162582427C1A49745AB26C5A /* KBCfgSensorScan.swift */,
+				9245C8D7DE6EC185D3D63F1E00AAA2C0 /* KBCfgSensorVOC.swift */,
+				3C50576B1DA21A80F868B306A172C122 /* KBCfgTrigger.swift */,
+				AC1143A7F0D4D36E3556BF4E28A08D86 /* KBCfgTriggerAngle.swift */,
+				1FCF2B9ACBA956FC9D10EC76BBE056B0 /* KBCfgTriggerMotion.swift */,
+				9A5AB9466B6C41C9AB5491DDFD9DAA33 /* KBCfgType.swift */,
+				4A4CD510138309AA06A6AE6C2C358AF1 /* KBConnPara.swift */,
+				7B68C187D3877F222C61B07A48783331 /* KBeacon.swift */,
+				E04FA8D8CFFD62126BF1711BD3FF3C07 /* KBeaconsMgr.swift */,
+				3570798BD02AFDD8E4567DCD1274FA8C /* KBException.swift */,
+				EED979F830745E83F0CE951BC07D806D /* KBPreferance.swift */,
+				39F43A3F6077E2882DFFC864CA63A7BA /* KBRecordAlarm.swift */,
+				AAE6282E772C1CF4A2162AE56285D83D /* KBRecordBase.swift */,
+				781D058183D4D85E3A3AD79CCAF71675 /* KBRecordCO2.swift */,
+				30EF45FE7EDE3CAE15074AC1F05125EF /* KBRecordDataHandler.swift */,
+				CE9D8B8C2B5F9C1739981C1A66D8060A /* KBRecordDataRsp.swift */,
+				B3CABA5CD57108C01CD069E310BCAD1B /* KBRecordHumidity.swift */,
+				5938F9FDF3181915028CB14EEAA2FE76 /* KBRecordInfoRsp.swift */,
+				8F11F0CF272A31975AA248D389B145DB /* KBRecordLight.swift */,
+				46D0E0C816257EBE1FC87AB130DCF9D2 /* KBRecordPIR.swift */,
+				02729B582928A4FFCFF26863CB43DA6A /* KBRecordVOC.swift */,
+				BB9123E536FDEB4A1643987ECACCF446 /* KBSensorType.swift */,
+				F090B964A9138AB140DAF9F3FD2CD6C5 /* KBTimeRange.swift */,
+				F099A6DDAEEE2379D6A06AA9C98B4E4B /* KBTLMElapseTime.swift */,
+				3256A2D0F070A3B37EC1E9D9927B9267 /* KBTriggerAction.swift */,
+				F23D12142874C8CE7C7E13DB02EC6FDF /* KBTriggerAdvChgMode.swift */,
+				BE4F6394C0255260127DFFE3BA3931B6 /* KBTriggerType.swift */,
+				3025B0AAD8FC84E874B3B8AAF51ED6BA /* KBUtility.swift */,
+				F44D9B10B56D9D9EAA8234D764E5E11F /* UTCTime.swift */,
+				D87FF88E555EAB098622804D09AB7A3B /* Pod */,
+				3600515C3BAB17C7076F9BECAA3CBB55 /* Support Files */,
+			);
+			name = kbeaconlib2;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		EBBF8A37965C02629DDA7D2BB7582544 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7341046DA652B338549EFD44F9083BB3 /* PrivacyInfo.xcprivacy */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		493FD7AE9AB865D6BEAEEA32ED534420 /* Headers */ = {
+		0AD490FCB870B3DE4ADBE21B56BAB82B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA6ACC660A977D3E1F84AC32278DB046 /* Pods-kbeaconlib2_Tests-umbrella.h in Headers */,
+				9345BDA61C01546A192DAF7DB42D4F7C /* CryptoSwift-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A535D4E15698CFBC2ACC90874A58A867 /* Headers */ = {
+		8EF05F8C41C74FB21E6D3DDD22BD1536 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB8943110BB3C97BBFD528CE302C9CD4 /* Pods-kbeaconlib2_Example-umbrella.h in Headers */,
+				4F206F0AAC9AC3904676C3CBF6304DC0 /* kbeaconlib2-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FAB21305B500E16E81DEBAE80D2F36E6 /* Headers */ = {
+		C810D2E3FEC33B897492E105AF1A682B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5129266E33F04DF244DED619EA650683 /* kbeaconlib2-umbrella.h in Headers */,
+				A51A14D0D6150C640F92AE520B38D892 /* Pods-kbeaconlib2_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F37DFE62B7F7B5D06CBD5F50675E4FB3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7EEE0965A620C5454D5FE80740B8969 /* Pods-kbeaconlib2_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,59 +891,97 @@
 /* Begin PBXNativeTarget section */
 		06617B05248325FE042856211F31524C /* Pods-kbeaconlib2_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3025E9B3E54F184A03C8AEDAD7BD56FD /* Build configuration list for PBXNativeTarget "Pods-kbeaconlib2_Tests" */;
+			buildConfigurationList = D90A352DD0BF6603C3821BDCF07C2843 /* Build configuration list for PBXNativeTarget "Pods-kbeaconlib2_Tests" */;
 			buildPhases = (
-				493FD7AE9AB865D6BEAEEA32ED534420 /* Headers */,
-				4543241320F29D22CA2EB88238D4B74A /* Sources */,
-				F36C1B3063BCFC8D8E621C5658790F31 /* Frameworks */,
-				EE1B57814F0BC84DD9398E4C4BE73329 /* Resources */,
+				F37DFE62B7F7B5D06CBD5F50675E4FB3 /* Headers */,
+				39A60B1A039378944EADFA2BCE292525 /* Sources */,
+				0DE9B75F466A1B33FF4AD0C2334C0CBC /* Frameworks */,
+				1359DF2F012620F52AAD7BD611228943 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				93C5664712D92D410419DFCE51F30C05 /* PBXTargetDependency */,
+				D6BFDA39D296D7DAD81621EBAB68981C /* PBXTargetDependency */,
 			);
 			name = "Pods-kbeaconlib2_Tests";
-			productName = "Pods-kbeaconlib2_Tests";
-			productReference = 01A4C2CD8322DA751BFA621B896A329A /* Pods_kbeaconlib2_Tests.framework */;
+			productName = Pods_kbeaconlib2_Tests;
+			productReference = 01A4C2CD8322DA751BFA621B896A329A /* Pods-kbeaconlib2_Tests */;
 			productType = "com.apple.product-type.framework";
 		};
 		989F78AFDFDA7F6A720659D6364CF384 /* kbeaconlib2 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EC0707E7FA73525D40C111AE7C71C65E /* Build configuration list for PBXNativeTarget "kbeaconlib2" */;
+			buildConfigurationList = 0D0CCD8790E232F1A67524A5209E1A38 /* Build configuration list for PBXNativeTarget "kbeaconlib2" */;
 			buildPhases = (
-				FAB21305B500E16E81DEBAE80D2F36E6 /* Headers */,
-				C4B3D1CDB85F3227194FD3B88373F5E6 /* Sources */,
-				4904AF55C0E191DE0D4BFF47762BC747 /* Frameworks */,
-				57062234EB23696F12AB963DB9A43A83 /* Resources */,
+				8EF05F8C41C74FB21E6D3DDD22BD1536 /* Headers */,
+				D506230D562F6B004297374D674C9982 /* Sources */,
+				7CC77C6DA646C482CF9C03C003D046E6 /* Frameworks */,
+				E85A3916965E26A67E653B1E35BF790C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8520283E06EBE1FF601AD22B9A72CDBA /* PBXTargetDependency */,
 			);
 			name = kbeaconlib2;
 			productName = kbeaconlib2;
-			productReference = F3338390214B72D5C38D39C4CEDBAE0D /* kbeaconlib2.framework */;
+			productReference = F3338390214B72D5C38D39C4CEDBAE0D /* kbeaconlib2 */;
+			productType = "com.apple.product-type.framework";
+		};
+		99313990C1D76A6D1D017868B6975CC8 /* CryptoSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79AEB1E28C499AB4F4FAD5375A6B9BC4 /* Build configuration list for PBXNativeTarget "CryptoSwift" */;
+			buildPhases = (
+				0AD490FCB870B3DE4ADBE21B56BAB82B /* Headers */,
+				712856403B7DFB33C6F7CB528877E435 /* Sources */,
+				08DE37C504F9FCD0B0D25BD694FB25C8 /* Frameworks */,
+				689A6DC688C56F47040221ADAF677C02 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A403C09C9DD08692701913236A22FA24 /* PBXTargetDependency */,
+			);
+			name = CryptoSwift;
+			productName = CryptoSwift;
+			productReference = F81274EDB681F11E7CB05F7DCA2BB33C /* CryptoSwift */;
 			productType = "com.apple.product-type.framework";
 		};
 		9E1C81D5ABBC244BD7BE70C92E004CA8 /* Pods-kbeaconlib2_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FDFC01013618004CAC59F2B4045E06A6 /* Build configuration list for PBXNativeTarget "Pods-kbeaconlib2_Example" */;
+			buildConfigurationList = A89A1A2399B68336EB31B99A042F611A /* Build configuration list for PBXNativeTarget "Pods-kbeaconlib2_Example" */;
 			buildPhases = (
-				A535D4E15698CFBC2ACC90874A58A867 /* Headers */,
-				302534B9248D3AD86CE2F561B777903A /* Sources */,
-				4F42D167B2E4161897297177D00C282F /* Frameworks */,
-				B0D9DD636862E360B57F56678DDC93AD /* Resources */,
+				C810D2E3FEC33B897492E105AF1A682B /* Headers */,
+				59F2F7476BB1E3B0D8889EBF6CCF9BC7 /* Sources */,
+				208FDCB736FF1AE53B98113A71D11A72 /* Frameworks */,
+				670EE4AF496ABEDE57244DEEB1FE8939 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				843D87DD4F4CB7A758A36459263B947C /* PBXTargetDependency */,
+				44502B78EA2E4F8CB018B395A12539AA /* PBXTargetDependency */,
+				84A5499C1AFA3DE14E503C3D2E04C877 /* PBXTargetDependency */,
 			);
 			name = "Pods-kbeaconlib2_Example";
-			productName = "Pods-kbeaconlib2_Example";
-			productReference = 82E84098ACCE73F1D6B7E6E2FD9A181D /* Pods_kbeaconlib2_Example.framework */;
+			productName = Pods_kbeaconlib2_Example;
+			productReference = 82E84098ACCE73F1D6B7E6E2FD9A181D /* Pods-kbeaconlib2_Example */;
 			productType = "com.apple.product-type.framework";
+		};
+		EBC10B6451F5FE5244D138B5176C2A02 /* CryptoSwift-CryptoSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B57DDD0E9DCC06FF0551B9CBCA3961A /* Build configuration list for PBXNativeTarget "CryptoSwift-CryptoSwift" */;
+			buildPhases = (
+				FCB8098472F437F0DD3505A3A49F9BBD /* Sources */,
+				48899C24EC9373A78CC93AE25A358444 /* Frameworks */,
+				2F23D8706FCAE44229E08EE32EF39213 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CryptoSwift-CryptoSwift";
+			productName = CryptoSwift;
+			productReference = 409A40F21065BFF2199E91A10A27F9DA /* CryptoSwift-CryptoSwift */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -536,22 +989,24 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 92B2118846A980A94556870CFA618CB9 /* Products */;
+			productRefGroup = 0A5340F120F3BAEB9922A69193E500ED /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				99313990C1D76A6D1D017868B6975CC8 /* CryptoSwift */,
+				EBC10B6451F5FE5244D138B5176C2A02 /* CryptoSwift-CryptoSwift */,
 				989F78AFDFDA7F6A720659D6364CF384 /* kbeaconlib2 */,
 				9E1C81D5ABBC244BD7BE70C92E004CA8 /* Pods-kbeaconlib2_Example */,
 				06617B05248325FE042856211F31524C /* Pods-kbeaconlib2_Tests */,
@@ -560,21 +1015,37 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		57062234EB23696F12AB963DB9A43A83 /* Resources */ = {
+		1359DF2F012620F52AAD7BD611228943 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B0D9DD636862E360B57F56678DDC93AD /* Resources */ = {
+		2F23D8706FCAE44229E08EE32EF39213 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77054D344EE23AAC557116CCE7A2E4E3 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		670EE4AF496ABEDE57244DEEB1FE8939 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EE1B57814F0BC84DD9398E4C4BE73329 /* Resources */ = {
+		689A6DC688C56F47040221ADAF677C02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0697775380D82F213C70072376B27ECF /* CryptoSwift-CryptoSwift in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E85A3916965E26A67E653B1E35BF790C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -584,116 +1055,264 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		302534B9248D3AD86CE2F561B777903A /* Sources */ = {
+		39A60B1A039378944EADFA2BCE292525 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD64A7D3A326AA0DADD7F16A51CE511D /* Pods-kbeaconlib2_Example-dummy.m in Sources */,
+				9CBE18838984F00F1E5A9CD8293C7675 /* Pods-kbeaconlib2_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4543241320F29D22CA2EB88238D4B74A /* Sources */ = {
+		59F2F7476BB1E3B0D8889EBF6CCF9BC7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				753A45C714A24F244E5F305A44483451 /* Pods-kbeaconlib2_Tests-dummy.m in Sources */,
+				D26D0D90EC38FB79BE1A58D4FDC7689A /* Pods-kbeaconlib2_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C4B3D1CDB85F3227194FD3B88373F5E6 /* Sources */ = {
+		712856403B7DFB33C6F7CB528877E435 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0473483F2B8455F7001BC186 /* KBAdvPacketAOA.swift in Sources */,
-				0C4E80842688B93E00D153BB /* KBAccSensorValue.swift in Sources */,
-				0C4E804A2688B82900D153BB /* KBCfgAdvBase.swift in Sources */,
-				043531E92A210042004027F6 /* KBRecordPIR.swift in Sources */,
-				2218493EBD4E8F999064B6B6278BB7FB /* ByteConvert.swift in Sources */,
-				043531EE2A210042004027F6 /* KBRecordVOC.swift in Sources */,
-				0C4E80752688B8D000D153BB /* KBTriggerAdvChgMode.swift in Sources */,
-				0C4E804E2688B82900D153BB /* KBCfgBase.swift in Sources */,
-				0C4E804B2688B82900D153BB /* KBCfgCommon.swift in Sources */,
-				043531CC2A20F0DD004027F6 /* KBCfgSensorCO2.swift in Sources */,
-				0C4E80352688B80600D153BB /* KBAdvType.swift in Sources */,
-				0C4E80662688B8A800D153BB /* KBSensorType.swift in Sources */,
-				0C4E802E2688B80600D153BB /* KBAdvMode.swift in Sources */,
-				043531E62A210042004027F6 /* KBRecordCutoff.swift in Sources */,
-				0C4E80552688B82900D153BB /* KBCfgAdvNull.swift in Sources */,
-				0C4E804D2688B82900D153BB /* KBCfgAdvIBeacon.swift in Sources */,
-				0C4E802F2688B80600D153BB /* KBAdvTxPower.swift in Sources */,
-				0C4E804C2688B82900D153BB /* KBCfgAdvKSensor.swift in Sources */,
-				0C4E80342688B80600D153BB /* KBAdvPacketIBeacon.swift in Sources */,
-				11B2A2922850DA2600DE97FE /* KBTimeRange.swift in Sources */,
-				A5698761A640D96E42BAA9E48636FDBA /* KBAuthHandler.swift in Sources */,
-				043531CD2A20F0DD004027F6 /* KBCfgSensorPIR.swift in Sources */,
-				0C4E80322688B80600D153BB /* KBAdvPacketBase.swift in Sources */,
-				0473483D2B84557C001BC186 /* KBCfgTriggerAngle.swift in Sources */,
-				0C4E802B2688B80600D153BB /* KBAdvPacketSystem.swift in Sources */,
-				0C4E805E2688B88800D153BB /* KBCfgHandler.swift in Sources */,
-				11D1FC8928C7907700B08A6E /* KBCfgTriggerMotion.swift in Sources */,
-				04B5ED482A94C0DA002EE781 /* KBCfgSensorAcc.swift in Sources */,
-				0C4E804F2688B82900D153BB /* KBCfgAdvEddyUID.swift in Sources */,
-				0C4E80542688B82900D153BB /* KBCfgAdvEddyURL.swift in Sources */,
-				043531EB2A210042004027F6 /* KBRecordCO2.swift in Sources */,
-				0C4E806E2688B8BF00D153BB /* KBTLMElapseTime.swift in Sources */,
-				043531ED2A210042004027F6 /* KBRecordLight.swift in Sources */,
-				043531E52A210042004027F6 /* KBRecordHumidity.swift in Sources */,
-				0C4E80482688B82900D153BB /* KBCfgHandler.swift in Sources */,
-				3972AFAF785403EB0C115E2DAC0847C3 /* KBConnPara.swift in Sources */,
-				0C4E80892688B9C500D153BB /* KBAdvPacketHandler.swift in Sources */,
-				0C4E80562688B82900D153BB /* KBCfgType.swift in Sources */,
-				10889B79F731865F2EBC584C5C293170 /* KBeacon.swift in Sources */,
-				0C4E80532688B82900D153BB /* KBCfgAdvSystem.swift in Sources */,
-				0C4E802C2688B80600D153BB /* KBAdvPacketEddyTLM.swift in Sources */,
-				1630F9EF84DAF4F56F656EDF3B7CF7F4 /* kbeaconlib2-dummy.m in Sources */,
-				7CE94DCB62688D56553DBFB72DAB3AA6 /* KBeaconsMgr.swift in Sources */,
-				0C4E80312688B80600D153BB /* KBAdvPacketEddyURL.swift in Sources */,
-				0C4E80502688B82900D153BB /* KBCfgSensorHT.swift in Sources */,
-				0479805A296C3D1600164CF4 /* KBCfgSensorLight.swift in Sources */,
-				0C4E80332688B80600D153BB /* KBAdvPacketEddyUID.swift in Sources */,
-				043531CB2A20F0DD004027F6 /* KBCfgSensorVOC.swift in Sources */,
-				38806C3520F7B6280204DD46A2214B18 /* KBException.swift in Sources */,
-				043531CE2A20F0DD004027F6 /* KBCfgSensorLight.swift in Sources */,
-				043531EA2A210042004027F6 /* KBRecordBase.swift in Sources */,
-				043531CA2A20F0DD004027F6 /* KBCfgSensorHT.swift in Sources */,
-				0C4E80522688B82900D153BB /* KBCfgAdvEddyTLM.swift in Sources */,
-				04C90C012C4DFF44005C5D89 /* KBCfgSensorGEO.swift in Sources */,
-				0C4E802D2688B80600D153BB /* KBAdvPacketSensor.swift in Sources */,
-				7A94C5B2AD2F95BACD87494A5BE5E9A5 /* KBUtility.swift in Sources */,
-				B8079798BBD20DAEAA532214730F5045 /* UTCTime.swift in Sources */,
-				0C4E807F2688B8FA00D153BB /* KBCfgTrigger.swift in Sources */,
-				0C4E80762688B8D000D153BB /* KBTriggerType.swift in Sources */,
-				043531E82A210042004027F6 /* KBRecordDataHandler.swift in Sources */,
-				0473483B2B84555F001BC186 /* KBCfgAdvAOA.swift in Sources */,
-				043531E72A210042004027F6 /* KBRecordDataRsp.swift in Sources */,
-				043531EC2A210042004027F6 /* KBRecordInfoRsp.swift in Sources */,
-				0C4E80772688B8D000D153BB /* KBTriggerAction.swift in Sources */,
-				043531D02A20F1CE004027F6 /* KBCfgSensorBase.swift in Sources */,
+				214A82651021588A358B3F4323CB4A44 /* Addition.swift in Sources */,
+				309ECDB05C2B74B09162264275C4ADB9 /* AEAD.swift in Sources */,
+				E948E80F782AB42C3A96D83C2A45D1B9 /* AEADChaCha20Poly1305.swift in Sources */,
+				E3F7C56D61C70D7315FC960D58357C4B /* AEADXChaCha20Poly1305.swift in Sources */,
+				76C26E07D00328B09025FDE8B095F0AD /* AES.swift in Sources */,
+				3D205C4BE556D0EE5B691ADFA73550F1 /* AES+Foundation.swift in Sources */,
+				F4751F3CE7A5A93CEB916ABB879DBD2D /* AES.Cryptors.swift in Sources */,
+				CCB0BDFFB6A7D5CAEEFCB721DDCABF10 /* Array+Extension.swift in Sources */,
+				405BDA965CA81ABDBC173BE62E9223AA /* Array+Foundation.swift in Sources */,
+				9CC6473D8DEE15111004C0BB892449EA /* ASN1.swift in Sources */,
+				7C0BB54E5448EC74E4721C895868A0C2 /* ASN1Decoder.swift in Sources */,
+				5051EFCD0B99125A084319BE7545534B /* ASN1Encoder.swift in Sources */,
+				A453169A10D909AFB814B670C35FCE50 /* ASN1Scanner.swift in Sources */,
+				2859BA898633F3F9EF1D71C513833AA8 /* Authenticator.swift in Sources */,
+				D823904503E9FA1CAFBFF5BB2873AD90 /* BatchedCollection.swift in Sources */,
+				0273CA677D68F1A7CB7FFC5AFE881C3C /* BigInt.swift in Sources */,
+				9922457D93ABCC97F6EEB1EE6794A7AF /* BigUInt.swift in Sources */,
+				D202CB86E340A56D980106BE1A876158 /* Bit.swift in Sources */,
+				8D5877DCA19DCFEB8930682B9EB2AE49 /* BitwiseOps.swift in Sources */,
+				2F6F65B8CA281BF20EA5203A43759899 /* BlockCipher.swift in Sources */,
+				D2B342A2733525C178E623F3ADEE7B32 /* BlockDecryptor.swift in Sources */,
+				B984511AD4A48808CF73A75D93080487 /* BlockEncryptor.swift in Sources */,
+				23A8C84790760F6C70582B49F7E55D17 /* BlockMode.swift in Sources */,
+				96674C477D8B7B46271C5B4109B51CA7 /* BlockModeOptions.swift in Sources */,
+				49A47F69808F4BDFC96E3E10D558D793 /* Blowfish.swift in Sources */,
+				BA2FB2027765321ED2C3079AC49D617B /* Blowfish+Foundation.swift in Sources */,
+				1415C68A64D0DE6DF9A1074525EA2BE9 /* CBC.swift in Sources */,
+				4F63A67E94F3297CBC55ABC48B993200 /* CBCMAC.swift in Sources */,
+				A10B93F256A77A3E41BC562697CEFA03 /* CCM.swift in Sources */,
+				B81B1A353BFC12DC1808A09F68319A6E /* CFB.swift in Sources */,
+				9AEDF9E07BA63D228C0422258192553B /* ChaCha20.swift in Sources */,
+				61A4481B733C8D48DEBE7DD7CF451903 /* ChaCha20+Foundation.swift in Sources */,
+				094678419EBED3486880603F3ADE1A69 /* Checksum.swift in Sources */,
+				00B97278A4AFEE5DF5A6E222F101D9AA /* Cipher.swift in Sources */,
+				3231951592248AFDAFEA73E8AAB6FA34 /* CipherModeWorker.swift in Sources */,
+				9B89DDAD4078481A4514449DCA3B7FAF /* CMAC.swift in Sources */,
+				390CF8FA401DCFA5541CF3AA9D3D965C /* Codable.swift in Sources */,
+				1BAA54A204DA7EC5843011D8B6ED34C0 /* Collection+Extension.swift in Sources */,
+				297C2A040F1AA09415987197066FE3D4 /* CompactMap.swift in Sources */,
+				93BF7A55D7D3BAA670F554EF507DBCE2 /* Comparable.swift in Sources */,
+				2678AF749BEA83CB7A81B53D800329AF /* Cryptor.swift in Sources */,
+				E6B40F19F3C6FB12EDE24533C520C4D6 /* Cryptors.swift in Sources */,
+				1943249988A7BAC3B636725B0D0D622E /* CryptoSwift-dummy.m in Sources */,
+				945C5C02C891589974E4F405AF7E1C98 /* CS.swift in Sources */,
+				20E22143031EE14594A2E0D4DF748AE6 /* CTR.swift in Sources */,
+				71230EA989E78FB947C9E1AE313657C6 /* Data+Extension.swift in Sources */,
+				5B1B9D4D216194F068CE55D0712BD18E /* DataConversion.swift in Sources */,
+				856D7BE0A0DB79A78E0BEE49DCF0D6D4 /* DER.swift in Sources */,
+				4FF05A71BF928F02703C436B63F2B4A7 /* Digest.swift in Sources */,
+				F339E4DEABDA64CEEF6F25C457A5A8CB /* DigestType.swift in Sources */,
+				E7E94D289E5EC7611958CE9B8715FFEA /* Division.swift in Sources */,
+				413EA9780639BCA3E045DCAF88930402 /* ECB.swift in Sources */,
+				53A96739B316065AE0BEFD00B92F53B9 /* Exponentiation.swift in Sources */,
+				1B9B29F961D7999F2798ACAA932CE6C6 /* FloatingPointConversion.swift in Sources */,
+				2E75CBEA253D0FB93F309CBB50BD9FAA /* GCD.swift in Sources */,
+				DA74348110ED1D879CBD069F086151CC /* GCM.swift in Sources */,
+				7ACD62BDB86EC94CA8FC2774561C2BA7 /* Generics.swift in Sources */,
+				46B4321ECA5C4ED935B29723B56D4EDC /* Hashable.swift in Sources */,
+				D0DF570430FB4B4758A8B8AB73FF279A /* HKDF.swift in Sources */,
+				382D8549E1DF4B18608093BF25C3BA8C /* HMAC.swift in Sources */,
+				F39C0350F665E027F661D56848A9C9DB /* HMAC+Foundation.swift in Sources */,
+				1F4E854DD8DB21F427A8EEB74EC1206F /* Int+Extension.swift in Sources */,
+				800E8EF7C48F5D0CC33CF6931AB62C9C /* IntegerConversion.swift in Sources */,
+				57EA5571AA050FA14F202A1F1837898E /* ISO10126Padding.swift in Sources */,
+				20E5B3464766A72C4BA2884F423CBCF8 /* ISO78164Padding.swift in Sources */,
+				C29B6DAB731279BA8663EF8A1414F71B /* MD5.swift in Sources */,
+				74DD84DD19398A7A301B4993ADFAE94B /* Multiplication.swift in Sources */,
+				CDF8531700F4D5A05E15B96628E8C6EA /* NoPadding.swift in Sources */,
+				F6632C5CC4C23A8DBB4DFADF76936CC5 /* OCB.swift in Sources */,
+				4048E5CAC5075A5F9D98DCE4C2AC4EEF /* OFB.swift in Sources */,
+				C9FED408654BF886DF3E995EE8B88D86 /* Operators.swift in Sources */,
+				2BE544C736C972DE164B6390417FF18D /* Padding.swift in Sources */,
+				6E42FBC9A2FB8549008E18EC718187F7 /* PBKDF1.swift in Sources */,
+				FE575B7BF2C1928DD118746E8EFF8DC9 /* PBKDF2.swift in Sources */,
+				CED8B4EE050EF5949D2713F8FFC1FF99 /* PCBC.swift in Sources */,
+				E887CEF7906108C440653A1317338170 /* PKCS1v15.swift in Sources */,
+				4908E4B9CA43AC3E6118B0D6F0387FC4 /* PKCS5.swift in Sources */,
+				24C5F3AAD419B2C7C50FF620BE5342D8 /* PKCS7.swift in Sources */,
+				47992DF408D422E82D87A907733DEAEA /* PKCS7Padding.swift in Sources */,
+				5B58D23DFF882EC40B95FE03EC193632 /* Poly1305.swift in Sources */,
+				6B5182748D64734C662465F98AC44D22 /* PrimeTest.swift in Sources */,
+				B5EA6E97F1F3A2914F342EE4C21092BB /* Rabbit.swift in Sources */,
+				D5E7FAE79DF21FAE51799A1A2A3401C0 /* Rabbit+Foundation.swift in Sources */,
+				89D3D268939106CC561C7793A2F95376 /* Random.swift in Sources */,
+				2050FAFACB410F149D17EBA3167B4047 /* RSA.swift in Sources */,
+				FD4449FDFE982DAE0283C52F1AB477D6 /* RSA+Cipher.swift in Sources */,
+				DF2168316D5F02FDE9D210E136FA4B97 /* RSA+Signature.swift in Sources */,
+				BA398D20D810347943F85C0C3F5A8048 /* Scrypt.swift in Sources */,
+				44F00B0C9F1E9123489023F08583DA46 /* SecureBytes.swift in Sources */,
+				D0F147671F5A0E573D5687654B274B8D /* SHA1.swift in Sources */,
+				7F4A5EDE169A8CB1963DE4285413D0AF /* SHA2.swift in Sources */,
+				38F27853229457884541E9B9E531CF17 /* SHA3.swift in Sources */,
+				F2856EC97D781F3A490FF950DAA03EBC /* Shifts.swift in Sources */,
+				72495714F37A198085F93E0910C6BD17 /* Signature.swift in Sources */,
+				919EF818CB6565CAE6EC83193ABF395C /* SquareRoot.swift in Sources */,
+				A95EB519D49DF76545BBEDA77DA18E69 /* StreamDecryptor.swift in Sources */,
+				44C6756E528D519EE034E25DC5FE8DE1 /* StreamEncryptor.swift in Sources */,
+				2724AED2051DF6E7D96EBB6A7A2D6F4F /* Strideable.swift in Sources */,
+				A499ADC2FDBC89B2E43481DAB16F4210 /* String+Extension.swift in Sources */,
+				F5D866C38C4112CC488236E81CB8626B /* String+FoundationExtension.swift in Sources */,
+				8681782F18CC3B6738A0C343EB868CB7 /* StringConversion.swift in Sources */,
+				877DFCE39645F9A25D16B7C0F27D6011 /* Subtraction.swift in Sources */,
+				026DD76DD6A38D393127C6190F30C8A4 /* UInt128.swift in Sources */,
+				8E9BFF46DE47D563574F1644B2687AA6 /* UInt16+Extension.swift in Sources */,
+				C60FA0D9EE6B630C11020981EE4B5BB7 /* UInt32+Extension.swift in Sources */,
+				637FD2ADED562987CF5B26121E020E9E /* UInt64+Extension.swift in Sources */,
+				8D2CB74CDC67BFC6272D8A7258160189 /* UInt8+Extension.swift in Sources */,
+				052CAE0F86812E1F9C44FBA541C06673 /* Updatable.swift in Sources */,
+				789C5099BA0C26BE5A8D2CE50C3F2FB6 /* Utils.swift in Sources */,
+				88758749A41E35E396D01248F7CA31B6 /* Utils+Foundation.swift in Sources */,
+				7E3EF62A17611B9992C09E9C92D1DCB3 /* WordsAndBits.swift in Sources */,
+				424536DEB568124B4B9637D833367D05 /* XChaCha20.swift in Sources */,
+				6A115C8EC5AD970CD7ED23D1E9988876 /* XChaCha20+Foundation.swift in Sources */,
+				90B64D8D456A3969B7BB421BA05D5BE6 /* ZeroPadding.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D506230D562F6B004297374D674C9982 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C32B9FBABFB53D3D68CF00ACE5F05C8B /* ByteConvert.swift in Sources */,
+				1CCEE863CEFEC6537CCD75F9298DA825 /* KBAccSensorValue.swift in Sources */,
+				F8BC4D6CE116E9CC59C4642DA7197CDF /* KBAdvMode.swift in Sources */,
+				EC8242C5B20AABDE7306A44F4117F7EF /* KBAdvPacketAOA.swift in Sources */,
+				6D88CBA19E61A13D0BBD713DB04CD548 /* KBAdvPacketBase.swift in Sources */,
+				90C004E412169634DFE00E72D4010347 /* KBAdvPacketEBeacon.swift in Sources */,
+				EA89989D0AA7F34FFFB3FB655D65504A /* KBAdvPacketEddyTLM.swift in Sources */,
+				5BF0309549F6B1BD09113DF4038C5ACE /* KBAdvPacketEddyUID.swift in Sources */,
+				B8B341616F164F64282439E420CA4584 /* KBAdvPacketEddyURL.swift in Sources */,
+				1AECDB109C0313FC2D3FF54FC559A314 /* KBAdvPacketHandler.swift in Sources */,
+				22A2AD8A5D0BCEC7788DC1F60C4BE702 /* KBAdvPacketIBeacon.swift in Sources */,
+				9525B3559C712A9198D05E42E91E30F7 /* KBAdvPacketSensor.swift in Sources */,
+				FE69DA71797151C0D54DFDEB6A9F06C6 /* KBAdvPacketSystem.swift in Sources */,
+				7B25DB35F39BB03F836B9A6BC2773429 /* KBAdvTxPower.swift in Sources */,
+				2B1A5EF6CF0C60E2190A3AE3296ACF96 /* KBAdvType.swift in Sources */,
+				0662D94CF105654B5F6B1A05F2FAC8EC /* KBAuthHandler.swift in Sources */,
+				AC88DD95306F6544F2427BEFD7CB6D1A /* KBCfgAdvAOA.swift in Sources */,
+				6536B7F37A5D9330155E060B93A97C52 /* KBCfgAdvBase.swift in Sources */,
+				226EEACB2A04417AF345BAD79E0845AB /* KBCfgAdvEBeacon.swift in Sources */,
+				0D0EC33BEB59805ED5CE1E30BD0C34CB /* KBCfgAdvEddyTLM.swift in Sources */,
+				E0069465050B324B1EE75BB925E7E5AB /* KBCfgAdvEddyUID.swift in Sources */,
+				65F7B6952EAF05898F1484A02E9998C3 /* KBCfgAdvEddyURL.swift in Sources */,
+				1E18487637CEB9654E496A00A90C929C /* KBCfgAdvIBeacon.swift in Sources */,
+				72E29DEC2570F78C8496F1CCB34F4C76 /* KBCfgAdvKSensor.swift in Sources */,
+				DBB93BA9A13A4DD712C6560EE6AB4373 /* KBCfgAdvNull.swift in Sources */,
+				B422CD4B46F3D3070B787C18C2D2903B /* KBCfgAdvSystem.swift in Sources */,
+				A8BD878D5043C16D4D15F9BC7FE14B4C /* KBCfgBase.swift in Sources */,
+				527123BB3DF90853F6104D537CC5128D /* KBCfgCommon.swift in Sources */,
+				83FB43C3A710AAE553BC196A8E3BCC7E /* KBCfgHandler.swift in Sources */,
+				239374CF04AB41D316A5F43907A90530 /* KBCfgSensorAcc.swift in Sources */,
+				32A727FA3E6ACA1D4289A76EDA66CCBA /* KBCfgSensorBase.swift in Sources */,
+				E853B8501BC3E7983555A08843555EF1 /* KBCfgSensorCO2.swift in Sources */,
+				375D519ACBDD0AF70093DEDB0DF34968 /* KBCfgSensorGEO.swift in Sources */,
+				765347E1D6AA3B26D3E5A500757D9088 /* KBCfgSensorHT.swift in Sources */,
+				FEB96D66746E528D7DEE7BFC2EB41301 /* KBCfgSensorLight.swift in Sources */,
+				C08DA49D02C7EA50985A42B207FC8163 /* KBCfgSensorPIR.swift in Sources */,
+				99F32B64A8357FD08D8594FB6BADF71F /* KBCfgSensorScan.swift in Sources */,
+				3C48E118FDA8B8FD9EF1509BC16B6EC6 /* KBCfgSensorVOC.swift in Sources */,
+				04A5638772B67513986F9C47D5773D02 /* KBCfgTrigger.swift in Sources */,
+				58E765D116FFDF1200EEFAA2B32C2CF6 /* KBCfgTriggerAngle.swift in Sources */,
+				6938587F46DD7B47F4CD4C094356E457 /* KBCfgTriggerMotion.swift in Sources */,
+				86FC81498E540536E42CD7D40A2E4CB7 /* KBCfgType.swift in Sources */,
+				E7FAD14FFA87BB1D4CB49760C613C97C /* KBConnPara.swift in Sources */,
+				1F3CDC90508F32E5423264E652937CA3 /* KBeacon.swift in Sources */,
+				AD903D513CAB2CB76ECCA31EDC6D48CE /* kbeaconlib2-dummy.m in Sources */,
+				E1F9F6C0B4148C10839AAC0DED2E51C0 /* KBeaconsMgr.swift in Sources */,
+				3B348ADDB9ECA73BB9EA058C733DE84D /* KBException.swift in Sources */,
+				073B36C56B7C9AA96C0C6A01F345F2EF /* KBPreferance.swift in Sources */,
+				46C244B48833A634B13535E7524923C8 /* KBRecordAlarm.swift in Sources */,
+				EABCFE4E93C16565C34A94D08B83A0CF /* KBRecordBase.swift in Sources */,
+				3E49CB87BDAE70F3F6D4ACC636C6FA3E /* KBRecordCO2.swift in Sources */,
+				DEBFF12841CBE26E42DFED2C849BD3BF /* KBRecordDataHandler.swift in Sources */,
+				7106053786C64AE8A1DE06F8A25824AE /* KBRecordDataRsp.swift in Sources */,
+				EFC8E6B98B7E14878B3F9B838F131035 /* KBRecordHumidity.swift in Sources */,
+				8CB6D345C454C0FFE92DFE561B381D7A /* KBRecordInfoRsp.swift in Sources */,
+				3C442D6C609FB421D6E90B3D8AFDB14B /* KBRecordLight.swift in Sources */,
+				D5ECA32FA78180CE651C967DC2DF4B1E /* KBRecordPIR.swift in Sources */,
+				32414BCD6220DC1EAD0FD75C99ED6A19 /* KBRecordVOC.swift in Sources */,
+				473C3A0312818A7E369FAB849C11152F /* KBSensorType.swift in Sources */,
+				CB2B6CA48B7E5037D98C8E03C11F86DF /* KBTimeRange.swift in Sources */,
+				8EAEA61129B7E2D2EA4BDCC7D041B6A3 /* KBTLMElapseTime.swift in Sources */,
+				3F35BB7E6DB7AE73CB507D4DF4A909C1 /* KBTriggerAction.swift in Sources */,
+				A317C775E5481B05614B3DADF6CB0238 /* KBTriggerAdvChgMode.swift in Sources */,
+				37EC02C060BADD9556F035D187810484 /* KBTriggerType.swift in Sources */,
+				232C9BF562926A8778AE523F34351DCE /* KBUtility.swift in Sources */,
+				5B2D937F083BFFD69339FA20752F33E7 /* UTCTime.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCB8098472F437F0DD3505A3A49F9BBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		843D87DD4F4CB7A758A36459263B947C /* PBXTargetDependency */ = {
+		44502B78EA2E4F8CB018B395A12539AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CryptoSwift;
+			target = 99313990C1D76A6D1D017868B6975CC8 /* CryptoSwift */;
+			targetProxy = CF263AA610BBF439B27393E4BF852904 /* PBXContainerItemProxy */;
+		};
+		84A5499C1AFA3DE14E503C3D2E04C877 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = kbeaconlib2;
 			target = 989F78AFDFDA7F6A720659D6364CF384 /* kbeaconlib2 */;
-			targetProxy = 2B515DEFB9E653C0136217DD89EE5985 /* PBXContainerItemProxy */;
+			targetProxy = 2EB22F183CD7187AA66D420D194CB306 /* PBXContainerItemProxy */;
 		};
-		93C5664712D92D410419DFCE51F30C05 /* PBXTargetDependency */ = {
+		8520283E06EBE1FF601AD22B9A72CDBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CryptoSwift;
+			target = 99313990C1D76A6D1D017868B6975CC8 /* CryptoSwift */;
+			targetProxy = 2DB157B249880987407B16BE79FCCE12 /* PBXContainerItemProxy */;
+		};
+		A403C09C9DD08692701913236A22FA24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "CryptoSwift-CryptoSwift";
+			target = EBC10B6451F5FE5244D138B5176C2A02 /* CryptoSwift-CryptoSwift */;
+			targetProxy = 8DE89708DC8DF43A588624C9F775C074 /* PBXContainerItemProxy */;
+		};
+		D6BFDA39D296D7DAD81621EBAB68981C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-kbeaconlib2_Example";
 			target = 9E1C81D5ABBC244BD7BE70C92E004CA8 /* Pods-kbeaconlib2_Example */;
-			targetProxy = 895CA09367FCB7D3D8FA97230971D5A4 /* PBXContainerItemProxy */;
+			targetProxy = 6CB295AF6D9A61CF62DC4093B304D5C5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		12290396EF1668CEA9E80DEDDCE18928 /* Debug */ = {
+		3A8B9717E2831DCE2E62715F7E19A737 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7538B40DF9C2069F0F4B14585EC4998C /* kbeaconlib2.debug.xcconfig */;
+			baseConfigurationReference = D9A14B4967234FB4DD127AD2B4D6509D /* CryptoSwift.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -703,29 +1322,67 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/kbeaconlib2/kbeaconlib2-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/kbeaconlib2/kbeaconlib2-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/CryptoSwift/CryptoSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CryptoSwift/CryptoSwift-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/kbeaconlib2/kbeaconlib2.modulemap";
-				PRODUCT_MODULE_NAME = kbeaconlib2;
-				PRODUCT_NAME = kbeaconlib2;
+				MODULEMAP_FILE = "Target Support Files/CryptoSwift/CryptoSwift.modulemap";
+				PRODUCT_MODULE_NAME = CryptoSwift;
+				PRODUCT_NAME = CryptoSwift;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.6;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		2349F64D07D913FA8858657850EE2433 /* Debug */ = {
+		675555D8C5810EC1CBD924400D5A81A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0953A02910B8FB6E4C64229E8CB0629 /* Pods-kbeaconlib2_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-kbeaconlib2_Example/Pods-kbeaconlib2_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-kbeaconlib2_Example/Pods-kbeaconlib2_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		70327F22B1ECE2B3FF9AD3C8C7371FEF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C20DF99EB9364AAB081C32A4CE3CB148 /* Pods-kbeaconlib2_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -753,7 +1410,151 @@
 			};
 			name = Debug;
 		};
-		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
+		7DF8AB3FA72030ADC3C9C67611070479 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 911DEF294B7ECE6C88CF721372AA302A /* kbeaconlib2.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/kbeaconlib2/kbeaconlib2-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/kbeaconlib2/kbeaconlib2-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/kbeaconlib2/kbeaconlib2.modulemap";
+				PRODUCT_MODULE_NAME = kbeaconlib2;
+				PRODUCT_NAME = kbeaconlib2;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		89185610BBAA2348C59F9A676D8A4728 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EC4304078EA1264FE2470328A07B0DF /* CryptoSwift.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CryptoSwift/CryptoSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CryptoSwift/CryptoSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CryptoSwift/CryptoSwift.modulemap";
+				PRODUCT_MODULE_NAME = CryptoSwift;
+				PRODUCT_NAME = CryptoSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.6;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		903A0004D3E6651EFD5D2E16214D101B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		A389159C42B501DBD1DE307088ED94BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EC4304078EA1264FE2470328A07B0DF /* CryptoSwift.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/CryptoSwift";
+				IBSC_MODULE = CryptoSwift;
+				INFOPLIST_FILE = "Target Support Files/CryptoSwift/ResourceBundle-CryptoSwift-CryptoSwift-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = CryptoSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		B4EFE046ACF8F37157F6E322C7FCFC28 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -806,7 +1607,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -819,77 +1620,13 @@
 			};
 			name = Debug;
 		};
-		72824ECAE83345240E55615F909E4CB2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 967F010B1686CDFC864D33606AAC0174 /* Pods-kbeaconlib2_Tests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-kbeaconlib2_Tests/Pods-kbeaconlib2_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-kbeaconlib2_Tests/Pods-kbeaconlib2_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		7BE2FCA206DDFD66385B79440C9119D9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C0953A02910B8FB6E4C64229E8CB0629 /* Pods-kbeaconlib2_Example.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-kbeaconlib2_Example/Pods-kbeaconlib2_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-kbeaconlib2_Example/Pods-kbeaconlib2_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		950DF31BE5362FD2E4690748B85E1B9B /* Debug */ = {
+		B8A7D0CAF9CC8D709B859A9DC39265FB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7EC4B2C9F85C9957C40ADDE9E820B60A /* Pods-kbeaconlib2_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -917,71 +1654,46 @@
 			};
 			name = Debug;
 		};
-		CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */ = {
+		D96F647E84CCE2849D6E2043EABC573C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 967F010B1686CDFC864D33606AAC0174 /* Pods-kbeaconlib2_Tests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 5.0;
-				SYMROOT = "${SRCROOT}/../build";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-kbeaconlib2_Tests/Pods-kbeaconlib2_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-kbeaconlib2_Tests/Pods-kbeaconlib2_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		E977BA3C8453956D9F3277EF3659B3F5 /* Release */ = {
+		DA226D7B188114F0CB8BAC0E2D117CB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 907D7AD2D3A43A378D53E33DA8393169 /* kbeaconlib2.release.xcconfig */;
+			baseConfigurationReference = 3A6CABED9B7015B68F5BC289EE596AF1 /* kbeaconlib2.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1004,20 +1716,45 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EE87B04562EDC624DE66A8D9934A490D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9A14B4967234FB4DD127AD2B4D6509D /* CryptoSwift.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/CryptoSwift";
+				IBSC_MODULE = CryptoSwift;
+				INFOPLIST_FILE = "Target Support Files/CryptoSwift/ResourceBundle-CryptoSwift-CryptoSwift-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = CryptoSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3025E9B3E54F184A03C8AEDAD7BD56FD /* Build configuration list for PBXNativeTarget "Pods-kbeaconlib2_Tests" */ = {
+		0D0CCD8790E232F1A67524A5209E1A38 /* Build configuration list for PBXNativeTarget "kbeaconlib2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				950DF31BE5362FD2E4690748B85E1B9B /* Debug */,
-				72824ECAE83345240E55615F909E4CB2 /* Release */,
+				DA226D7B188114F0CB8BAC0E2D117CB7 /* Debug */,
+				7DF8AB3FA72030ADC3C9C67611070479 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B57DDD0E9DCC06FF0551B9CBCA3961A /* Build configuration list for PBXNativeTarget "CryptoSwift-CryptoSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A389159C42B501DBD1DE307088ED94BF /* Debug */,
+				EE87B04562EDC624DE66A8D9934A490D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1025,26 +1762,35 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */,
-				CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */,
+				B4EFE046ACF8F37157F6E322C7FCFC28 /* Debug */,
+				903A0004D3E6651EFD5D2E16214D101B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EC0707E7FA73525D40C111AE7C71C65E /* Build configuration list for PBXNativeTarget "kbeaconlib2" */ = {
+		79AEB1E28C499AB4F4FAD5375A6B9BC4 /* Build configuration list for PBXNativeTarget "CryptoSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				12290396EF1668CEA9E80DEDDCE18928 /* Debug */,
-				E977BA3C8453956D9F3277EF3659B3F5 /* Release */,
+				89185610BBAA2348C59F9A676D8A4728 /* Debug */,
+				3A8B9717E2831DCE2E62715F7E19A737 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FDFC01013618004CAC59F2B4045E06A6 /* Build configuration list for PBXNativeTarget "Pods-kbeaconlib2_Example" */ = {
+		A89A1A2399B68336EB31B99A042F611A /* Build configuration list for PBXNativeTarget "Pods-kbeaconlib2_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2349F64D07D913FA8858657850EE2433 /* Debug */,
-				7BE2FCA206DDFD66385B79440C9119D9 /* Release */,
+				70327F22B1ECE2B3FF9AD3C8C7371FEF /* Debug */,
+				675555D8C5810EC1CBD924400D5A81A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D90A352DD0BF6603C3821BDCF07C2843 /* Build configuration list for PBXNativeTarget "Pods-kbeaconlib2_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8A7D0CAF9CC8D709B859A9DC39265FB /* Debug */,
+				D96F647E84CCE2849D6E2043EABC573C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

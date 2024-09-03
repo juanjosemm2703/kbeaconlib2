@@ -24,6 +24,7 @@ internal class KBCfgHandler {
         KBAdvType.IBeacon: KBCfgAdvIBeacon.self,
         KBAdvType.System: KBCfgAdvSystem.self,
         KBAdvType.AOA: KBCfgAdvAOA.self,
+        KBAdvType.EBeacon:KBCfgAdvEBeacon.self
     ]
     
     static var kbCfgTriggerObjects : Dictionary<Int, KBCfgTrigger.Type> = [
@@ -42,17 +43,19 @@ internal class KBCfgHandler {
         KBTriggerType.HTHumidityPeriodically: KBCfgTrigger.self,
         KBTriggerType.PIRBodyInfraredDetected: KBCfgTrigger.self,
         KBTriggerType.LightLUXAbove: KBCfgTrigger.self,
-        KBTriggerType.LightLUXBelow: KBCfgTrigger.self
+        KBTriggerType.LightLUXBelow: KBCfgTrigger.self,
+        KBTriggerType.PeriodicallyEvent: KBCfgTrigger.self
     ]
     static var kbCfgSensorObjects :Dictionary<Int, KBCfgSensorBase.Type> = [
         KBSensorType.HTHumidity: KBCfgSensorHT.self,
-        KBSensorType.Cutoff: KBCfgSensorBase.self,
+        KBSensorType.Alarm: KBCfgSensorBase.self,
         KBSensorType.PIR: KBCfgSensorPIR.self,
         KBSensorType.Light: KBCfgSensorLight.self,
         KBSensorType.VOC: KBCfgSensorVOC.self,
         KBSensorType.CO2: KBCfgSensorCO2.self,
         KBSensorType.Acc: KBCfgSensorAcc.self,
-        KBSensorType.GEO: KBCfgSensorGEO.self
+        KBSensorType.GEO: KBCfgSensorGEO.self,
+        KBSensorType.SCAN: KBCfgSensorScan.self
     ]
     
     internal init()

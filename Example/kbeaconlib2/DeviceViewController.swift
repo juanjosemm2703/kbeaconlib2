@@ -388,6 +388,87 @@ class DeviceViewController :UIViewController, ConnStateDelegate, UITextFieldDele
         })
     }
     
+    //example4: update KBeacon to advertisement encrypt UUID
+    //the encrypt interval is 5 seconds
+    func setSlot0EncryptAdvertisement_unconnectable()
+    {
+        if (self.beacon!.state != KBConnState.Connected)
+        {
+            NSLog("beacon not connected")
+            return
+        }
+
+        //iBeacon parameters
+        let encAdv = KBCfgAdvEBeacon()
+        encAdv.setSlotIndex(0)
+        encAdv.setAdvConnectable(false)    //not allowed connect
+        encAdv.setAdvPeriod(1000.0)
+        
+        //set aes type to ecb
+        encAdv.setAESType(0);
+        
+        //set uuid
+        encAdv.setUuid("E2C56DB5-DFFB-48D2-B060-D0F5A71096E0")
+        
+        //Every 5 seconds, a new AES key will be generated for encryption
+        encAdv.setEncryptInterval(5)
+
+        //start configruation
+        self.beacon!.modifyConfig(array:[encAdv], callback: { (result, exception) in
+            if (result)
+            {
+                print("config encrypt adv success")
+            }
+            else
+            {
+                print("config encrypt adv failed");
+            }
+        })
+    }
+    
+    //example4: We can set slot0 to broadcast every 2 minutes for 10 seconds,
+    //with a broadcast interval of 1 second during these 10 seconds, which is equivalent to broadcasting 10 times.
+    func setSlot0PeriodicallyAdvertisement()
+    {
+        if (self.beacon!.state != KBConnState.Connected)
+        {
+            NSLog("beacon not connected")
+            return
+        }
+
+        //iBeacon parameters
+        let periodicAdv = KBCfgAdvIBeacon()
+        periodicAdv.setSlotIndex(1)
+        periodicAdv.setUuid("E2C56DB5-DFFB-48D2-B060-D0F5A71096E0")
+        periodicAdv.setAdvPeriod(1000.0)
+        //It must be set to true here so that slot0 does not broadcast by default
+        //and only broadcasts when a periodic trigger is triggered
+        periodicAdv.setAdvTriggerOnly(true)
+        
+        //add periodically trigger
+        let periodicTrigger = KBCfgTrigger()
+        periodicTrigger.setTriggerType(KBTriggerType.PeriodicallyEvent)
+        periodicTrigger.setTriggerIndex(0)
+        periodicTrigger.setTriggerAction(KBTriggerAction.Advertisement)
+        periodicTrigger.setTriggerAdvSlot(1)
+        periodicTrigger.setTriggerAdvTime(10) //set the adv duration to 10 seconds
+        
+        //set trigger period to 2 minutes, unit is ms
+        periodicTrigger.setTriggerPara(120 * 1000)
+
+        //start configruation
+        self.beacon!.modifyConfig(array:[periodicAdv, periodicTrigger], callback: { (result, exception) in
+            if (result)
+            {
+                print("config periodic adv success")
+            }
+            else
+            {
+                print("config periodic adv failed");
+            }
+        })
+    }
+    
     //only update the modification para
     func updateModifyParaToDevice()
     {
@@ -1107,7 +1188,7 @@ class DeviceViewController :UIViewController, ConnStateDelegate, UITextFieldDele
     //read cutoff history info example
     func readCutSensorDataInfo()
     {
-        beacon!.readSensorDataInfo(KBSensorType.Cutoff, callback: { (result, obj, exception) in
+        beacon!.readSensorDataInfo(KBSensorType.Alarm, callback: { (result, obj, exception) in
             if (!result)
             {
                 print("read record info failed")
@@ -1275,6 +1356,73 @@ class DeviceViewController :UIViewController, ConnStateDelegate, UITextFieldDele
             else
             {
                 print("Enable disable period failed")
+            }
+        }
+    }
+    
+    //set parking idle
+    //Parking sensors need to be marked before use. That is, when there is no parking, we need to set
+    // the sensor to idle. The sensor detects if a vehicle is parked based on the status of the marker.
+    func setParkingIdleParameters()
+    {
+        guard self.beacon!.isConnected(),
+            let commCfg = self.beacon!.getCommonCfg(),
+              commCfg.isSupportGEOSensor() else
+        {
+            print("device does not support parking sensor")
+            return
+        }
+        
+        //set tilt angle trigger
+        let sensorGeoPara = KBCfgSensorGEO()
+        
+        //If this parameter is set to true, the sensor initiates the measurement
+        // and sets the current state to the idle parking state.
+        sensorGeoPara.setParkingTag(true);
+        
+        self.beacon!.modifyConfig(obj: sensorGeoPara) { (result, exception) in
+            if (result)
+            {
+                print("Enable sensor success")
+            }
+            else
+            {
+                print("Enable sensor failed")
+            }
+        }
+    }
+    
+    //set parking sensor measure parameters
+    func setParkingSensorMeasureParameters()
+    {
+        guard self.beacon!.isConnected(),
+            let commCfg = self.beacon!.getCommonCfg(),
+              commCfg.isSupportGEOSensor() else
+        {
+            print("device does not support parking sensor")
+            return
+        }
+        
+
+        //set tilt angle trigger
+        let sensorGeoPara = KBCfgSensorGEO()
+        
+        //Set the geomagnetic offset value of the parking space occupancy relative to the idle parking space
+        //unit is mg
+        sensorGeoPara.setParkingThreshold(2000);
+
+        //If the setting continuously detects geomagnetic changes for more than 50 seconds,
+        //the device will generate a parking space occupancy event. the Delay unit is 10 seconds
+        sensorGeoPara.setParkingDelay(5);
+
+        self.beacon!.modifyConfig(obj: sensorGeoPara) { (result, exception) in
+            if (result)
+            {
+                print("Enable sensor success")
+            }
+            else
+            {
+                print("Enable sensor failed")
             }
         }
     }

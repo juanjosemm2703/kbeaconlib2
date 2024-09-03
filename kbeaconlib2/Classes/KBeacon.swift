@@ -227,9 +227,8 @@ public typealias onActionComplete = (_ result:Bool, _ error:KBException?)->Void
             }
             else     //saved mac
             {
-                let defaults = UserDefaults.standard
-                let strMacKey = "kb_\(uuidString!)"
-                return defaults.object(forKey: strMacKey) as? String
+                let mPrefCfg = KBPreferance.sharedPreferance
+                return mPrefCfg.getMacFromUUID(uuid: uuidString!)
             }
         }
     }
@@ -379,6 +378,10 @@ public typealias onActionComplete = (_ result:Bool, _ error:KBException?)->Void
         self.mAuthHandler = KBAuthHandler(password: password, connPara: connPara, delegate: self)
         state = KBConnState.Connecting
         
+        //save password
+        let mPrefCfg = KBPreferance.sharedPreferance
+        mPrefCfg.savePassword(cbPeripherial.identifier.uuidString, password: password)
+        
         //start connect
         cbPeripherial.delegate = self
         cbCentral.connect(cbPeripherial, options: nil)
@@ -407,6 +410,22 @@ public typealias onActionComplete = (_ result:Bool, _ error:KBException?)->Void
         }
         
         return true;
+    }
+    
+    //set adv decode password
+    @objc @discardableResult public func savePassword(_ password:String)->Bool
+    {
+        if (password.count >= 8 && password.count <= 16)
+        {
+            if let peripherial = cbPeripheral
+            {
+                let prefCfg = KBPreferance.sharedPreferance
+                prefCfg.savePassword(peripherial.identifier.uuidString, password: password)
+                return true
+            }
+        }
+        
+        return false
     }
     
     //the app can init disconnect with device
@@ -799,7 +818,7 @@ public typealias onActionComplete = (_ result:Bool, _ error:KBException?)->Void
         return KBCfgHandler.createCfgSensorObject(sensorType)
     }
     
-    public func parseAdvPacket(advData:[String:Any], rssi:Int8)->Bool
+    public func parseAdvPacket(advData:[String:Any], rssi:Int8, uuid:String)->Bool
     {
         if let beaconName = advData["kCBAdvDataLocalName"] as? String{
             self.name = beaconName
@@ -810,7 +829,7 @@ public typealias onActionComplete = (_ result:Bool, _ error:KBException?)->Void
             self.rssi = Int8(rssi)
         }
         
-        return mAdvPacketMgr.parseAdvPacket(advData, rssi: rssi)
+        return mAdvPacketMgr.parseAdvPacket(advData, rssi: rssi,peripheralUUID: uuid, mac: connectionMac)
     }
     
     @discardableResult private func startEnableNotification(serviceID:CBUUID, charID:CBUUID, enable:Bool)->Bool
@@ -1928,8 +1947,8 @@ public typealias onActionComplete = (_ result:Bool, _ error:KBException?)->Void
                           byMacValue[0])
         
         //save uuid and mac mapping
-        let strMacKey = "kb_\(peripherial.identifier.uuidString)"
-        UserDefaults.standard.setValue(self.connectionMac, forKey: strMacKey)
+        let mPrefCfg = KBPreferance.sharedPreferance
+        mPrefCfg.saveUUID2Mac(uuid: peripherial.identifier.uuidString, mac: connectionMac!)
         
         //start auth entication
         if state == KBConnState.Connecting {

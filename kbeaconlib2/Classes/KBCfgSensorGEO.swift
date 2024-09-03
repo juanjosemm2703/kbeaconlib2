@@ -9,50 +9,72 @@ import UIKit
 
 public class KBCfgSensorGEO: KBCfgSensorBase {
 
-    public static let MAX_PARKING_CHANGE_THD = 65535;
-    public static let MIN_PARKING_CHANGE_THD = 100;
-    public static let DEFAULT_PARKING_CHANGE_THD = 1000;
+    @objc public static let MAX_PARKING_CHANGE_THD = 65535;
+    @objc public static let MIN_PARKING_CHANGE_THD = 256;
+    @objc public static let DEFAULT_PARKING_CHANGE_THD = 1000;
     
-    public static let MAX_PARKING_DELAY_THD = 200;
-    public static let MIN_PARKING_DELAY_THD = 1;
-    public static let DEFAULT_PARKING_DELAY_THD = 9;
+    @objc public static let MAX_MEASURE_INTERVAL = 100
+    @objc public static let MIN_MEASURE_INTERVAL = 1
     
-    public static let JSON_SENSOR_TYPE_GEO_PTHD = "pThd"
+    @objc public static let MAX_PARKING_DELAY_THD = 100;
+    @objc public static let MIN_PARKING_DELAY_THD = 1;
+    @objc public static let DEFAULT_PARKING_DELAY_THD = 9;
+    
+    @objc public static let JSON_SENSOR_TYPE_GEO_PTHD = "pThd"
 
-    public static let JSON_SENSOR_TYPE_GEO_PDLY = "pDly"
+    @objc public static let JSON_SENSOR_TYPE_GEO_PDLY = "pDly"
     
-    public static let JSON_SENSOR_TYPE_GEO_TAG = "tag"
+    @objc public static let JSON_SENSOR_TYPE_GEO_TAG = "tag"
     
-    public static let JSON_SENSOR_TYPE_GEO_FCL = "fcl"
+    @objc public static let JSON_SENSOR_TYPE_GEO_FCL = "fcl"
 
     //measure interval
-    var measureInterval: Int?
+    private var measureInterval: Int?
     
     //parking GEO sensor change threshold
-    var parkingThreshold: Int?
+    private var parkingThreshold: Int?
     
     //parking delay
-    var parkingDelay: Int?
+    private var parkingDelay: Int?
     
     //idle parking tag
-    var parkingTag: Int?
+    private var parkingTag: Int?
     
     //force GEO sensor calibration
-    var calibration: Int?
+    private var calibration: Int?
     
-    public required init()
+    @objc public required init()
     {
         super.init(sensorType:KBSensorType.GEO)
     }
     
-    public func getParkingThreshold() -> Int {
+    @objc @discardableResult public func setMeasureInterval(_ interval :Int)->Bool
+    {
+        if (KBCfgSensorGEO.MAX_MEASURE_INTERVAL >= interval
+            && KBCfgSensorGEO.MIN_MEASURE_INTERVAL <= interval)
+        {
+            measureInterval = interval
+            return true
+        }
+        else
+        {
+            return false
+        }
+    }
+
+    @objc public func getMeasureInterval()->Int
+    {
+        return measureInterval ?? KBCfgBase.INVALID_INT
+    }
+    
+    @objc public func getParkingThreshold() -> Int {
         if let value = parkingThreshold {
             return value
         }
         return KBCfgSensorGEO.DEFAULT_PARKING_CHANGE_THD
     }
     
-    @discardableResult public func setParkingThreshold(_ parkThd:Int) ->Bool{
+    @objc @discardableResult public func setParkingThreshold(_ parkThd:Int) ->Bool{
         if (parkThd <= KBCfgSensorGEO.MAX_PARKING_CHANGE_THD
             && parkThd >= KBCfgSensorGEO.MIN_PARKING_CHANGE_THD)
         {
@@ -65,14 +87,14 @@ public class KBCfgSensorGEO: KBCfgSensorBase {
         }
     }
     
-    public func getPakingDelay() -> Int {
+    @objc public func getPakingDelay() -> Int {
         if let value = parkingDelay {
             return value
         }
         return KBCfgSensorGEO.DEFAULT_PARKING_DELAY_THD
     }
     
-    @discardableResult public func setParkingDelay(_ parkDly:Int) ->Bool{
+    @objc @discardableResult public func setParkingDelay(_ parkDly:Int) ->Bool{
         if (parkDly <= KBCfgSensorGEO.MAX_PARKING_DELAY_THD
             && parkDly >= KBCfgSensorGEO.MIN_PARKING_DELAY_THD)
         {
@@ -85,25 +107,25 @@ public class KBCfgSensorGEO: KBCfgSensorBase {
         }
     }
     
-    public func isParkingTaged() -> Bool {
+    @objc public func isParkingTaged() -> Bool {
         return parkingTag == 1
     }
     
-    public func setParkingTag(_ tag: Bool)
+    @objc public func setParkingTag(_ tag: Bool)
     {
         parkingTag = tag ? 1 : 0;
     }
     
-    public func isCalibrated() -> Bool {
+    @objc public func isCalibrated() -> Bool {
         return calibration == 1
     }
     
-    public func setCalibration(_ forceCalibration: Bool)
+    @objc public func setCalibration(_ forceCalibration: Bool)
     {
         calibration = forceCalibration ? 1 : 0;
     }
 
-    public override func updateConfig(_ para: Dictionary<String, Any>) -> Int {
+    @objc public override func updateConfig(_ para: Dictionary<String, Any>) -> Int {
         var nUpdatePara = super.updateConfig(para)
         if let tempValue = para[KBCfgSensorBase.JSON_SENSOR_TYPE_MEASURE_INTERVAL] as? Int {
             measureInterval = tempValue
@@ -128,11 +150,7 @@ public class KBCfgSensorGEO: KBCfgSensorBase {
         return nUpdatePara
     }
     
-    public override func toJsonObject() -> [String : Any] {
-        return super.toJsonObject();
-    }
-    
-    public override func toDictionary() -> Dictionary<String, Any> {
+    @objc public override func toDictionary() -> Dictionary<String, Any> {
         var cfgDicts = super.toDictionary()
 
         if let tempValue = measureInterval {

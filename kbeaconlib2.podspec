@@ -8,13 +8,13 @@
 
 Pod::Spec.new do |s|
   s.name             = 'kbeaconlib2'
-  s.version          = '1.1.7'
-  s.summary          = 'add GEO sensor. Bug fix for connecting device timeout'
+  s.version          = '1.1.8'
+  s.summary          = 'support encrypt advertising'
 
-# This description is used to generate tags and improve search results.
+# This description is used to g/Users/mac/xcode/iTrackIos/kbeaconlib2/Example/Podfileenerate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
 #   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
+#   * Write the description bet/Users/mac/xcode/iTrackIos/kbeaconlib2/Example/Podfileween the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
@@ -38,5 +38,5 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'CryptoSwift'
 end

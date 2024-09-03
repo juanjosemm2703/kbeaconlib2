@@ -38,6 +38,9 @@ import Foundation
     @objc public static let LightLUXAbove = 14   //light lux above
     @objc public static let LightLUXBelow = 15   //light lux below
     
+    //periodically
+    @objc public static let PeriodicallyEvent = 20
+    
     //acc axis position report
     @objc public static let AccPositionReport = 60
 }
