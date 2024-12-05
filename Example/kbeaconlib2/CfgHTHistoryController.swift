@@ -149,7 +149,7 @@ class CfgHTHistoryController : UIViewController,UITableViewDataSource, UITableVi
         self.beacon!.readSensorRecord(KBSensorType.HTHumidity,
                                       number: KBRecordDataRsp.INVALID_DATA_RECORD_POS,
                                       option: KBSensorReadOption.NewRecord,
-                                      max: 30,
+                                      max: 1000,
                                       callback: { (result, recordRsp, exception) in
                         if (!result)
                         {
