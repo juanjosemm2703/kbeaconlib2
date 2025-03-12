@@ -34,7 +34,7 @@ class CfgHTHistoryController : UIViewController,UITableViewDataSource, UITableVi
     
     private var mRecordMgr : CfgHTRecordFileMgr?
     
-    static let HISTORY_LOAD_TIMEOUT_SEC = 12.0
+    static let HISTORY_LOAD_TIMEOUT_SEC = 60.0
 
     static let INVALID_DATA_RECORD_POS  = UInt32(0xFFFFFFFF)
     
@@ -149,7 +149,7 @@ class CfgHTHistoryController : UIViewController,UITableViewDataSource, UITableVi
         self.beacon!.readSensorRecord(KBSensorType.HTHumidity,
                                       number: KBRecordDataRsp.INVALID_DATA_RECORD_POS,
                                       option: KBSensorReadOption.NewRecord,
-                                      max: 1000,
+                                      max: 600,
                                       callback: { (result, recordRsp, exception) in
                         if (!result)
                         {

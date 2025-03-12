@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'kbeaconlib2'
-  s.version          = '1.1.9'
+  s.version          = '1.2.0'
   s.summary          = 'support history record batch reading'
 
 # This description is used to g/Users/mac/xcode/iTrackIos/kbeaconlib2/Example/Podfileenerate tags and improve search results.
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/kkmhogen/kbeaconlib2.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '11.0'
+  s.ios.deployment_target = '12.0'
   
   s.source_files = 'kbeaconlib2/Classes/**/*'
   
@@ -38,5 +38,4 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'CryptoSwift'
 end

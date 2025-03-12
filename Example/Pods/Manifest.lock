@@ -1,23 +1,16 @@
 PODS:
-  - CryptoSwift (1.8.3)
-  - kbeaconlib2 (1.1.8):
-    - CryptoSwift
+  - kbeaconlib2 (1.1.9)
 
 DEPENDENCIES:
   - kbeaconlib2 (from `../`)
-
-SPEC REPOS:
-  trunk:
-    - CryptoSwift
 
 EXTERNAL SOURCES:
   kbeaconlib2:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CryptoSwift: 967f37cea5a3294d9cce358f78861652155be483
-  kbeaconlib2: 337a8559b9e6d3e77c0fafb03a791d9e07554e30
+  kbeaconlib2: 907c9e4af8392bffa3d7e589175355ea30fd94a2
 
 PODFILE CHECKSUM: 7e2ec2c9fd4cc34621437f9a55b020e166ff95e5
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.16.2
