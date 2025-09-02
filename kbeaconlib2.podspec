@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'kbeaconlib2'
-  s.version          = '1.2.0'
-  s.summary          = 'support history record batch reading'
+  s.version          = '1.2.1'
+  s.summary          = 'bugfix for pir sensor'
 
 # This description is used to g/Users/mac/xcode/iTrackIos/kbeaconlib2/Example/Podfileenerate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
