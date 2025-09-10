@@ -77,6 +77,8 @@ let MAX_TIMER_OUT_INTERVAL = 0.3;
         mCBNtfBeacons = [String : KBeacon]()
         mCbAllBeacons = [String : KBeacon]()
         scanMinRssiFilter = -100
+        super.init()
+        cbBeaconMgr.delegate = self
     }
 
     //clear all beacon
